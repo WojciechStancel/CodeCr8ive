@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@200;400;700&display=swap"
+        rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript" src="./dist/js/email-data.min.js"></script>
+
+    <link rel="stylesheet" href="dist/css/style.min.css">
+    <title>Code Cr8ive</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <div class="nav">
+                <a class="nav__link" href="#">Home</a>
+                <a class="nav__link" href="#aboutme">O mnie</a>
+                <a class="nav__link" href="#info">Informacje</a>
+                <a class="nav__link" href="#projects">Projekty</a>
+                <a class="nav__link" href="#contact">Kontakt</a>
+            </div>
+            <div class="mobile-nav">
+                <div class="items">
+                    <a href="#" class="item">Home</a>
+                    <a href="#aboutme" class="item">O mnie</a>
+                    <a href="#projects" class="item">Projekty</a>
+                    <a href="#contact" class="item">Kontakt</a>
+                </div>
+            </div>
+            <button class="burger-btn">
+                <div class="burger-btn__box">
+                    <div class="burger-btn__bars"></div>
+                </div>
+            </button>
+            <div class="header__shadow"></div>
+            <div class="header__text">
+                <h1>code<span>cr8ive</span></h1>
+                <p>Strona to coś więcej niż kod.</p>
+                <a href="#aboutme">
+                    <div class="arrow-icon">
+                        <img class="icon-img" src="dist/img/icons/arrow-down.svg"
+                            alt="Przycisk nawigacji kierujący w dół na kolejną sekcję">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="aboutme wrapper" id="aboutme">
+            <div class="second-title">
+                <h2>O MNIE</h2>
+            </div>
+            <div class="aboutme__main">
+                <div class="aboutme-image">
+                    <img src="dist/img/IMG_20230122_125325_1.jpg"
+                        alt="Zdjęcie przedstawiające mężczyznę - założyciela strony." class="aboutme__img">
+                </div>
+                <div class="aboutme__text">
+                    <p>Cześć!</p>
+                    <p>Z tej strony Wojtek, tworzę profesjonalne strony internetowe, które są w pełni dostosowane do
+                        aktualnych potrzeb użytkowników. </p>
+                    <p>Tworzenie strony internetowej, to nie tylko klepanie kodu. To przede wszystkim odpowiedni plan,
+                        zorientowanie na potrzeby i pełne zaangażowanie, by opracowany projekt w pełni wpłynął
+                        korzystnie na Twoją działalność.</p>
+                    <div class="aboutme__arrow">
+                        <p class="aboutme__end">Co mnie cechuje?</p>
+                        <a href="#values"><img class="icon" src="dist/img/icons/arrow-special.png"
+                                alt="strzałka nawigacyjna kierująca do dołu"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values wrapper" id="values">
+            <h2 class="second-title">Kluczowe wartości</h2>
+            <div class="values__image">
+                <div class="values__image-box values__image-box1">
+                    <div class="value-shadow"></div>
+                    <button class="question-btn"></button>
+                    <h3 class="delay hidden">Profesjonalizm</h3>
+                    <div class="hidden-text">
+                        <p>Na naukę poświęciłem setki godzin, zacząłem od Pythona poprzez bazy danych, framework Django
+                            czy DRF. Dzięki temu wiem jak działa to, czego często nie widać na pierwszy rzut oka.</p>
+                        <p>Gdy poznałem działanie backendu, postanowiłem wdrożyć się we frontend, a więc HTML, CSS,
+                            JavaScript, Sass, Gulp, SEO. </p>
+
+                        <p class="last-param">Obecnie jestem na początkowym etapie poznawania Dockera, ponadto
+                            rozpoczynam naukę frameworka React.</p>
+                    </div>
+                </div>
+                <div class="values__image-box values__image-box2">
+                    <div class="value-shadow"></div>
+                    <button class="question-btn"></button>
+                    <h3 class="delay hidden">Kreatywność</h3>
+                    <div class="hidden-text">
+                        <p>Kreatywne i elastyczne podejście do każdego tematu jest gwarancją nowych rozwiązań.</p>
+                        <p class="last-param">Od zawsze jestem fanem sprytnych rozwiązań, które pomagają w osiągnięciu
+                            konkretnego celu.</p>
+                    </div>
+                </div>
+                <div class="values__image-box values__image-box3">
+                    <div class="value-shadow"></div>
+                    <button class="question-btn"></button>
+                    <h3 class="delay hidden">Pomoc</h3>
+                    <div class="hidden-text">
+                        <p>To, co mnie napędza, to świadomość, że pozytywnie wpłynąłem na czyjeś życie.</p>
+                        <p class="last-param">Moim nadrzędnym celem jest przede wszystkim pomoc w rozwiązaniu danego
+                            problemu. Takie nastawienie do działania przekłada się na jego pozytywne skutki.</p>
+
+                    </div>
+                </div>
+                <div class="values__image-box values__image-box4">
+                    <div class="value-shadow"></div>
+                    <button class="question-btn"></button>
+                    <h3 class="delay hidden">Człowiek</h3>
+                    <div class="hidden-text">
+                        <p>Tworzenie strony internetowej to dostosowanie jej do wielu potrzeb różnych użytkowników.
+                            Ogromna część ludzi korzysta głównie z urządzeń mobilnych, do których każda strona powinna
+                            być dostosowana. Z internetu korzystają również osoby z niepełnosprawnościami, więc
+                            kluczowym czynnikiem jest również dostosowanie strony pod tym kątem.</p>
+                        <p class="last-param">Projektując i tworząc stronę internetową należy być przede wszystkim
+                            zorientowanym na człowieka.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper" id="info">
+            <div class="info">
+                <h2 class="second-title">Strona jest Twoją wizytówką!</h2>
+                <div class="info__photo info__photo-one">
+                    <div class="value-shadow"></div>
+                    <p class="inner-text">Potrzebujesz nowoczesnej i responsywnej strony internetowej? Tworzę strony,
+                        które idealnie
+                        dostosowują się do każdego urządzenia, gwarantując Twoim użytkownikom doskonałe wrażenia. </p>
+                </div>
+                <div class="info__photo info__photo-two">
+                    <div class="value-shadow"></div>
+                    <p class="inner-text">Obecnie większość użytkowników przegląda strony internetowe na urządzeniach
+                        mobilnych. Dlatego
+                        responsywność jest kluczowym czynnikiem. Strona internetowa to wizytówka i możliwość dotarcia do
+                        szerszego grona.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper" id="projects">
+            <h2 class="second-title">Projekty</h2>
+            <div class="group-projects">
+                <div class="projects">
+                    <div class="image-container">
+                        <div class="projects__img projects__img-one hidden"></div>
+                    </div>
+                    <div class="projects__body">
+                        <h5>Fotograf</h5>
+                        <p>Przykładowa strona stworzona dla osoby zajmującej się fotografią, która chciałaby móc
+                            promować swoją działalność.</p>
+                        <p>Linki do kodu, jak i również do podglądu live poniżej.</p>
+                    </div>
+                    <div class="projects__footer">
+                        <a href="">
+                            <div class="footer-icon"><img src="dist/img/icons/github.png" alt="ikona portalu github">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="footer-icon"><img src="dist/img/icons/github.png"
+                                    alt="ikona portalu github-live"></div>
+                        </a>
+                        <a href="">
+                            <div class="footer-icon"><img src="dist/img/icons/instagram.png"
+                                    alt="ikona portalu instagram"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="image-container">
+                        <div class="projects__img projects__img-two hidden"></div>
+                    </div>
+                    <div class="projects__body">
+                        <h5>Biuro nieruchomości</h5>
+                        <p>Projekt stworzony w frameworku Django. Baza danych PostgreSql. Do frontendu wykorzystany
+                            został bootstrap. Możliwość rejestracji, logowania, dodawania ofert i kontaktu.</p>
+                    </div>
+                    <div class="projects__footer">
+                        <a href="">
+                            <div class="footer-icon"><img src="dist/img/icons/github.png" alt="ikona portalu github">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="footer-icon"><img src="dist/img/icons/instagram.png"
+                                    alt="ikona portalu instagram"></div>
+                        </a>
+                        <a href="">
+                            <div class="footer-icon"><img src="dist/img/icons/github.png"
+                                    alt="ikona portalu github-live"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="image-container">
+                        <div class="projects__img projects__img-three hidden"></div>
+                    </div>
+                    <div class="projects__body">
+                        <h5>Kwiaciarnia</h5>
+                        <p>Przykładowa strona dla osoby prowadzącej własną kwiaciarnię.</p>
+                        <p>Kod źródłowy oraz link do strony live poniżej.</p>
+                    </div>
+                    <div class="projects__footer">
+                        <a href="">
+                            <div class="footer-icon"><img src="dist/img/icons/instagram.png"
+                                    alt="ikona portalu instagram"></div>
+                        </a>
+                        <a href="">
+                            <div class="footer-icon"><img src="dist/img/icons/github.png" alt="ikona portalu github">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="footer-icon"><img src="dist/img/icons/github.png"
+                                    alt="ikona portalu github-live"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact wrapper">
+                <h2 class="second-title">Formularz kontaktowy <img src="dist/img/icons/email.png" alt=""
+                        class="email-icon"> </h2>
+                <form action="" class="contact__form">
+                    <div class="contact__form-top contact-box">
+                        <label for="name" class="contact__label">Podaj Imię</label>
+                        <input type="text" id="name" class="contact__input" placeholder="Podaj swoje imię">
+                        <p class="error-text"></p>
+                    </div>
+                    <div class="contact__form-middle contact-box">
+                        <label for="email" class="contact__label">Adres e-mail:</label>
+                        <input type="text" id="email" class="contact__input" placeholder="Wprowadź swój adres e-mail">
+                        <p class="error-text"></p>
+                    </div>
+                    <div class="contact__form-end contact-box">
+                        <label for="msg">Napisz wiadomość:</label>
+                        <textarea id="msg" class="textarea" placeholder="Wpisz wiadomość"></textarea>
+                        <p class="error-text message-error">Wiadomość nie może być pusta!</p>
+                        <button type="submit" class="submit-btn">Wyślij</button>
+                    </div>
+                    <div class="contact__form-protection contact-box">
+                        <p>Wypełnienie formularza oznacza, że podane w nim dane osobowe będą przetwarzane w celu
+                            udzielenia odpowiedzi.</p>
+                        <label for="agreement">Akceptuję</label>
+                        <input type="checkbox" id="agreement" placeholder="Zaakceptuj warunki">
+                        <p class="error-text message-error">Musisz zaakceptować warunki</p>
+                    </div>
+
+                    <div class="hidden-popup">
+                        <div class="popup">
+                            <p>Wiadomość została wysłana!</p>
+                            <button class="close">Zamknij</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="footer">
+                <div class="footer__box">
+                    <h3>Portale społecznościowe</h3>
+                    <p>Poniżej linki do portali: Github, Linkedin, Instagram</p>
+                    <div class="footer__box-socials">
+                        <a href="https://github.com/WojciechStancel" target="_blank"><img
+                                src="dist/img/icons/github.png" alt="ikona portalu github"></a>
+                        <a href="https://www.linkedin.com/in/wojciech-stancel/"><img src="dist/img/icons/linkedin.png"
+                                alt="ikona portalu github"></a>
+                        <a href=""><img src="dist/img/icons/instagram.png" alt="ikona portalu instagram"></a>
+                    </div>
+                </div>
+                <div class="footer__box">
+                    <h3>Inne dokumenty</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a href="privacy_policy.html">Polityka prywatności</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer__bottom-text"> &copy;<span class="footer-year"></span> Code Cr8ive</p>
+    </footer>
+
+    <script type="module" src="/dist/js/script.min.js"></script>
+</body>
+
+</html>
