@@ -3,6 +3,8 @@ const mobileNav = document.querySelector(".mobile-nav");
 const mobileNavItems = document.querySelectorAll(".items");
 const footerYear = document.querySelector(".footer-year");
 const hiddenElements = document.querySelectorAll(".hidden");
+const buttonBars = document.querySelector(".burger-btn__bars");
+const allSections = document.querySelectorAll(".section");
 
 // Email variables
 const email = document.getElementById("email");
@@ -109,7 +111,26 @@ const observer = new IntersectionObserver((entries) => {
 
 hiddenElements.forEach((el) => observer.observe(el));
 
+const sectionObserver = () => {
+	const currentSection = window.scrollY;
+	allSections.forEach((sect) => {
+		if (
+			sect.classList.contains("black-btn") &&
+			sect.offsetTop <= currentSection + 60
+		) {
+			buttonBars.classList.add("black-bars-color");
+		} else if (
+			!sect.classList.contains("black-btn") &&
+			sect.offsetTop <= currentSection + 60
+		) {
+			buttonBars.classList.remove("black-bars-color");
+		}
+	});
+};
+
 // Listenery
+
+window.addEventListener("scroll", sectionObserver);
 
 document.addEventListener("DOMContentLoaded", () => {
 	const nav = document.querySelector(".nav");
