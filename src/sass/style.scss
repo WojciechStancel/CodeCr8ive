@@ -17,7 +17,6 @@ body {
 	height: 100vh;
 	font-family: "Raleway", sans-serif;
 	color: $dark;
-	background-color: $dark-blue;
 	background-color: $pure-white;
 }
 
@@ -49,11 +48,10 @@ body {
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-
 		height: 100%;
 		width: 100%;
 		color: $light-white;
-		font-size: 2.5rem;
+		font-size: 2rem;
 		text-shadow: 3px 5px 5px black;
 		animation: show 2s;
 
@@ -66,7 +64,11 @@ body {
 
 		p {
 			text-align: center;
-			font-size: 1.7rem;
+			font-size: 1.4rem;
+
+			img {
+				width: 3rem;
+			}
 		}
 
 		.arrow-icon {
@@ -169,7 +171,7 @@ body {
 
 	&__link {
 		display: inline-block;
-		padding: 0 1em;
+		padding: .5em 1em;
 		font-size: 2rem;
 		font-weight: bold;
 		text-transform: uppercase;
@@ -218,7 +220,7 @@ body {
 		font-size: 3rem;
 
 		.item {
-			padding: 0.5em 0;
+			padding: 0.5em;
 			text-decoration: none;
 			text-transform: uppercase;
 			font-weight: bold;
@@ -228,6 +230,7 @@ body {
 
 			&:hover {
 				color: $dark-blue;
+				color: $intensive-blue;
 			}
 		}
 	}
@@ -262,7 +265,7 @@ body {
 	}
 
 	&__text {
-		padding: 1em 2em;
+		padding: 1em;
 		text-align: center;
 		font-size: 2rem;
 
@@ -278,8 +281,8 @@ body {
 
 	.icon {
 		margin-top: 10px;
-		height: 50px;
-		width: 50px;
+		height: 40px;
+		width: 40px;
 		transition: transform 0.6s;
 		cursor: pointer;
 
@@ -292,16 +295,12 @@ body {
 // SECTION WITH CHARACTERISTIC
 
 .values {
-	height: 100vh;
-	margin-bottom: 130px;
 
 	&__image {
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
-		grid-template-rows: repeat(4, 1fr);
+		grid-template-rows: repeat(12, 1fr);
 		margin-top: 10px;
-		width: 100%;
-		height: 100%;
 
 		&-box {
 			display: flex;
@@ -313,6 +312,7 @@ body {
 			margin-top: 10px;
 			margin-left: 10px;
 			overflow: hidden;
+			height: 200px;
 			box-shadow: 3px 3px 5px black;
 
 			.value-shadow {
@@ -326,8 +326,8 @@ body {
 
 			.question-btn {
 				position: absolute;
-				width: 50px;
-				height: 50px;
+				width: 30px;
+				height: 30px;
 				border: none;
 				background-color: transparent;
 				background-image: url("../img/icons/help-octagon.svg");
@@ -357,21 +357,21 @@ body {
 			.hidden-text {
 				display: flex;
 				flex-direction: column;
-				justify-content: flex-end;
+				justify-content: center;
 				height: 100%;
 				width: 100%;
 				position: absolute;
 				text-align: center;
 				color: $pure-white;
-				font-size: 2rem;
+
 				background-color: rgba($color: #000000, $alpha: 0.8);
 				clip-path: circle(0% at 50% 90%);
 				transition: clip-path 0.7s;
 
 				p {
 					margin-bottom: 10px;
-					padding: 0 55px;
-					font-size: 0.8rem;
+					padding: 0 45px;
+					font-size: .9rem;
 				}
 			}
 		}
@@ -386,24 +386,24 @@ body {
 
 		&-box1 {
 			grid-column: 2/8;
-			grid-row: 1/2;
+			grid-row: 1/4;
 			background-image: url("../img/professional_small.jpg");
 		}
 
 		&-box2 {
 			grid-column: 2/8;
-			grid-row: 2/3;
+			grid-row: 4/7;
 			background-image: url("../img/robot_small.jpg");
 		}
 		&-box3 {
 			grid-column: 2/8;
-			grid-row: 3/4;
+			grid-row: 7/10;
 			background-image: url("../img/help_small.jpg");
 		}
 
 		&-box4 {
 			grid-column: 2/8;
-			grid-row: 4/5;
+			grid-row: 10/13;
 			background-image: url("../img/hands_small.png");
 		}
 	}
@@ -429,7 +429,6 @@ body {
 		background-position: center;
 		background-attachment: fixed;
 		overflow: hidden;
-		box-shadow: 3px 3px 5px black;
 
 		.value-shadow {
 			position: absolute;
@@ -524,7 +523,7 @@ body {
 		height: 110px;
 		text-align: center;
 		margin: 10px;
-		font-size: 1.4rem;
+		font-size: 1.3rem;
 
 		h5 {
 			text-transform: uppercase;
@@ -578,7 +577,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		.email-icon {
-			width: 23px;
+			width: 20px;
 			margin-left: 7px;
 		}
 	}
@@ -687,6 +686,7 @@ body {
 		border-radius: 8px;
 		border: 1px solid black;
 		background-color: $pure-white;
+		transition: opacity .8s;
 
 		p {
 			margin-bottom: 15px;
@@ -710,10 +710,13 @@ body {
 
 	.hidden-popup {
 		display: none;
+		opacity: 0;
 	}
 
 	.show-popup {
 		display: block;
+		opacity: 1;
+
 	}
 }
 
@@ -773,13 +776,13 @@ body {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	height: 80vh;
+	height: 100vh;
 
 	.privacy-btn {
 		text-decoration: none;
-		font-size: 2rem;
+		font-size: 1rem;
 		color: $pure-white;
-		padding: 20px 15px;
+		padding: 10px 10px;
 		background-color: $dark-blue;
 		border-radius: 8px;
 		transition: background-color 0.4s;
@@ -792,8 +795,9 @@ body {
 
 .privacy-policy {
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	margin-top: 40px;
+	padding: 0 20px;
 
 	section {
 		margin: 50px auto;
@@ -811,19 +815,19 @@ body {
 // ----------------------------
 // ANIMATION CLASSES
 
-.show {
-	opacity: 1;
-	transition: opacity 2s, transform 0.8s;
-	transform: translateX(0);
-}
 
 .hidden {
 	opacity: 0;
 	transform: translateX(100%);
 }
-.bounce {
-	animation: bounce 2s forwards;
+
+
+.show {
+	opacity: 1;
+	transform: translateX(0);
+	transition: opacity .6s, transform 0.8s;
 }
+
 
 @keyframes show {
 	from {
@@ -864,6 +868,19 @@ body {
 // MEDIA
 
 @media (min-width: 578px) {
+
+	.header {
+		&__text {
+			font-size: 2.5rem;
+
+			p {
+				img {
+					width: 4rem;
+				}
+			}
+		}
+	}
+
 	.contact {
 		&__form-top,
 		&__form-middle,
@@ -900,6 +917,15 @@ body {
 			h1 {
 				font-size: 7rem;
 			}
+
+			p {
+				font-size: 2rem;
+				align-content: center;
+				img {
+
+					width: 5rem;
+				}
+			}
 		}
 
 		.burger-btn {
@@ -926,26 +952,26 @@ body {
 
 			&-box1 {
 				grid-column: 1/5;
-				grid-row: 1/3;
+				grid-row: 1/7;
 			}
 
 			&-box2 {
 				grid-column: 5/9;
-				grid-row: 1/3;
+				grid-row: 1/7;
 			}
 
 			&-box3 {
 				grid-column: 1/5;
-				grid-row: 3/5;
+				grid-row: 7/13;
 			}
 			&-box4 {
 				grid-column: 5/9;
-				grid-row: 3/5;
+				grid-row: 7/13;
 			}
 
 			.hidden-text {
 				p {
-					font-size: 1.6rem;
+					font-size: 1.2rem;
 				}
 			}
 		}
@@ -962,6 +988,10 @@ body {
 
 		.projects {
 			width: 30%;
+
+			&__body {
+				font-size: 1.2rem;
+			}
 		}
 	}
 }
@@ -992,7 +1022,6 @@ body {
 		}
 
 		&__img {
-			width: 700px;
 			height: 600px;
 		}
 	}
@@ -1039,21 +1068,36 @@ body {
 
 	.values {
 		&__image {
+
+			&-box {
+				height: 450px;
+
+				.question-btn {
+					width: 45px;
+					height: 45px;
+				}
+			}
+
+			grid-template-rows: repeat(19, 1fr);
 			h3 {
 				font-size: 3rem;
 			}
 
 			&-box1 {
 				background-image: url("../img/professional_big.jpg");
+				grid-row: 1/10;
 			}
 			&-box2 {
 				background-image: url("../img/robot_big.jpg");
+				grid-row: 1/10;
 			}
 			&-box3 {
 				background-image: url("../img/help__big.jpg");
+				grid-row: 10/20;
 			}
 			&-box4 {
 				background-image: url("../img/hands_big.png");
+				grid-row: 10/20;
 			}
 
 			.hidden-text {
@@ -1066,15 +1110,21 @@ body {
 		}
 	}
 
-	.projects {
-		&__img-one {
-			background-image: url("../img/photographs-big.jpg");
-		}
-		&__img-two {
-			background-image: url("../img/macarons-big.jpg");
-		}
-		&__img-three {
-			background-image: url("../img/flowershop-big.jpg");
+	.group-projects {
+		.projects {
+			&__img-one {
+				background-image: url("../img/photographs-big.jpg");
+			}
+			&__img-two {
+				background-image: url("../img/macarons-big.jpg");
+			}
+			&__img-three {
+				background-image: url("../img/flowershop-big.jpg");
+			}
+
+			&__body {
+				font-size: 1.4rem;
+			}
 		}
 	}
 
