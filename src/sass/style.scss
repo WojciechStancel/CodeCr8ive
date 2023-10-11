@@ -511,13 +511,13 @@ body {
 	}
 
 	&__img-one {
-		background-image: url("/dist/img/photographs-small.jpg");
+		background-image: url("dist/img/photographs-small.jpg");
 	}
 	&__img-two {
-		background-image: url("/dist/img/macarons-small.jpg");
+		background-image: url("dist/img/macarons-small.jpg");
 	}
 	&__img-three {
-		background-image: url("/dist/img/flowershop-small.jpg");
+		background-image: url("dist/img/flowershop-small.jpg");
 	}
 
 	&__body {
@@ -1000,7 +1000,7 @@ body {
 
 @media (min-width: 1200px) {
 	.header {
-		background-image: url("/dist/img/milkyway_big.jpg");
+		background-image: url("dist/img/milkyway_big.jpg");
 
 		&__text {
 			h1 {
@@ -1044,16 +1044,16 @@ body {
 			}
 
 			&-box1 {
-				background-image: url("/dist/img/professional_big.jpg");
+				background-image: url("dist/img/professional_big.jpg");
 			}
 			&-box2 {
-				background-image: url("/dist/img/robot_big.jpg");
+				background-image: url("dist/img/robot_big.jpg");
 			}
 			&-box3 {
-				background-image: url("/dist/img/help__big.jpg");
+				background-image: url("dist/img/help__big.jpg");
 			}
 			&-box4 {
-				background-image: url("/dist/img/hands_big.png");
+				background-image: url("dist/img/hands_big.png");
 			}
 
 			.hidden-text {
@@ -1068,13 +1068,13 @@ body {
 
 	.projects {
 		&__img-one {
-			background-image: url("/dist/img/photographs-big.jpg");
+			background-image: url("dist/img/photographs-big.jpg");
 		}
 		&__img-two {
-			background-image: url("/dist/img/macarons-big.jpg");
+			background-image: url("dist/img/macarons-big.jpg");
 		}
 		&__img-three {
-			background-image: url("/dist/img/flowershop-big.jpg");
+			background-image: url("dist/img/flowershop-big.jpg");
 		}
 	}
 
