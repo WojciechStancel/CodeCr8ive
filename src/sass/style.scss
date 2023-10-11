@@ -30,7 +30,7 @@ body {
 .header {
 	position: relative;
 	height: 100vh;
-	background-image: url("../../dist/img/404-small.jpg");
+	background-image: url("../img/milkyway_small.jpg");
 	background-size: cover;
 	background-position: center;
 
@@ -235,7 +235,7 @@ body {
 
 .add-background {
 	background-color: rgb(27, 26, 26);
-	transition: .5s;
+	transition: 0.5s;
 }
 
 // ABOUT ME
@@ -387,13 +387,13 @@ body {
 		&-box1 {
 			grid-column: 2/8;
 			grid-row: 1/2;
-			background-image: url("dist/img/professional_small.jpg");
+			background-image: url("/dist/img/professional_small.jpg");
 		}
 
 		&-box2 {
 			grid-column: 2/8;
 			grid-row: 2/3;
-			background-image: url("dist/img/robot_small.jpg");
+			background-image: url("../img/robot_small.jpg");
 		}
 		&-box3 {
 			grid-column: 2/8;
