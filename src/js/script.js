@@ -51,8 +51,8 @@ const prepareDomEvents = () => {
 		popup.classList.remove("show-popup");
 		email.value = "";
 		name.value = "";
-		message.value = '';
-
+		message.value = "";
+		agreement.checked = false;
 	});
 	window.addEventListener("scroll", sectionObserver);
 

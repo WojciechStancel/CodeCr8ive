@@ -274,6 +274,9 @@ body {
 		text-align: center;
 		font-size: 2rem;
 
+		.hello {
+			font-weight: bold;
+		}
 		p {
 			padding: 0.5em;
 		}
@@ -1252,7 +1255,9 @@ body {
 	.not-found {
 		margin-top: 8em;
 		img {
-			width: 800px;
+			width: 100%;
+			box-shadow: none;
+			border-radius: 0;
 		}
 	}
 }
