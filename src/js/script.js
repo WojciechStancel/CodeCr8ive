@@ -1,7 +1,6 @@
 const burgerBtn = document.querySelector(".burger-btn");
 const mobileNav = document.querySelector(".mobile-nav");
 const mobileNavItems = document.querySelectorAll(".items");
-const footerYear = document.querySelector(".footer-year");
 const hiddenElements = document.querySelectorAll(".hidden");
 const buttonBars = document.querySelector(".burger-btn__bars");
 const allSections = document.querySelectorAll(".section");
@@ -91,14 +90,7 @@ const countErrors = () => {
 	}
 };
 
-// Uruchamianie Animacji / Pobieranie roku
-
-const currentYear = () => {
-	const year = new Date().getFullYear();
-	footerYear.innerText = year;
-};
-
-currentYear();
+// Uruchamianie Animacji
 
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
