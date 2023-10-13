@@ -13,6 +13,11 @@ html {
 	scroll-behavior: smooth;
 }
 
+@font-face {
+	font-family: "Raleway";
+	src: url("../fonts/Raleway-Regular.ttf");
+}
+
 body {
 	height: 100vh;
 	font-family: "Raleway", sans-serif;
@@ -29,7 +34,7 @@ body {
 .header {
 	position: relative;
 	height: 100vh;
-	background-image: url("../img/milkyway_small.jpg");
+	background-image: url("../img/milkyway_big.jpg");
 	background-size: cover;
 	background-position: center;
 
@@ -412,7 +417,7 @@ body {
 		&-box4 {
 			grid-column: 2/8;
 			grid-row: 10/13;
-			background-image: url("../img/hands_small.png");
+			background-image: url("../img/team-spirit-2447163_1280.jpg");
 		}
 	}
 }
@@ -918,6 +923,52 @@ body {
 	}
 }
 
+// COOKIES
+
+.cookies-sleep {
+	display: none;
+}
+
+.cookie-box {
+	position: fixed;
+	bottom: 0;
+	padding: 1em;
+	background-image: url("../img/cookie-monster-5655016_1920-big.jpg");
+	background-size: cover;
+	background-position: center;
+	font-size: 2.2rem;
+	height: 200px;
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	transform: translateY(100%);
+	animation: show-cookies 0.5s 0.5s forwards;
+	animation-delay: 4s;
+	z-index: 100;
+
+	&-items {
+		background-color: #ffffffde;
+		border-radius: 5px;
+		padding: 0.5em;
+	}
+
+	.cookie-btn {
+		margin-top: 1em;
+		padding: 0.7em;
+		font-size: 2rem;
+		border: 1px solid $intensive-blue;
+		background-color: $dark-blue;
+		border-radius: 4px;
+		color: $pure-white;
+		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: $intensive-blue;
+		}
+	}
+}
+
 // ANIMATION CLASSES
 
 .hidden {
@@ -950,6 +1001,13 @@ body {
 	to {
 		transform: scale(1.4);
 		opacity: 0;
+	}
+}
+
+@keyframes show-cookies {
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
@@ -1134,8 +1192,6 @@ body {
 
 @media (min-width: 1200px) {
 	.header {
-		background-image: url("../img/milkyway_big.jpg");
-
 		&__text {
 			h1 {
 				font-size: 9rem;
@@ -1208,7 +1264,7 @@ body {
 				grid-row: 10/20;
 			}
 			&-box4 {
-				background-image: url("../img/hands_big.png");
+				background-image: url("../img/team-spirit-2447163_1280.jpg");
 				grid-row: 10/20;
 			}
 

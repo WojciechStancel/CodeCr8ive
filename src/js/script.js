@@ -10,7 +10,9 @@ let burgerBtn,
 	sendBtn,
 	agreement,
 	popup,
-	closeBtn;
+	closeBtn,
+	cookieBox,
+	cookieBtn;
 
 const prepareDomElements = () => {
 	burgerBtn = document.querySelector(".burger-btn");
@@ -26,9 +28,13 @@ const prepareDomElements = () => {
 	sendBtn = document.querySelector(".submit-btn");
 	popup = document.querySelector(".hidden-popup");
 	closeBtn = document.querySelector(".close");
+	cookieBox = document.querySelector(".cookie-box");
+	cookieBtn = document.querySelector(".cookie-btn");
 };
 
 const prepareDomEvents = () => {
+	cookieBtn.addEventListener("click", cookiesAlert);
+
 	mobileNavItems.forEach((item) =>
 		item.addEventListener("click", () =>
 			mobileNav.classList.remove("mobile-nav-active")
@@ -69,6 +75,19 @@ const prepareDomEvents = () => {
 
 		window.addEventListener("scroll", addShadow);
 	});
+};
+
+const cookiesAlert = () => {
+	localStorage.setItem("cookie", "true");
+	cookieBox.classList.add("cookies-sleep");
+};
+
+
+const showCookie = () => {
+	const cookieExist = localStorage.getItem("cookie");
+	if (cookieExist) {
+		cookieBox.classList.add("cookies-sleep");
+	}
 };
 
 // Email validation
@@ -155,3 +174,4 @@ const observer = new IntersectionObserver((entries) => {
 
 hiddenElements.forEach((el) => observer.observe(el));
 prepareDomEvents();
+showCookie();
