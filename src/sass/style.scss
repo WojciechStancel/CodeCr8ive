@@ -1316,4 +1316,14 @@ body {
 			border-radius: 0;
 		}
 	}
+
+	.cookie-box {
+		height: 160px;
+
+		&-items {
+			display: inline-block;
+			background-color: hsla(0, 0%, 100%, 0.951);
+			padding: .5em 2em;
+		}
+	}
 }
