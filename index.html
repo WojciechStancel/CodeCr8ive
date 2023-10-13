@@ -3,20 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Code Cr8ive</title>
+    <meta name="description" content="W CodeCr8ive tworzymy profesjonalne strony internetowe dostosowane do obecnych wymogów.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@200;400;700&display=swap"
-        rel="stylesheet">
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript" src="dist/js/email-data.min.js"></script>
-
     <link rel="stylesheet" href="dist/css/style.min.css">
-    <title>Code Cr8ive</title>
+
 </head>
 
 <body>
@@ -38,7 +30,7 @@
                     <a href="#contact" class="item">Kontakt</a>
                 </div>
             </div>
-            <button class="burger-btn">
+            <button class="burger-btn" aria-label="Przycisk rozwijania nawigacji">
                 <div class="burger-btn__box">
                     <div class="burger-btn__bars"></div>
                 </div>
@@ -62,9 +54,8 @@
     <main>
 
         <section class="aboutme wrapper section black-btn" id="aboutme">
-            <div class="second-title">
-                <h2>O MNIE</h2>
-            </div>
+                <h2 class="second-title">O MNIE</h2>
+
             <div class="aboutme__main">
                 <div class="aboutme-image">
                     <img src="dist/img/IMG_20230122_125325_1.jpg"
@@ -91,7 +82,7 @@
             <div class="values__image">
                 <div class="values__image-box values__image-box1">
                     <div class="value-shadow"></div>
-                    <button class="question-btn"></button>
+                    <button class="question-btn" aria-label="znak zapytania"></button>
                     <h3 class="hidden">Profesjonalizm</h3>
                     <div class="hidden-text">
                         <p>Na naukę poświęciłem setki godzin, zacząłem od Pythona poprzez bazy danych, framework Django
@@ -105,7 +96,7 @@
                 </div>
                 <div class="values__image-box values__image-box2">
                     <div class="value-shadow"></div>
-                    <button class="question-btn"></button>
+                    <button class="question-btn" aria-label="znak zapytania"></button>
                     <h3 class="hidden">Kreatywność</h3>
                     <div class="hidden-text">
                         <p>Kreatywne i elastyczne podejście do każdego tematu jest gwarancją nowych rozwiązań.</p>
@@ -115,7 +106,7 @@
                 </div>
                 <div class="values__image-box values__image-box3">
                     <div class="value-shadow"></div>
-                    <button class="question-btn"></button>
+                    <button class="question-btn" aria-label="znak zapytania"></button>
                     <h3 class="hidden">Pomoc</h3>
                     <div class="hidden-text">
                         <p>To, co mnie napędza, to świadomość, że pozytywnie wpłynąłem na czyjeś życie.</p>
@@ -126,7 +117,7 @@
                 </div>
                 <div class="values__image-box values__image-box4">
                     <div class="value-shadow"></div>
-                    <button class="question-btn"></button>
+                    <button class="question-btn" aria-label="znak zapytania"></button>
                     <h3 class="hidden">Człowiek</h3>
                     <div class="hidden-text">
                         <p>Tworzenie strony internetowej to dostosowanie jej do wielu potrzeb różnych użytkowników.
@@ -167,7 +158,7 @@
                         <div class="projects__img projects__img-one hidden"></div>
                     </div>
                     <div class="projects__body">
-                        <h5>Fotograf</h5>
+                        <h3>Fotograf</h3>
                         <p>Przykładowa strona stworzona dla osoby zajmującej się fotografią, która chciałaby móc
                             promować swoją działalność.</p>
                         <p>Linki do kodu, jak i również do podglądu live znajdują się poniżej.</p>
@@ -188,7 +179,7 @@
                         <div class="projects__img projects__img-two hidden"></div>
                     </div>
                     <div class="projects__body">
-                        <h5>Biuro nieruchomości</h5>
+                        <h3>Biuro nieruchomości</h3>
                         <p>Projekt stworzony w Django, baza danych PosgreSql. Frontend w frameworku bootstrap. Projekt
                             znajduje się w chmurze Digital Ocean, do obsługi użyłem serwera Nginx.</p>
                     </div>
@@ -209,7 +200,7 @@
                         <div class="projects__img projects__img-three hidden"></div>
                     </div>
                     <div class="projects__body">
-                        <h5>Kwiaciarnia</h5>
+                        <h3>Kwiaciarnia</h3>
                         <p>Prosta strona dla osoby prowadzącej własną kwiaciarnię.</p>
                         <p>Kod źródłowy oraz link do strony live znajdują się poniżej.</p>
                     </div>
@@ -246,7 +237,7 @@
                         <label for="msg">Napisz wiadomość:</label>
                         <textarea id="msg" class="textarea" placeholder="Wpisz wiadomość"></textarea>
                         <p class="error-text message-error">Wiadomość nie może być pusta!</p>
-                        <button type="submit" class="submit-btn">Wyślij</button>
+                        <button type="submit" class="submit-btn" aria-label="Wyślij">Wyślij</button>
                     </div>
                     <div class="contact__form-protection contact-box">
                         <p>Wypełnienie formularza oznacza, że podane w nim dane osobowe będą przetwarzane w celu
@@ -259,7 +250,7 @@
                     <div class="hidden-popup">
                         <div class="popup">
                             <p>Wiadomość została wysłana!</p>
-                            <button class="close">Zamknij</button>
+                            <button class="close" aria-label="Zamknij">Zamknij</button>
                         </div>
                     </div>
                 </form>
@@ -278,7 +269,8 @@
                                 src="dist/img/icons/github.png" alt="ikona portalu github"></a>
                         <a href="https://www.linkedin.com/in/wojciech-stancel/"><img src="dist/img/icons/linkedin.png"
                                 alt="ikona portalu github"></a>
-                        <a href="not-found.html"><img src="dist/img/icons/instagram.png" alt="ikona portalu instagram"></a>
+                        <a href="not-found.html"><img src="dist/img/icons/instagram.png"
+                                alt="ikona portalu instagram"></a>
                     </div>
                 </div>
                 <div class="footer__box">

@@ -1,36 +1,74 @@
-const burgerBtn = document.querySelector(".burger-btn");
-const mobileNav = document.querySelector(".mobile-nav");
-const mobileNavItems = document.querySelectorAll(".items");
-const hiddenElements = document.querySelectorAll(".hidden");
-const buttonBars = document.querySelector(".burger-btn__bars");
-const allSections = document.querySelectorAll(".section");
+let burgerBtn,
+	mobileNav,
+	mobileNavItems,
+	hiddenElements,
+	buttonBars,
+	allSections,
+	email,
+	name,
+	message,
+	sendBtn,
+	agreement,
+	popup,
+	closeBtn;
 
-// Email variables
-const email = document.getElementById("email");
-const name = document.getElementById("name");
-const message = document.getElementById("msg");
-const agreement = document.getElementById("agreement");
-const sendBtn = document.querySelector(".submit-btn");
-const popup = document.querySelector(".hidden-popup");
-const closeBtn = document.querySelector(".close");
-// Email Send
-const sendMail = () => {
-	const params = {
-		name: document.getElementById("name").value,
-		email: document.getElementById("email").value,
-		msg: document.getElementById("msg").value,
-	};
-	const serviceId = "service_rxqgqje";
-	const templateId = "template_9t6ajir";
+const prepareDomElements = () => {
+	burgerBtn = document.querySelector(".burger-btn");
+	mobileNav = document.querySelector(".mobile-nav");
+	mobileNavItems = document.querySelectorAll(".items");
+	hiddenElements = document.querySelectorAll(".hidden");
+	buttonBars = document.querySelector(".burger-btn__bars");
+	allSections = document.querySelectorAll(".section");
+	email = document.getElementById("email");
+	name = document.getElementById("name");
+	message = document.getElementById("msg");
+	agreement = document.getElementById("agreement");
+	sendBtn = document.querySelector(".submit-btn");
+	popup = document.querySelector(".hidden-popup");
+	closeBtn = document.querySelector(".close");
+};
 
-	emailjs
-		.send(serviceId, templateId, params)
-		.then((res) => {
-			document.getElementById("name").value = "";
-			document.getElementById("email").value = "";
-			document.getElementById("msg").value = "";
-		})
-		.catch((err) => console.log(err));
+const prepareDomEvents = () => {
+	mobileNavItems.forEach((item) =>
+		item.addEventListener("click", () =>
+			mobileNav.classList.remove("mobile-nav-active")
+		)
+	);
+
+	burgerBtn.addEventListener("click", () => {
+		mobileNav.classList.toggle("mobile-nav-active");
+	});
+
+	sendBtn.addEventListener("click", (e) => {
+		e.preventDefault();
+
+		checkForm();
+		checkEmail(email);
+		countErrors();
+	});
+
+	closeBtn.addEventListener("click", () => {
+		popup.classList.remove("show-popup");
+		email.value = "";
+		name.value = "";
+		message.value = '';
+
+	});
+	window.addEventListener("scroll", sectionObserver);
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const nav = document.querySelector(".nav");
+
+		const addShadow = () => {
+			if (window.scrollY >= 400) {
+				nav.classList.add("add-background");
+			} else {
+				nav.classList.remove("add-background");
+			}
+		};
+
+		window.addEventListener("scroll", addShadow);
+	});
 };
 
 // Email validation
@@ -80,30 +118,15 @@ const countErrors = () => {
 	allBoxes.forEach((el) => {
 		if (el.classList.contains("error")) {
 			errorCount++;
-			console.log(errorCount);
 		}
 	});
 
 	if (errorCount === 0) {
 		popup.classList.add("show-popup");
-		sendMail();
 	}
 };
 
-// Uruchamianie Animacji
-
-const observer = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			entry.target.classList.remove("hidden");
-			entry.target.classList.add("show");
-		}
-	});
-});
-
-hiddenElements.forEach((el) => observer.observe(el));
-
-const sectionObserver = () => {
+function sectionObserver() {
 	const currentSection = window.scrollY;
 	allSections.forEach((sect) => {
 		if (
@@ -118,44 +141,17 @@ const sectionObserver = () => {
 			buttonBars.classList.remove("black-bars-color");
 		}
 	});
-};
+}
 
-// Listenery
-
-window.addEventListener("scroll", sectionObserver);
-
-document.addEventListener("DOMContentLoaded", () => {
-	const nav = document.querySelector(".nav");
-
-	const addShadow = () => {
-		if (window.scrollY >= 400) {
-			nav.classList.add("add-background");
-		} else {
-			nav.classList.remove("add-background");
+prepareDomElements();
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.remove("hidden");
+			entry.target.classList.add("show");
 		}
-	};
-
-	window.addEventListener("scroll", addShadow);
+	});
 });
 
-mobileNavItems.forEach((item) =>
-	item.addEventListener("click", () =>
-		mobileNav.classList.remove("mobile-nav-active")
-	)
-);
-
-burgerBtn.addEventListener("click", () => {
-	mobileNav.classList.toggle("mobile-nav-active");
-});
-
-sendBtn.addEventListener("click", (e) => {
-	e.preventDefault();
-
-	checkForm();
-	checkEmail(email);
-	countErrors();
-});
-
-closeBtn.addEventListener("click", () => {
-	popup.classList.remove("show-popup");
-});
+hiddenElements.forEach((el) => observer.observe(el));
+prepareDomEvents();
