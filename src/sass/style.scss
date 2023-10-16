@@ -972,6 +972,60 @@ body {
 	}
 }
 
+.icon-authors {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 100px 20px;
+
+	h1 {
+		text-transform: uppercase;
+	}
+
+	.thanks-to-authors {
+		margin-top: 15px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.icons-list {
+		margin: 30px;
+		background-color: #a0a0a020;
+		border-radius: 5px;
+
+		li {
+			margin: 30px;
+			padding: 10px;
+			font-size: 2rem;
+			list-style-position: inside;
+			.icons-item {
+				text-decoration: none;
+				color: $rich-dark;
+				cursor: pointer;
+				transition: color 0.4s;
+
+				&:hover {
+					color: $intensive-blue;
+				}
+			}
+		}
+	}
+
+	.back-to-main {
+		background-color: $dark-blue;
+		padding: 10px;
+		border-radius: 5px;
+		color: $pure-white;
+		text-decoration: none;
+		transition: background-color 0.4s;
+
+		&:hover {
+			background-color: $intensive-blue;
+		}
+	}
+}
+
 // ANIMATION CLASSES
 
 .hidden {
@@ -1016,10 +1070,31 @@ body {
 
 // MEDIA
 
-@media (max-width: 290px) {
+@media (max-width: 350px) {
+	.values {
+		&__image {
+			&-box {
+				height: 280px;
+			}
+		}
+	}
+
+	.contact {
+		&__form-top,
+		&__form-middle,
+		&__form-end,
+		&__form-protection {
+			width: 250px;
+		}
+
+		&-title {
+			font-size: 1.8rem;
+		}
+	}
+
 	.footer {
 		&__box {
-			padding: 10px 0;
+			padding: 12px 0;
 		}
 	}
 }
@@ -1152,6 +1227,9 @@ body {
 }
 
 @media (min-width: 992px) {
+	.header {
+		background-image: url("../img/milkyway_big.jpg");
+	}
 	.aboutme {
 		&__main {
 			display: flex;
@@ -1326,7 +1404,7 @@ body {
 		&-items {
 			display: inline-block;
 			background-color: hsla(0, 0%, 100%, 0.951);
-			padding: .5em 2em;
+			padding: 0.5em 2em;
 		}
 	}
 }

@@ -55,11 +55,8 @@ const prepareDomEvents = () => {
 
 	closeBtn.addEventListener("click", () => {
 		popup.classList.remove("show-popup");
-		email.value = "";
-		name.value = "";
-		message.value = "";
-		agreement.checked = false;
 	});
+
 	window.addEventListener("scroll", sectionObserver);
 
 	document.addEventListener("DOMContentLoaded", () => {
@@ -81,7 +78,6 @@ const cookiesAlert = () => {
 	localStorage.setItem("cookie", "true");
 	cookieBox.classList.add("cookies-sleep");
 };
-
 
 const showCookie = () => {
 	const cookieExist = localStorage.getItem("cookie");

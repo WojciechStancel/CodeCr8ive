@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Code Cr8ive</title>
+    <title>Code Cr8ive Profesjonalne strony internetowe</title>
     <meta name="description"
         content="W CodeCr8ive tworzymy profesjonalne strony internetowe dostosowane do obecnych wymogów.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="dist/css/style.min.css">
 
 </head>
@@ -66,7 +66,8 @@
                     <p class="hello">Cześć!</p>
                     <p>Z tej strony Wojtek, tworzę profesjonalne strony internetowe, które są w pełni dostosowane do
                         aktualnych potrzeb użytkowników. </p>
-                    <p>Tworzenie strony internetowej, to nie tylko klepanie kodu. To przede wszystkim odpowiedni plan,
+                    <p>Tworzenie strony internetowej, to nie tylko pisanie kodu. <br> To przede wszystkim odpowiedni
+                        plan,
                         zorientowanie na potrzeby i pełne zaangażowanie, by opracowany projekt w pełni wpłynął
                         korzystnie na Twoją działalność.</p>
                     <div class="aboutme__arrow">
@@ -78,7 +79,7 @@
             </div>
         </section>
 
-        <section class="values wrapper section black-btn" id="values">
+        <section class="values wrapper section" id="values">
             <h2 class="second-title">Kluczowe wartości</h2>
             <div class="values__image">
                 <div class="values__image-box values__image-box1">
@@ -164,14 +165,14 @@
                         <h3>Fotograf</h3>
                         <p>Przykładowa strona stworzona dla osoby zajmującej się fotografią, która chce
                             promować swoją działalność.</p>
-                        <p>Linki do kodu, jak i również do podglądu live znajdują się poniżej.</p>
+                        <p>Linki do podglądu live, jak i również do podglądu kodu znajdują się poniżej.</p>
                     </div>
                     <div class="projects__footer">
-                        <a href="https://wojciechstancel.github.io/FotoStory/">
+                        <a href="https://wojciechstancel.github.io/FotoStory/" target="_blank" rel="noopener">
                             <div class="footer-icon"><img src="dist/img/icons/github.png"
                                     alt="ikona portalu github-live"></div>
                         </a>
-                        <a href="https://github.com/WojciechStancel/FotoStory">
+                        <a href="https://github.com/WojciechStancel/FotoStory" target="_blank" rel="noopener">
                             <div class="footer-icon"><img src="dist/img/icons/github.png" alt="ikona portalu github">
                             </div>
                         </a>
@@ -187,14 +188,14 @@
                             znajduje się w chmurze Digital Ocean, do obsługi użyłem serwera Nginx.</p>
                     </div>
                     <div class="projects__footer">
-                        <a href="https://github.com/WojciechStancel/WSRealEstate">
-                            <div class="footer-icon"><img src="dist/img/icons/github.png" alt="ikona portalu github">
-                            </div>
-                        </a>
-
-                        <a href="http://161.35.199.38/">
+                        <a href="http://161.35.199.38/" target="_blank" rel="noopener">
                             <div class="footer-icon"><img src="dist/img/icons/4373943_digital_logo_logos_ocean_icon.png"
                                     alt="ikona digital ocean"></div>
+                        </a>
+
+                        <a href="https://github.com/WojciechStancel/WSRealEstate" target="_blank" rel="noopener">
+                            <div class="footer-icon"><img src="dist/img/icons/github.png" alt="ikona portalu github">
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -205,14 +206,14 @@
                     <div class="projects__body">
                         <h3>Kwiaciarnia</h3>
                         <p>Prosta strona dla osoby prowadzącej własną kwiaciarnię.</p>
-                        <p>Kod źródłowy oraz link do strony live znajdują się poniżej.</p>
+                        <p>Link do strony live oraz link do kodu źródłowego znajdują się poniżej.</p>
                     </div>
                     <div class="projects__footer">
-                        <a href="https://wojciechstancel.github.io/FlowerShop/">
+                        <a href="https://wojciechstancel.github.io/FlowerShop/" target="_blank" rel="noopener">
                             <div class="footer-icon"><img src="dist/img/icons/github.png"
                                     alt="ikona portalu github-live"></div>
                         </a>
-                        <a href="https://github.com/WojciechStancel/FlowerShop">
+                        <a href="https://github.com/WojciechStancel/FlowerShop" target="_blank" rel="noopener">
                             <div class="footer-icon"><img src="dist/img/icons/github.png" alt="ikona portalu github">
                             </div>
                         </a>
@@ -223,24 +224,26 @@
 
         <section class="section black-btn" id="contact">
             <div class="contact wrapper">
-                <h2 class="second-title">Formularz kontaktowy <img src="dist/img/icons/email.png" alt=""
-                        class="email-icon"> </h2>
-                <form action="" class="contact__form">
+                <h2 class="second-title contact-title">Formularz kontaktowy <img src="dist/img/icons/email.png"
+                        alt="ikona koperty pocztowej" class="email-icon"> </h2>
+
+                <form action="mail.php" method="post" class="contact__form">
                     <div class="contact__form-top contact-box">
                         <label for="name" class="contact__label">Podaj Imię</label>
-                        <input type="text" id="name" class="contact__input" placeholder="Podaj swoje imię">
+                        <input type="text" id="name" class="contact__input" name="name" placeholder="Podaj swoje imię">
                         <p class="error-text"></p>
                     </div>
                     <div class="contact__form-middle contact-box">
                         <label for="email" class="contact__label">Adres e-mail:</label>
-                        <input type="text" id="email" class="contact__input" placeholder="Wprowadź swój adres e-mail">
+                        <input type="email" id="email" class="contact__input" name="email"
+                            placeholder="Wprowadź swój adres e-mail">
                         <p class="error-text"></p>
                     </div>
                     <div class="contact__form-end contact-box">
                         <label for="msg">Napisz wiadomość:</label>
-                        <textarea id="msg" class="textarea" placeholder="Wpisz wiadomość"></textarea>
+                        <textarea id="msg" class="textarea" name="msg" placeholder="Wpisz wiadomość"></textarea>
                         <p class="error-text message-error">Wiadomość nie może być pusta!</p>
-                        <button type="submit" class="submit-btn" aria-label="Wyślij">Wyślij</button>
+                        <button class="submit-btn" aria-label="Wyślij">Wyślij</button>
                     </div>
                     <div class="contact__form-protection contact-box">
                         <p>Wypełnienie formularza oznacza, że podane w nim dane osobowe będą przetwarzane w celu
@@ -264,7 +267,7 @@
     <div class="cookie-box">
         <div class="cookie-box-items">
             <p>Ta strona korzysta z ciasteczek!</p>
-            <button class="cookie-btn" aria-label="Akteptuj">Akceptuj!</button>
+            <button class="cookie-btn" aria-label="Rozumiem">Rozumiem</button>
         </div>
 
     </div>
@@ -274,19 +277,21 @@
             <div class="footer">
                 <div class="footer__box">
                     <h3>Portale społecznościowe</h3>
-                    <p>Github, Linkedin, Instagram</p>
+                    <p>Github, Linkedin, Facebook</p>
                     <div class="footer__box-socials">
-                        <a href="https://github.com/WojciechStancel" target="_blank"><img
+                        <a href="https://github.com/WojciechStancel" target="_blank" rel="noopener"><img
                                 src="dist/img/icons/github.png" alt="ikona portalu github"></a>
-                        <a href="https://www.linkedin.com/in/wojciech-stancel/"><img src="dist/img/icons/linkedin.png"
-                                alt="ikona portalu github"></a>
-                        <a href="404.html"><img src="dist/img/icons/instagram.png" alt="ikona portalu instagram"></a>
+                        <a href="https://www.linkedin.com/in/wojciech-stancel/" target="_blank" rel="noopener"><img
+                                src="dist/img/icons/linkedin.png" alt="ikona portalu github"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61552481912036&mibextid=ZbWKwL" target="_blank"
+                            rel="noopener"><img src="dist/img/icons/facebook.png" alt="ikona portalu facebook"></a>
                     </div>
                 </div>
                 <div class="footer__box">
                     <h3>Inne dokumenty</h3>
                     <ul class="footer__list">
                         <li class="footer__list-item"><a href="privacy_policy.html">Polityka prywatności</a></li>
+                        <li class="footer__list-item"><a href="icons.html">Autorzy ikon</a></li>
                     </ul>
                 </div>
             </div>
