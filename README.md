@@ -35,3 +35,11 @@ Feel free to use this project as a template for your own portfolio website. Simp
 You can reach me at [kontakt@codecr8ive.pl](mailto:kontakt@codecreative..pl) or visit my website at [www.codecr8ive.pl](http://www.codecr8ive.pl).
 
 Thank you for checking out my portfolio website! <img width="20" src="https://uxwing.com/wp-content/themes/uxwing/download/emoji-emoticon/smile-icon.png">
+
+---
+
+> My Website 💻 [CodeCr8ive.pl](https://www.codecr8ive.pl) &nbsp;&middot;&nbsp;
+> My account on
+[Github <img width="20px" src="https://github.com/WojciechStancel/Notes-React-App/assets/121879383/fc63de6c-91ae-4eb7-ac97-a5a365bdf073)">](https://github.com/WojciechStancel) &nbsp;&middot;&nbsp;
+> Find me on
+ [Linkedin <img width="20px" src="https://github.com/WojciechStancel/Notes-React-App/assets/121879383/94d42b30-025f-4997-9ff5-9491c49d9026">](https://www.linkedin.com/in/wojciech-stancel/) 
