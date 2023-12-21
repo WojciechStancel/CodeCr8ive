@@ -16,9 +16,9 @@
 <body>
 
     <header>
-        <div class="header section">
+        <div class="header section section-margin">
             <div class="nav">
-                <a class="nav__link" href="#">Home</a>
+                <a class="nav__link nav-active" href="#">Home</a>
                 <a class="nav__link" href="#aboutme">O mnie</a>
                 <a class="nav__link" href="#info">Informacje</a>
                 <a class="nav__link" href="#projects">Projekty</a>
@@ -55,9 +55,7 @@
 
     <main>
 
-        <section class="aboutme wrapper section black-btn" id="aboutme">
-            <h2 class="second-title">O MNIE</h2>
-
+        <section class="aboutme wrapper section black-btn section-margin" id="aboutme">
             <div class="aboutme__main">
                 <div class="aboutme-image">
                     <img src="dist/img/IMG_20230122_125325_1.jpg"
@@ -80,8 +78,8 @@
             </div>
         </section>
 
-        <section class="values wrapper section" id="values">
-            <h2 class="second-title">Kluczowe wartości</h2>
+        <section class="values wrapper section section-margin " id="values">
+            <h2 class="second-title second-title-margin">Kluczowe wartości</h2>
             <div class="values__image">
                 <div class="values__image-box values__image-box1">
                     <div class="value-shadow"></div>
@@ -94,7 +92,7 @@
                             JavaScript, Sass, Gulp. </p>
 
                         <p class="last-param">Obecnie jestem na początkowym etapie poznawania Dockera, ponadto
-                            rozpoczynam naukę frameworka React.</p>
+                            od kilku miesięcy intensywnie uczę się frameworka React.</p>
                     </div>
                 </div>
                 <div class="values__image-box values__image-box2">
@@ -136,27 +134,50 @@
             </div>
         </section>
 
-        <section class="wrapper section" id="info">
+        <section class="section section-margin" id="info">
             <div class="info">
-                <h2 class="second-title">Strona jest Twoją wizytówką!</h2>
                 <div class="info__photo info__photo-one">
-                    <div class="value-shadow"></div>
-                    <p class="inner-text">Potrzebujesz nowoczesnej i responsywnej strony internetowej? Tworzę strony,
-                        które idealnie
-                        dostosowują się do każdego urządzenia, gwarantując Twoim użytkownikom doskonałe wrażenia. </p>
+                    <div class="value-shadow">
+                        <p class="inner-text wrapper inner-text-bold">
+                            Cechy nowoczesnej strony:
+                        <ul class="inner-text wrapper inner-text-list">
+                            <li>- Responsywna</li>
+                            <li>- Wydajna</li>
+                            <li>- Wysoko pozycjonowana pod względem SEO</li>
+                            <li>- Pozwala znaleźć szybko najważniejsze informacje</li>
+                            <li>- Jest dostosowana do potrzeb osób starszych lub z niepełnosprawnościami</li>
+                            <li>- Znajduje się na profesjonalnym hostingu</li>
+
+                        </ul>
+
+                        </p>
+
+                    </div>
                 </div>
+
                 <div class="info__photo info__photo-two">
-                    <div class="value-shadow"></div>
-                    <p class="inner-text">Obecnie większość użytkowników przegląda strony internetowe na urządzeniach
-                        mobilnych. Dlatego
-                        responsywność jest kluczowym czynnikiem. Strona internetowa to wizytówka i możliwość dotarcia do
-                        szerszego grona.</p>
+                    <div class="value-shadow">
+                        <p class="inner-text wrapper inner-text-bold">
+                            Tworzę strony przy użyciu najnowszych technologii:
+
+                        <ul class="inner-text wrapper inner-text-list">
+                            <li>- HTML, CSS, JavaScript</li>
+                            <li>- React przy użyciu Vite.js oraz Next.js</li>
+                            <li>- Python z frameworkiem Django, dzięki któremu możliwe jest tworzenie kompletnych aplikacji
+                                połączonych z bazą danych (np. sklep, blog, hotel, portal, który wymaga rejestracji i
+                                logowania)</li>
+
+
+                        </ul>
+
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <section class="wrapper section black-btn" id="projects">
-            <h2 class="second-title">Projekty</h2>
+        <section class="wrapper section black-btn section-margin" id="projects">
+            <h2 class="second-title second-title-margin">Projekty</h2>
             <div class="group-projects">
                 <div class="projects">
                     <div class="image-container">
@@ -164,7 +185,8 @@
                     </div>
                     <div class="projects__body">
                         <h3>Fotograf</h3>
-                        <p>Przykładowa strona stworzona dla osoby zajmującej się fotografią. Idealna do promowania swojej pracy.</p> <br>
+                        <p>Przykładowa strona stworzona dla osoby zajmującej się fotografią. Idealna do promowania
+                            swojej pracy.</p> <br>
                         <p>Linki do podglądu live, jak i również do podglądu kodu znajdują się poniżej.</p>
                     </div>
                     <div class="projects__footer">
@@ -173,7 +195,8 @@
                                     alt="ikona odsyłająca do github-live"></div>
                         </a>
                         <a href="https://github.com/WojciechStancel/FotoStory" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/github.png" alt="ikona odsyłająca do strony kodu na github">
+                            <div class="footer-icon"><img src="dist/img/icons/github.png"
+                                    alt="ikona odsyłająca do strony kodu na github">
                             </div>
                         </a>
                     </div>
@@ -184,7 +207,8 @@
                     </div>
                     <div class="projects__body">
                         <h3>Biuro nieruchomości</h3>
-                        <p>Projekt stworzony w Django, baza danych PostgreSql. Frontend w frameworku bootstrap. Projekt znajduje się na AWS, Wdrożony z wykorzystaniem m.in. Nginx, Gunicorn, Ubuntu. </p>
+                        <p>Projekt stworzony w Django, baza danych PostgreSql. Frontend w frameworku bootstrap. Projekt
+                            znajduje się na AWS, Wdrożony z wykorzystaniem m.in. Nginx, Gunicorn, Ubuntu. </p>
                     </div>
                     <div class="projects__footer">
                         <a href="http://51.20.211.102/" target="_blank" rel="noopener">
@@ -193,7 +217,8 @@
                         </a>
 
                         <a href="https://github.com/WojciechStancel/Real-Estate" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/github.png" alt="ikona do strony github">
+                            <div class="footer-icon"><img src="dist/img/icons/github.png"
+                                    alt="ikona do strony github gdzie znajduje się kod źródłowy">
                             </div>
                         </a>
                     </div>
@@ -210,10 +235,71 @@
                     <div class="projects__footer">
                         <a href="https://wojciechstancel.github.io/FlowerShop/" target="_blank" rel="noopener">
                             <div class="footer-icon"><img src="dist/img/icons/github.png"
-                                    alt="ikona github-live"></div>
+                                    alt="ikona do podglądu strony na żywo"></div>
                         </a>
                         <a href="https://github.com/WojciechStancel/FlowerShop" target="_blank" rel="noopener">
+                            <div class="footer-icon"><img src="dist/img/icons/github.png"
+                                    alt="ikona portalu github z kodem strony">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="image-container">
+                        <div class="projects__img projects__img-four hidden"></div>
+                    </div>
+                    <div class="projects__body">
+                        <h3>Gra Memory</h3>
+                        <p>Gra dla osób, które lubią ćwiczyć swoją pamięć.</p>
+                        <p>Gra została stworzona przy użyciu Next.js. Projekt ten będzie rozwijany, więc zachęcam do
+                            sprawdzania.</p>
+                    </div>
+                    <div class="projects__footer">
+                        <a href="https://www.memorygame.site/" target="_blank" rel="noopener">
+                            <div class="footer-icon"><img src="dist/img/icons/plane.svg" alt="ikona memorygame"></div>
+                        </a>
+                        <a href="https://github.com/WojciechStancel/Memo-Game" target="_blank" rel="noopener">
+                            <div class="footer-icon"><img src="dist/img/icons/github.png"
+                                    alt="ikona do kodu źródłowego strony">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="image-container">
+                        <div class="projects__img projects__img-five hidden"></div>
+                    </div>
+                    <div class="projects__body">
+                        <h3>Sklep odzieżowy</h3>
+                        <p>Stworzony w frameworku React, aktualnie projekt ten jest w fazie rozwoju, więc jeszcze nie
+                            jest dostępny podgląd na żywo.</p>
+                        <p>Poniższy link pozwala sprawdzić kilka zdjęć oraz kod źródłowy.</p>
+                    </div>
+                    <div class="projects__footer">
+
+                        <a href="https://github.com/WojciechStancel/e-shop" target="_blank" rel="noopener">
                             <div class="footer-icon"><img src="dist/img/icons/github.png" alt="ikona portalu github">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="image-container">
+                        <div class="projects__img projects__img-six hidden"></div>
+                    </div>
+                    <div class="projects__body">
+                        <h3>Notatnik</h3>
+                        <p>Aplikacja do dodawania, edycji oraz usuwania własnych notatek. Połączona z bazą danych
+                            Firebase.</p>
+                        <p>Link do strony live oraz link do kodu źródłowego znajdują się poniżej.</p>
+                    </div>
+                    <div class="projects__footer">
+                        <a href="https://your-notes-react-app.netlify.app/" target="_blank" rel="noopener">
+                            <div class="footer-icon"><img src="dist/img/icons/netlify.png" alt="ikona netlify"></div>
+                        </a>
+                        <a href="https://github.com/WojciechStancel/Notes-React-App" target="_blank" rel="noopener">
+                            <div class="footer-icon"><img src="dist/img/icons/github.png"
+                                    alt="ikona portalu na którym możesz znaleźć kod strony">
                             </div>
                         </a>
                     </div>
@@ -221,10 +307,10 @@
             </div>
         </section>
 
-        <section class="section black-btn" id="contact">
+        <section class="section black-btn section-margin" id="contact">
             <div class="contact wrapper">
-                <h2 class="second-title contact-title">Formularz kontaktowy <img src="dist/img/icons/email.png"
-                        alt="ikona koperty pocztowej" class="email-icon"> </h2>
+                <h2 class="second-title contact-title second-title-margin">Formularz kontaktowy <img
+                        src="dist/img/icons/email.png" alt="ikona koperty pocztowej" class="email-icon"> </h2>
 
                 <form action="mail.php" method="post" class="contact__form">
                     <div class="contact__form-top contact-box">
@@ -276,7 +362,6 @@
             <div class="footer">
                 <div class="footer__box">
                     <h3>Portale społecznościowe</h3>
-                    <p>Github, Linkedin, Facebook</p>
                     <div class="footer__box-socials">
                         <a href="https://github.com/WojciechStancel" target="_blank" rel="noopener"><img
                                 src="dist/img/icons/github.png" alt="ikona portalu github"></a>
