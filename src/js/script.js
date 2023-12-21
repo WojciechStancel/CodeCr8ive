@@ -1,4 +1,5 @@
 let burgerBtn,
+	nav,
 	mobileNav,
 	mobileNavItems,
 	hiddenElements,
@@ -16,6 +17,7 @@ let burgerBtn,
 
 const prepareDomElements = () => {
 	burgerBtn = document.querySelector(".burger-btn");
+	nav = document.querySelector(".nav");
 	mobileNav = document.querySelector(".mobile-nav");
 	mobileNavItems = document.querySelectorAll(".items");
 	hiddenElements = document.querySelectorAll(".hidden");
@@ -60,8 +62,6 @@ const prepareDomEvents = () => {
 	window.addEventListener("scroll", sectionObserver);
 
 	document.addEventListener("DOMContentLoaded", () => {
-		const nav = document.querySelector(".nav");
-
 		const addShadow = () => {
 			if (window.scrollY >= 400) {
 				nav.classList.add("add-background");
@@ -73,6 +73,13 @@ const prepareDomEvents = () => {
 		window.addEventListener("scroll", addShadow);
 	});
 };
+const navLink = document.querySelectorAll(".nav__link");
+navLink.forEach((link) => {
+	link.addEventListener("click", () => {
+		document.querySelector(".nav-active").classList.remove("nav-active");
+		link.classList.add("nav-active");
+	});
+});
 
 const cookiesAlert = () => {
 	localStorage.setItem("cookie", "true");
