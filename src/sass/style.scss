@@ -204,7 +204,7 @@ body {
 .nav {
 	position: fixed;
 	width: 100%;
-	background-color: #6760608c;
+	background-color: #49494948;
 	padding: 1em;
 	text-align: center;
 	z-index: 30;
@@ -774,7 +774,6 @@ body {
 .footer {
 	display: flex;
 	justify-content: center;
-	border-top: 1px solid black;
 
 	&__box {
 		display: flex;
@@ -793,6 +792,11 @@ body {
 			a {
 				text-decoration: none;
 				color: $dark;
+				transition: color .3s;
+
+				&:hover {
+					color: $lighter-blue;
+				}
 			}
 		}
 
@@ -807,6 +811,11 @@ body {
 				width: 40px;
 				margin-top: 15px;
 				padding: 4px;
+				transition: transform .3s;
+
+				&:hover {
+					transform: scale(1.1);
+				}
 			}
 		}
 	}
