@@ -11,7 +11,6 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-
 }
 
 @font-face {
@@ -29,7 +28,7 @@ body {
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1300px;
 }
 
 .section-margin {
@@ -213,17 +212,36 @@ body {
 		display: inline-block;
 		padding: 0.5em 1em;
 		font-size: 2rem;
-		font-weight: bold;
-		text-transform: uppercase;
 		color: $light-white;
 		text-shadow: 4px 4px 5px black;
 		text-decoration: none;
 		transition: color 0.3s;
 		cursor: pointer;
+		position: relative;
 
-		&:hover {
-			color: $intensive-blue;
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+			width: 0;
+			bottom: 0;
+			border-bottom: 1px solid white;
+			transition: .3s;
 		}
+
+		&::before {
+			right: 40%;
+		}
+
+		&::after {
+			left: 40%;
+		}
+
+		&:hover::before,
+		&:hover::after {
+			width: 50%;
+		}
+
 
 		&:hover &:focus {
 			outline: none;
@@ -232,7 +250,13 @@ body {
 	}
 
 	&-active {
-		color: $lighter-blue;
+		color: rgba(0, 140, 255, 0.799);
+	}
+
+	&__logo {
+		position: absolute;
+		left: 0;
+		text-transform: none;
 	}
 }
 
@@ -246,7 +270,9 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: linear-gradient(330deg, $pure-white 50%, blue 80%);
+	background-image: url("../img/mobile-nav.jpg");
+	background-size: cover;
+	object-fit: cover;
 	z-index: 10;
 	transition: transform 0.5s;
 	transform: translateX(-102%);
@@ -260,15 +286,18 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		background-color: #000000bd;
 		height: 100%;
 		font-size: 3rem;
 
 		.item {
-			padding: 0.5em;
+			padding: 1.2em;
 			text-decoration: none;
-			text-transform: uppercase;
-			font-weight: bold;
-			color: $dark;
+			// text-transform: uppercase;
+			width: 280px;
+			background-color: #ffffff07;
+			text-align: center;
+			color: $pure-white;
 			transition: color 0.3s;
 			cursor: pointer;
 
@@ -289,6 +318,7 @@ body {
 
 .aboutme {
 	margin-top: 10px;
+	margin-bottom: 2em;
 
 	&__main {
 		margin: 0 40px;
@@ -498,7 +528,7 @@ body {
 	}
 
 	.inner-text {
-		padding: .5em;
+		padding: 0.5em;
 		margin-top: 0.5em;
 		font-size: 2rem;
 		color: $light-white;
@@ -516,7 +546,6 @@ body {
 		padding: 0.4em;
 	}
 }
-
 
 // PROJECTS
 
@@ -697,7 +726,7 @@ body {
 			transition: background-color 0.5s, color 0.5s;
 
 			&:hover {
-				background-color: $dark-blue;
+				background-color: $intensive-blue;
 				color: $pure-white;
 			}
 		}
@@ -792,7 +821,7 @@ body {
 			a {
 				text-decoration: none;
 				color: $dark;
-				transition: color .3s;
+				transition: color 0.3s;
 
 				&:hover {
 					color: $lighter-blue;
@@ -811,7 +840,7 @@ body {
 				width: 40px;
 				margin-top: 15px;
 				padding: 4px;
-				transition: transform .3s;
+				transition: transform 0.3s;
 
 				&:hover {
 					transform: scale(1.1);
@@ -825,7 +854,11 @@ body {
 		font-size: 1.2rem;
 		padding: 20px;
 		width: 100%;
-		background-color: $dark-blue;
+		// background-color: rgb(27, 26, 26);
+		// background-color: $lighter-blue;
+		// background-color: rgb(33, 61, 118);
+		background-color: rgb(12, 47, 118);
+
 		color: $pure-white;
 		margin-top: 20px;
 	}
@@ -841,6 +874,7 @@ body {
 	padding: 1em;
 	font-size: 2rem;
 	background-color: $dark-blue;
+	background-color: rgb(27, 26, 26);
 	z-index: 10;
 
 	a {
@@ -854,10 +888,6 @@ body {
 	p {
 		text-align: center;
 		color: $pure-white;
-
-		span {
-			text-transform: uppercase;
-		}
 	}
 }
 
@@ -880,15 +910,16 @@ body {
 	.privacy-btn {
 		text-decoration: none;
 		font-size: 1rem;
-		color: $pure-white;
+		color: $dark;
 		padding: 10px 10px;
-		background-color: $dark-blue;
+		border: 1px solid $dark;
 		border-radius: 8px;
 		transition: background-color 0.4s;
 		width: 100%;
 
 		&:hover {
-			background-color: $intensive-blue;
+			background-color: $light-dark;
+			color: $pure-white;
 		}
 	}
 }
@@ -1069,16 +1100,17 @@ body {
 	}
 
 	.back-to-main {
-		background-color: $dark-blue;
-		padding: 20px;
+		padding: 1em;
 		border-radius: 5px;
-		color: $pure-white;
+		color: $dark;
+		border: 1px solid $dark;
 		font-size: 1.3rem;
 		text-decoration: none;
 		transition: background-color 0.4s;
 
 		&:hover {
-			background-color: $intensive-blue;
+			background-color: $light-dark;
+			color: $pure-white;
 		}
 	}
 }
@@ -1360,7 +1392,6 @@ body {
 				font-size: 2.4rem;
 				width: 700px;
 				letter-spacing: 1px;
-
 			}
 
 			&-one {
@@ -1466,7 +1497,6 @@ body {
 			font-size: 1.2rem;
 		}
 	}
-
 
 	.not-found {
 		margin-top: 8em;
