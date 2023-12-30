@@ -7,20 +7,38 @@
     <meta name="description" content="Autorzy ikon - linki do strony z której pochodzą poszczególne ikony">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 
-<body>
+<body class="special-body-color">
+    <nav class="nav" style="top: 0; background-color: #1b1a1a">
+        <div class="nav-logo">
+            <a class="nav__link-item" href="/">CodeCr8ive</a>
+        </div>
+        <div class="nav__link">
+            <a class="nav__link-item" href="/#aboutme">O mnie</a>
+            <a class="nav__link-item" href="/#info">Informacje</a>
+            <a class="nav__link-item" href="/#projects">Projekty</a>
+            <a class="nav__link-item" href="/#contact">Kontakt</a>
+        </div>
+    </nav>
+    <div class="mobile">
+        <a href="/">CodeCr8ive</a>
+        <button class="burger-btn" aria-label="Przycisk rozwijania nawigacji" style="top: 1em; right: 0 ">
+            <div class="burger-btn__box">
+                <div class="burger-btn__bars"></div>
+            </div>
+        </button>
+    </div>
 
-    <section class="section-top">
-
-        <a href="/">
-            <p>CodeCr8ive</p>
-        </a>
-
-    </section>
-
+    <nav class="mobile-nav">
+        <div class="items">
+            <a href="/" class="item">CodeCr8ive</a>
+            <a href="/#aboutme" class="item">O mnie</a>
+            <a href="/#projects" class="item">Projekty</a>
+            <a href="/#contact" class="item">Kontakt</a>
+        </div>
+    </nav>
 
     <section class="icon-authors">
         <h1>Autorzy ikon / Icon Authors</h1>
@@ -56,7 +74,13 @@
 
         <a href="/" class="back-to-main">Wróć do głownej</a>
     </section>
+    <div class="cookie-box">
+        <div class="cookie-box-items">
+            <p>Ta strona korzysta z ciasteczek!</p>
+            <button class="cookie-btn" aria-label="Rozumiem">Rozumiem</button>
+        </div>
 
+    </div>
     <footer>
         <div class="wrapper">
             <h2 class="second-title"></h2>
@@ -67,10 +91,10 @@
                     <div class="footer__box-socials">
                         <a href="https://github.com/WojciechStancel" target="_blank" rel="noopener"><img
                                 src="dist/img/icons/github.png" alt="ikona portalu github"></a>
-                        <a href="https://www.linkedin.com/in/wojciech-stancel/" target="_blank" rel="noopener"><img src="dist/img/icons/linkedin.png"
-                                alt="ikona portalu github"></a>
-                        <a href="https://www.facebook.com/profile.php?id=61552481912036&mibextid=ZbWKwL" target="_blank" rel="noopener"><img src="dist/img/icons/facebook.png"
-                                alt="ikona portalu facebook"></a>
+                        <a href="https://www.linkedin.com/in/wojciech-stancel/" target="_blank" rel="noopener"><img
+                                src="dist/img/icons/linkedin.png" alt="ikona portalu github"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61552481912036&mibextid=ZbWKwL" target="_blank"
+                            rel="noopener"><img src="dist/img/icons/facebook.png" alt="ikona portalu facebook"></a>
                     </div>
                 </div>
                 <div class="footer__box">
@@ -79,18 +103,16 @@
                         <li class="footer__list-item"><a href="/privacy_policy">Polityka prywatności</a></li>
                         <li class="footer__list-item"><a href="/icons">Autorzy ikon</a></li>
                     </ul>
-
                 </div>
-
             </div>
-
-
         </div>
 
         <p class="footer__bottom-text"> &copy; <span class="footer-year"></span> Code Cr8ive</p>
     </footer>
 
-    <script src="dist/js/footer-year.min.js"></script>
+    <script type="module" src="dist/js/script.min.js"></script>
+    <script type="module" src="dist/js/cookies.min.js"></script>
+    <script type="module" src="dist/js/footer-year.min.js"></script>
 </body>
 
 </html>

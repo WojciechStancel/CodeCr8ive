@@ -138,6 +138,22 @@ body {
 	}
 }
 
+// MOBILE NAV BACKGROUND FOR BETTER VISIBILITY
+.mobile {
+	display: flex;
+	align-items: center;
+	background-color: rgb(27, 26, 26);
+	width: 100%;
+	height: 8em;
+	top: 0;
+
+	a {
+		color: $pure-white;
+		margin-left: 1em;
+		text-decoration: none;
+		font-size: 2rem;
+	}
+}
 .burger-btn {
 	position: fixed;
 	top: 20px;
@@ -201,62 +217,66 @@ body {
 }
 
 .nav {
-	position: fixed;
-	width: 100%;
+	height: 3em;
 	background-color: #49494948;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 2rem;
 	padding: 1em;
-	text-align: center;
-	z-index: 30;
+	z-index: 150;
+	position: fixed;
+
+	a {
+		text-decoration: none;
+		color: $pure-white;
+	}
 
 	&__link {
-		display: inline-block;
-		padding: 0.5em 1em;
-		font-size: 2rem;
-		color: $light-white;
-		text-shadow: 4px 4px 5px black;
-		text-decoration: none;
-		transition: color 0.3s;
-		cursor: pointer;
-		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+		gap: 3em;
 
-		&::after,
-		&::before {
-			content: "";
-			position: absolute;
-			width: 0;
-			bottom: 0;
-			border-bottom: 1px solid white;
-			transition: .3s;
-		}
+		&-item {
+			position: relative;
+			padding: .5em 0;
 
-		&::before {
-			right: 40%;
-		}
+			&::after,
+			&::before {
+				content: "";
+				position: absolute;
+				width: 0;
+				bottom: 0;
+				border-bottom: 1px solid white;
+				transition: 0.3s;
+			}
 
-		&::after {
-			left: 40%;
-		}
+			&::before {
+				right: 50%;
+			}
 
-		&:hover::before,
-		&:hover::after {
-			width: 50%;
-		}
+			&::after {
+				left: 50%;
+			}
 
+			&:hover::before,
+			&:hover::after {
+				width: 50%;
+			}
 
-		&:hover &:focus {
-			outline: none;
-			border: 1px solid white;
+			&:hover &:focus {
+				outline: none;
+				border: 1px solid white;
+			}
 		}
 	}
 
-	&-active {
+	.nav-active {
 		color: rgba(0, 140, 255, 0.799);
-	}
-
-	&__logo {
-		position: absolute;
-		left: 0;
-		text-transform: none;
 	}
 }
 
@@ -293,7 +313,6 @@ body {
 		.item {
 			padding: 1.2em;
 			text-decoration: none;
-			// text-transform: uppercase;
 			width: 280px;
 			background-color: #ffffff07;
 			text-align: center;
@@ -763,7 +782,7 @@ body {
 		font-size: 2rem;
 		text-align: center;
 		border-radius: 8px;
-		border: 1px solid black;
+		border: 1px solid $dark;
 		background-color: $pure-white;
 		transition: opacity 0.8s;
 
@@ -854,40 +873,9 @@ body {
 		font-size: 1.2rem;
 		padding: 20px;
 		width: 100%;
-		// background-color: rgb(27, 26, 26);
-		// background-color: $lighter-blue;
-		// background-color: rgb(33, 61, 118);
 		background-color: rgb(12, 47, 118);
-
 		color: $pure-white;
 		margin-top: 20px;
-	}
-}
-
-.section-top {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	padding: 1em;
-	font-size: 2rem;
-	background-color: $dark-blue;
-	background-color: rgb(27, 26, 26);
-	z-index: 10;
-
-	a {
-		text-decoration: none;
-		transition: transform 0.4s;
-		&:hover {
-			transform: scale(1.2);
-		}
-	}
-
-	p {
-		text-align: center;
-		color: $pure-white;
 	}
 }
 
@@ -899,7 +887,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	margin-top: 5em;
+	margin-top: 4em;
 	margin-bottom: 2em;
 	padding: 4em;
 
@@ -1052,12 +1040,16 @@ body {
 	}
 }
 
+.special-body-color {
+	background-color: #c0c0c075;
+}
+
 .icon-authors {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 100px 20px;
+	margin: 6em 2em;
 
 	h1 {
 		text-transform: uppercase;
@@ -1076,14 +1068,15 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: 30px;
+		margin: 1em .5em;
 		background-color: #a0a0a01a;
 		border-radius: 5px;
 
+
 		li {
 			text-align: center;
-			margin: 30px;
-			padding: 10px;
+			margin: 1em;
+			padding: .5em;
 			font-size: 2rem;
 			list-style-position: inside;
 			.icons-item {
@@ -1232,6 +1225,18 @@ body {
 		scroll-margin-top: 54px;
 	}
 
+	.mobile {
+		display: none;
+	}
+
+	.nav {
+		display: flex;
+	}
+
+	.burger-btn {
+		display: none;
+	}
+
 	.header {
 		&__text {
 			h1 {
@@ -1245,14 +1250,6 @@ body {
 					width: 5rem;
 				}
 			}
-		}
-
-		.burger-btn {
-			display: none;
-		}
-
-		.nav {
-			display: block;
 		}
 
 		.arrow-icon {
@@ -1313,6 +1310,14 @@ body {
 				font-size: 1.2rem;
 			}
 		}
+	}
+
+	.icon-authors {
+		margin: 10em 2em;
+	}
+
+	.authors-body {
+		background-color: transparent;
 	}
 }
 

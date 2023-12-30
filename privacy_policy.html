@@ -10,15 +10,36 @@
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 
-<body>
+<body class="special-body-color">
 
-    <section class="section-top">
+    <nav class="nav" style="top: 0; background-color: #1b1a1a">
+        <div class="nav-logo">
+            <a class="nav__link-item" href="/">CodeCr8ive</a>
+        </div>
+        <div class="nav__link">
+            <a class="nav__link-item" href="/#aboutme">O mnie</a>
+            <a class="nav__link-item" href="/#info">Informacje</a>
+            <a class="nav__link-item" href="/#projects">Projekty</a>
+            <a class="nav__link-item" href="/#contact">Kontakt</a>
+        </div>
+    </nav>
+    <div class="mobile">
+        <a href="/">CodeCr8ive</a>
+        <button class="burger-btn" aria-label="Przycisk rozwijania nawigacji" style="top: 1em; right: 0 ">
+            <div class="burger-btn__box">
+                <div class="burger-btn__bars"></div>
+            </div>
+        </button>
+    </div>
 
-        <a href="/">
-            <p>CodeCr8ive</p>
-        </a>
-
-    </section>
+    <nav class="mobile-nav">
+        <div class="items">
+            <a href="/" class="item">CodeCr8ive</a>
+            <a href="/#aboutme" class="item">O mnie</a>
+            <a href="/#projects" class="item">Projekty</a>
+            <a href="/#contact" class="item">Kontakt</a>
+        </div>
+    </nav>
 
 
     <section class="privacy-policy-head wrapper">
@@ -55,7 +76,13 @@
         </div>
         <a href="/" class="privacy-btn">Wróć do głownej</a>
     </section>
+    <div class="cookie-box">
+        <div class="cookie-box-items">
+            <p>Ta strona korzysta z ciasteczek!</p>
+            <button class="cookie-btn" aria-label="Rozumiem">Rozumiem</button>
+        </div>
 
+    </div>
     <footer>
         <div class="wrapper">
             <h2 class="second-title"></h2>
@@ -88,8 +115,10 @@
 
         <p class="footer__bottom-text"> &copy; <span class="footer-year"></span> Code Cr8ive</p>
     </footer>
-
-    <script src="dist/js/footer-year.min.js"></script>
+    <script type="module" src="dist/js/script.min.js">
+    </script>
+    <script type="module" src="dist/js/cookies.min.js"></script>
+    <script type="module" src="dist/js/footer-year.min.js"></script>
 </body>
 
 </html>
