@@ -13,31 +13,36 @@
 
 </head>
 
-<body>
+<body class="main-page">
+    <nav class="nav">
+        <div class="nav-logo">
+            <a class="nav__link-item nav-active" href="#">CodeCr8ive</a>
+        </div>
+        <div class="nav__link">
+            <a class="nav__link-item" href="#aboutme">O mnie</a>
+            <a class="nav__link-item" href="#info">Informacje</a>
+            <a class="nav__link-item" href="#projects">Projekty</a>
+            <a class="nav__link-item" href="#contact">Kontakt</a>
+        </div>
+    </nav>
+    <button class="burger-btn" aria-label="Przycisk rozwijania nawigacji">
+        <div class="burger-btn__box">
+            <div class="burger-btn__bars"></div>
+        </div>
+    </button>
+    <nav class="mobile-nav">
+        <div class="items">
+            <a href="#" class="item">CodeCr8ive</a>
+            <a href="#aboutme" class="item">O mnie</a>
+            <a href="#projects" class="item">Projekty</a>
+            <a href="#contact" class="item">Kontakt</a>
+        </div>
+    </nav>
+
 
     <header>
         <div class="header section section-margin">
 
-            <div class="nav">
-                <a class="nav__link nav__logo nav-active" href="#">CodeCr8ive</a>
-                <a class="nav__link" href="#aboutme">O mnie</a>
-                <a class="nav__link" href="#info">Informacje</a>
-                <a class="nav__link" href="#projects">Projekty</a>
-                <a class="nav__link" href="#contact">Kontakt</a>
-            </div>
-            <div class="mobile-nav">
-                <div class="items">
-                    <a href="#" class="item">CodeCr8ive</a>
-                    <a href="#aboutme" class="item">O mnie</a>
-                    <a href="#projects" class="item">Projekty</a>
-                    <a href="#contact" class="item">Kontakt</a>
-                </div>
-            </div>
-            <button class="burger-btn" aria-label="Przycisk rozwijania nawigacji">
-                <div class="burger-btn__box">
-                    <div class="burger-btn__bars"></div>
-                </div>
-            </button>
             <div class="header__shadow"></div>
             <div class="header__text">
                 <h1>code<span>cr8ive</span></h1>
@@ -90,7 +95,8 @@
                     <div class="hidden-text">
                         <p>Na naukę poświęciłem już setki godzin, najpierw backend - Python, Django, Bazy danych,
                             Serwery. </p>
-                        <p>Gdy poznałem działanie backendu, postanowiłem wdrożyć się w frontend, a więc m.in. HTML, CSS,
+                        <p>Gdy poznałem działanie backendu, postanowiłem wdrożyć się w frontend, a więc m.in. HTML,
+                            CSS,
                             JavaScript, Sass, Gulp. </p>
 
                         <p class="last-param">Obecnie jestem na początkowym etapie poznawania Dockera, ponadto
@@ -103,7 +109,8 @@
                     <h3 class="hidden">Kreatywność</h3>
                     <div class="hidden-text">
                         <p>Kreatywne i elastyczne podejście do każdego tematu jest gwarancją nowych rozwiązań.</p>
-                        <p class="last-param">Od zawsze byłem fanem sprytnych rozwiązań, które pomagają w osiągnięciu
+                        <p class="last-param">Od zawsze byłem fanem sprytnych rozwiązań, które pomagają w
+                            osiągnięciu
                             konkretnego celu.</p>
                     </div>
                 </div>
@@ -124,7 +131,8 @@
                     <h3 class="hidden">Człowiek</h3>
                     <div class="hidden-text">
                         <p>
-                            Ogromna część użytkowników korzysta głównie z urządzeń mobilnych, do których każda strona
+                            Ogromna część użytkowników korzysta głównie z urządzeń mobilnych, do których każda
+                            strona
                             powinna
                             być dostosowana. <br>
                             Z internetu korzystają również osoby z niepełnosprawnościami, więc
@@ -163,7 +171,8 @@
                             <li>- React przy użyciu Vite.js oraz Next.js</li>
                             <li>- Python z frameworkiem Django, dzięki któremu możliwe jest tworzenie kompletnych
                                 aplikacji
-                                połączonych z bazą danych (np. sklep, blog, hotel, portal, który wymaga rejestracji i
+                                połączonych z bazą danych (np. sklep, blog, hotel, portal, który wymaga rejestracji
+                                i
                                 logowania)</li>
 
 
@@ -206,7 +215,8 @@
                     </div>
                     <div class="projects__body">
                         <h3>Biuro nieruchomości</h3>
-                        <p>Projekt stworzony w Django, baza danych PostgreSql. Frontend w frameworku bootstrap. Projekt
+                        <p>Projekt stworzony w Django, baza danych PostgreSql. Frontend w frameworku bootstrap.
+                            Projekt
                             znajduje się na AWS, Wdrożony z wykorzystaniem m.in. Nginx, Gunicorn, Ubuntu. </p>
                     </div>
                     <div class="projects__footer">
@@ -255,7 +265,8 @@
                     </div>
                     <div class="projects__footer">
                         <a href="https://www.memorygame.site/" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/plane.svg" alt="ikona memorygame"></div>
+                            <div class="footer-icon"><img src="dist/img/icons/plane.svg" alt="ikona memorygame">
+                            </div>
                         </a>
                         <a href="https://github.com/WojciechStancel/Memo-Game" target="_blank" rel="noopener">
                             <div class="footer-icon"><img src="dist/img/icons/github.png"
@@ -270,7 +281,8 @@
                     </div>
                     <div class="projects__body">
                         <h3>Sklep odzieżowy</h3>
-                        <p>Stworzony w frameworku React, aktualnie projekt ten jest w fazie rozwoju, więc jeszcze nie
+                        <p>Stworzony w frameworku React, aktualnie projekt ten jest w fazie rozwoju, więc jeszcze
+                            nie
                             jest dostępny podgląd na żywo.</p>
                         <p>Poniższy link pozwala sprawdzić kilka zdjęć oraz kod źródłowy.</p>
                     </div>
@@ -294,7 +306,8 @@
                     </div>
                     <div class="projects__footer">
                         <a href="https://your-notes-react-app.netlify.app/" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/netlify.png" alt="ikona netlify"></div>
+                            <div class="footer-icon"><img src="dist/img/icons/netlify.png" alt="ikona netlify">
+                            </div>
                         </a>
                         <a href="https://github.com/WojciechStancel/Notes-React-App" target="_blank" rel="noopener">
                             <div class="footer-icon"><img src="dist/img/icons/github.png"
@@ -384,8 +397,11 @@
         <p class="footer__bottom-text"> &copy; <span class="footer-year"></span> Code Cr8ive</p>
     </footer>
 
-    <script src="dist/js/footer-year.min.js"></script>
     <script type="module" src="dist/js/script.min.js"></script>
+    <script type="module" src="dist/js/cookies.min.js"></script>
+    <script type="module" src="dist/js/email-validation.min.js"></script>
+    <script type="module" src="dist/js/scrollSpy.min.js"></script>
+    <script type="module" src="dist/js/footer-year.min.js"></script>
 </body>
 
 </html>
