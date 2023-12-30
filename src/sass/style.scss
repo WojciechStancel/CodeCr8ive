@@ -979,17 +979,19 @@ body {
 	display: flex;
 	justify-content: center;
 	.not-found-btn {
-		padding: 1em;
+		padding: 1em 2em;
 		text-align: center;
 		text-decoration: none;
-		color: $pure-white;
-		background-color: $intensive-blue;
+		color: $dark;
+		background-color: transparent;
+		border: 1px solid $dark;
 		border-radius: 8px;
 		margin: 2em 0;
 		transition: background-color 0.4s;
 
 		&:hover {
-			background-color: $dark-blue;
+			background-color: $dark;
+			color: $pure-white;
 		}
 	}
 }

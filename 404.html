@@ -10,13 +10,36 @@
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 
-<body>
+<body class="special-body-color">
 
-    <div class="section-top">
-        <a href="/">
-            <p>code<span>CR8IVE</span></p>
-        </a>
+    <nav class="nav" style="top: 0; background-color: #1b1a1a">
+        <div class="nav-logo">
+            <a class="nav__link-item" href="/">CodeCr8ive</a>
+        </div>
+        <div class="nav__link">
+            <a class="nav__link-item" href="/#aboutme">O mnie</a>
+            <a class="nav__link-item" href="/#info">Informacje</a>
+            <a class="nav__link-item" href="/#projects">Projekty</a>
+            <a class="nav__link-item" href="/#contact">Kontakt</a>
+        </div>
+    </nav>
+    <div class="mobile">
+        <a href="/">CodeCr8ive</a>
+        <button class="burger-btn" aria-label="Przycisk rozwijania nawigacji" style="top: 1em; right: 0 ">
+            <div class="burger-btn__box">
+                <div class="burger-btn__bars"></div>
+            </div>
+        </button>
     </div>
+
+    <nav class="mobile-nav">
+        <div class="items">
+            <a href="/" class="item">CodeCr8ive</a>
+            <a href="/#aboutme" class="item">O mnie</a>
+            <a href="/#projects" class="item">Projekty</a>
+            <a href="/#contact" class="item">Kontakt</a>
+        </div>
+    </nav>
     <div class="not-found">
         <img src="dist/img/404-big.jpg" alt="zdjęcie informujące, że dana strona jeszcze nie istnieje">
         <div class="not-found-box">
@@ -29,6 +52,7 @@
 
     <footer>
         <div class="wrapper">
+            <p class="second-title"></p>
             <div class="footer">
                 <div class="footer__box">
                     <h3>Portale społecznościowe</h3>
@@ -37,7 +61,8 @@
                                 src="dist/img/icons/github.png" alt="ikona portalu github"></a>
                         <a href="https://www.linkedin.com/in/wojciech-stancel/" target="_blank" rel="noopener"><img
                                 src="dist/img/icons/linkedin.png" alt="ikona portalu github"></a>
-                        <a href="https://www.facebook.com/profile.php?id=61552481912036&mibextid=ZbWKwL" target="_blank" rel="noopener"><img src="dist/img/icons/facebook.png" alt="ikona portalu facebook"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61552481912036&mibextid=ZbWKwL" target="_blank"
+                            rel="noopener"><img src="dist/img/icons/facebook.png" alt="ikona portalu facebook"></a>
                     </div>
                 </div>
                 <div class="footer__box">
@@ -52,6 +77,8 @@
         <p class="footer__bottom-text"> &copy;<span class="footer-year"></span> Code Cr8ive</p>
     </footer>
 
+    <script type="module" src="dist/js/script.min.js">
+    </script>
     <script src="dist/js/footer-year.min.js"></script>
 
 </body>
