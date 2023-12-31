@@ -5,6 +5,8 @@ const mobileNavItems = document.querySelectorAll(".items");
 const hiddenElements = document.querySelectorAll(".hidden");
 const buttonBars = document.querySelector(".burger-btn__bars");
 const allSections = document.querySelectorAll(".section");
+const accordion = document.querySelector(".accordion");
+const accordionBtns = document.querySelectorAll(".accordion-btn");
 
 mobileNavItems.forEach((item) =>
 	item.addEventListener("click", () =>
@@ -38,7 +40,6 @@ navLink.forEach((link) => {
 	});
 });
 
-
 function sectionObserver() {
 	const currentSection = window.scrollY;
 	allSections.forEach((sect) => {
@@ -66,3 +67,45 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 hiddenElements.forEach((el) => observer.observe(el));
+
+function openAccordion() {
+	const accordionInfo = this.nextElementSibling;
+
+	if (accordionInfo.classList.contains("active-accordion")) {
+		accordionInfo.classList.remove("active-accordion");
+		rotateIcon(this, 0);
+	} else {
+		closeAccordion();
+		accordionInfo.classList.add("active-accordion");
+		rotateIcon(this, 180);
+	}
+}
+
+function rotateIcon(button, angle) {
+	const icon = button.querySelector(".accordion-btn-icon");
+	if (icon) {
+		icon.style.transform = `rotate(${angle}deg)`;
+	}
+}
+
+const closeAccordion = () => {
+	const allActiveItems = document.querySelectorAll(".accordion-info");
+	allActiveItems.forEach((item) => {
+		item.classList.remove("active-accordion");
+		rotateIcon(item.previousElementSibling, 0);
+	});
+};
+
+const closeAccordionAfterClickOutside = (e) => {
+	if (
+		e.target.classList.contains("accordion-btn") ||
+		e.target.classList.contains("accordion-info") ||
+		e.target.classList.contains("accordion-info-text")
+	) {
+		return;
+	}
+	closeAccordion();
+};
+
+accordionBtns.forEach((btn) => btn.addEventListener("click", openAccordion));
+window.addEventListener("click", closeAccordionAfterClickOutside);
