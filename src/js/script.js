@@ -1,5 +1,6 @@
 const burgerBtn = document.querySelector(".burger-btn");
 const nav = document.querySelector(".nav");
+const menuItems = document.querySelectorAll(".nav__link-item");
 const mobileNav = document.querySelector(".mobile-nav");
 const mobileNavItems = document.querySelectorAll(".items");
 const hiddenElements = document.querySelectorAll(".hidden");
@@ -7,6 +8,14 @@ const buttonBars = document.querySelector(".burger-btn__bars");
 const allSections = document.querySelectorAll(".section");
 const accordion = document.querySelector(".accordion");
 const accordionBtns = document.querySelectorAll(".accordion-btn");
+const socials = document.querySelector(".social-nav");
+const cookieBox = document.querySelector(".cookie-box");
+const cookieBtn = document.querySelector(".cookie-btn");
+const footerYear = document.querySelector(".footer-year");
+
+window.addEventListener("scroll", sectionObserver);
+
+// ACTIVE MOBILE NAV
 
 mobileNavItems.forEach((item) =>
 	item.addEventListener("click", () =>
@@ -18,22 +27,7 @@ burgerBtn.addEventListener("click", () => {
 	mobileNav.classList.toggle("mobile-nav-active");
 });
 
-window.addEventListener("scroll", sectionObserver);
-
-document.addEventListener("DOMContentLoaded", () => {
-	const addShadow = () => {
-		if (window.scrollY >= 400) {
-			nav.classList.add("add-background");
-		} else {
-			nav.classList.remove("add-background");
-		}
-	};
-
-	window.addEventListener("scroll", addShadow);
-});
-
-const navLink = document.querySelectorAll(".nav__link-item");
-navLink.forEach((link) => {
+menuItems.forEach((link) => {
 	link.addEventListener("click", () => {
 		document.querySelector(".nav-active").classList.remove("nav-active");
 		link.classList.add("nav-active");
@@ -57,6 +51,22 @@ function sectionObserver() {
 	});
 }
 
+// ADD BACKGROUND TO NAV
+
+document.addEventListener("DOMContentLoaded", () => {
+	const addShadow = () => {
+		if (window.scrollY >= 400) {
+			nav.classList.add("add-background");
+		} else {
+			nav.classList.remove("add-background");
+		}
+	};
+
+	window.addEventListener("scroll", addShadow);
+});
+
+// ANIMATION OBSERVER
+
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
@@ -67,6 +77,8 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 hiddenElements.forEach((el) => observer.observe(el));
+
+// ACCORDION
 
 function openAccordion() {
 	const accordionInfo = this.nextElementSibling;
@@ -98,7 +110,7 @@ const closeAccordion = () => {
 
 const closeAccordionAfterClickOutside = (e) => {
 	if (
-		e.target.classList.contains("accordion-btn") ||
+		e.target.classList.contains("accordion-btn-drop") ||
 		e.target.classList.contains("accordion-info") ||
 		e.target.classList.contains("accordion-info-text")
 	) {
@@ -109,3 +121,67 @@ const closeAccordionAfterClickOutside = (e) => {
 
 accordionBtns.forEach((btn) => btn.addEventListener("click", openAccordion));
 window.addEventListener("click", closeAccordionAfterClickOutside);
+
+// SCROLLSPY
+const handleScrollSpy = () => {
+	if (document.body.classList.contains("main-page")) {
+		const sections = [];
+
+		allSections.forEach((section) => {
+			let top = window.scrollY;
+			let offset = section.offsetTop;
+			let height = section.offsetHeight;
+			if (top + 80 >= offset && top + 80 < offset + height) {
+				sections.push(section);
+				const activeSection = document.querySelector(
+					`[href*="${sections[0].id}"]`
+				);
+
+				if (activeSection) {
+					menuItems.forEach((item) => item.classList.remove("nav-active"));
+					activeSection.classList.add("nav-active");
+				} else {
+					menuItems.forEach((item) => item.classList.remove("nav-active"));
+					menuItems[0].classList.add("nav-active");
+				}
+			}
+		});
+	}
+};
+
+window.addEventListener("scroll", handleScrollSpy);
+
+// COOKIES
+
+const cookiesAlert = () => {
+	localStorage.setItem("cookie", "true");
+	cookieBox.classList.add("cookies-sleep");
+};
+
+const showCookie = () => {
+	const cookieExist = localStorage.getItem("cookie");
+	if (cookieExist) {
+		cookieBox.classList.add("cookies-sleep");
+	}
+};
+
+cookieBtn.addEventListener("click", cookiesAlert);
+showCookie();
+
+// FOOTER YEAR
+
+const currentYear = () => {
+	const year = new Date().getFullYear();
+	footerYear.innerText = year;
+};
+
+currentYear();
+
+// REMOVE ORPHANS
+Array.prototype.forEach.call(
+	document.querySelectorAll("[data-remove-orphans]"),
+	function (el, i) {
+		let string = el.innerHTML;
+		el.innerHTML = string.replace(/(\s)([\S]{1,2})[\s]+/g, "$1$2&nbsp;");
+	}
+);

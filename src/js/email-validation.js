@@ -1,9 +1,8 @@
 const email = document.getElementById("email");
 const name = document.getElementById("name");
 const message = document.getElementById("msg");
-const agreement = document.getElementById("agreement");
 const sendBtn = document.querySelector(".submit-btn");
-const popup = document.querySelector(".hidden-popup");
+const popup = document.querySelector(".popup");
 const closeBtn = document.querySelector(".close");
 
 sendBtn.addEventListener("click", (e) => {
@@ -39,12 +38,6 @@ const checkForm = () => {
 			clearError(el);
 		}
 	});
-
-	if (!agreement.checked) {
-		agreement.parentElement.classList.add("error");
-	} else {
-		agreement.parentElement.classList.remove("error");
-	}
 };
 
 const checkEmail = (email) => {
