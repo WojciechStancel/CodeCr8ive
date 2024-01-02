@@ -3,28 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Code Cr8ive Profesjonalne strony internetowe</title>
+    <title>CodeCr8ive Profesjonalne strony internetowe</title>
     <meta name="description"
-        content="W CodeCr8ive tworzymy profesjonalne strony internetowe dostosowane do obecnych wymogów.">
+        content="W CodeCr8ive tworzę profesjonalne strony internetowe dostosowane do Twoich potrzeb.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://codecr8ive.pl/">
+    <meta property="og:url" content="https://codecr8ive.pl/" />
+    <meta property="og:title" content="CodeCr8ive - profesjonalne strony internetowe dostosowane do Twoich potrzeb." />
+    <meta property="og:image" content="https://codecr8ive.pl/uploads/codecr8ive.png" />
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="420">
+
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch.png" />
-    <link rel="stylesheet" href="dist/css/style.min.css?ver=1.3">
+    <link rel="stylesheet" href="dist/css/style.min.css?ver=1.6">
 
 </head>
 
 <body class="main-page">
+
     <nav class="nav">
         <div class="nav-logo">
-            <a class="nav__link-item nav-active" href="#">CodeCr8ive</a>
+            <a class="nav__link-item nav-active" href="#">codeCR8IVE</a>
         </div>
         <div class="nav__link">
             <a class="nav__link-item" href="#aboutme">O mnie</a>
-            <a class="nav__link-item" href="#mystack">Technologie</a>
-            <a class="nav__link-item" href="#info">Informacje</a>
             <a class="nav__link-item" href="#projects">Projekty</a>
             <a class="nav__link-item" href="#prices">Koszty</a>
             <a class="nav__link-item" href="#contact">Kontakt</a>
+            <a class="nav__link-item" href="/blog">Blog</a>
         </div>
     </nav>
     <button class="burger-btn" aria-label="Przycisk rozwijania nawigacji">
@@ -36,11 +43,10 @@
         <div class="items">
             <a href="#" class="item">CodeCr8ive</a>
             <a href="#aboutme" class="item">O mnie</a>
-            <a href="#mystack" class="item">Technologie</a>
-            <a href="#info" class="item">Informacje</a>
             <a href="#projects" class="item">Projekty</a>
             <a href="#prices" class="item">Koszty</a>
             <a href="#contact" class="item">Kontakt</a>
+            <a href="/blog" class="item">Blog</a>
         </div>
     </nav>
 
@@ -54,7 +60,7 @@
                         alt="Web development icons created by surang - Flaticon"
                         title="Web development icons created by surang - Flaticon"></h1>
 
-                <a href="#aboutme">
+                <a href="#aboutme" aria-label="Przycisk nawigacji w dół do sekcji o mnie">
                     <div class="arrow-icon">
                         <img class="icon-img" src="dist/img/icons/arrow-down.svg"
                             alt="Przycisk nawigacji kierujący w dół na kolejną sekcję">
@@ -65,7 +71,7 @@
     </header>
 
     <main>
-        <section class="aboutme wrapper section black-btn section-margin" id="aboutme">
+        <section class="aboutme wrapper section black-btn " id="aboutme">
             <div class="aboutme__main">
                 <div class="aboutme-image">
                     <img src="dist/img/IMG_20230122_125325_1.jpg"
@@ -75,181 +81,27 @@
                     <p class="hello">Cześć!</p>
                     <p class="hello-content">Z tej strony Wojtek, tworzę profesjonalne strony internetowe, które są w
                         pełni dostosowane do
-                        aktualnych potrzeb użytkowników. </p>
-                    <p class="hello-content">Tworzenie strony internetowej, to nie tylko pisanie kodu. To przede
+                        aktualnych standardów oraz potrzeb użytkowników. </p>
+                    <p class="hello-content" data-remove-orphans>Tworzenie strony internetowej, to nie tylko pisanie
+                        kodu. To przede
                         wszystkim odpowiedni
                         plan,
-                        zorientowanie na potrzeby i pełne zaangażowanie, by opracowany projekt w pełni wpłynął
+                        zorientowanie na potrzeby i pełne zaangażowanie, by opracowany projekt wpłynął
                         korzystnie na Twoją działalność.</p>
                     <p class="hello-content">Zapraszam Cię do zapoznania się z pozostałą częścią strony - tam znajdziesz
                         informacje na temat
-                        m.in. technologii w jakich działam, czynników które wpływają na cenę strony. Oczywiście odwiedź
-                        koniecznie sekcję z <a href="#projects">projektami</a>, gdyż to one są najlepszym dowodem mojej
+                        m.in. technologii w jakich działam oraz czynników które wpływają na cenę strony.
+                        Koniecznie odwiedź sekcję z&nbsp;<a href="#projects"
+                            aria-label="Przycisk do zapoznania się z projektami">projektami</a>, gdyż to one są
+                        najlepszym
+                        dowodem mojej
                         wiedzy i doświadczenia.
                     </p>
                 </div>
             </div>
         </section>
 
-        <div class="full-width-bg">
-            <section class="values wrapper section section-margin " id="values">
-                <h2 class="second-title second-title-margin">Kluczowe wartości</h2>
-                <div class="values__image">
-                    <div class="values__image-box values__image-box1">
-                        <div class="value-shadow"></div>
-                        <button class="question-btn" aria-label="znak zapytania"></button>
-                        <h3 class="hidden">Profesjonalizm</h3>
-                        <div class="hidden-text">
-                            <p>Na naukę poświęciłem setki godzin, najpierw backend - Python, Django, Bazy danych,
-                                Serwery. </p>
-                            <p>Gdy poznałem działanie backendu, postanowiłem wdrożyć się w frontend, a więc m.in. HTML,
-                                CSS,
-                                JavaScript, Sass, Gulp. </p>
-
-                            <p class="last-param">Obecnie rozwjam się wykorzystując na co dzień Reacta.</p>
-                        </div>
-                    </div>
-                    <div class="values__image-box values__image-box2">
-                        <div class="value-shadow"></div>
-                        <button class="question-btn" aria-label="znak zapytania"></button>
-                        <h3 class="hidden">Kreatywność</h3>
-                        <div class="hidden-text">
-                            <p>Kreatywne i elastyczne podejście do każdego tematu jest gwarancją nowych rozwiązań.</p>
-                            <p class="last-param">Od zawsze byłem fanem sprytnych rozwiązań, które pomagają w
-                                osiągnięciu
-                                konkretnego celu.</p>
-                        </div>
-                    </div>
-                    <div class="values__image-box values__image-box3">
-                        <div class="value-shadow"></div>
-                        <button class="question-btn" aria-label="znak zapytania"></button>
-                        <h3 class="hidden">Pomoc</h3>
-                        <div class="hidden-text">
-                            <p>To, co mnie napędza, to świadomość, że pozytywnie wpłynąłem na czyjeś życie.</p>
-                            <p class="last-param">Moim nadrzędnym celem jest przede wszystkim pomoc w rozwiązaniu danego
-                                problemu. Takie nastawienie do działania przekłada się na jego pozytywne skutki.</p>
-
-                        </div>
-                    </div>
-                    <div class="values__image-box values__image-box4">
-                        <div class="value-shadow"></div>
-                        <button class="question-btn" aria-label="znak zapytania"></button>
-                        <h3 class="hidden">Człowiek</h3>
-                        <div class="hidden-text">
-                            <p>
-                                Ogromna część użytkowników korzysta głównie z urządzeń mobilnych, do których każda
-                                strona
-                                powinna
-                                być dostosowana. <br>
-                                Z internetu korzystają również osoby z niepełnosprawnościami, więc
-                                kluczowym czynnikiem jest również dostosowanie strony pod tym kątem.</p>
-                            <p class="last-param">Projektując i tworząc stronę internetową należy być przede wszystkim
-                                zorientowanym na człowieka.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <section class="wrapper section section-margin black-btn" id="mystack">
-            <h2 class="second-title second-title-margin">Pod Maską Kodu <img class="laptop-icon"
-                    src="/dist/img/icons/code.png" alt="ikona laptopa z kodem programistycznym"></h2>
-            <div class="stack-body">
-                <p>Część technologii, którymi posługuję się na co dzień tworząc aplikacje webowe. Poniżej znajduje się
-                    krótki opis każdej z nich, by wyjaśnić Ci w jak najprostszy sposób o co tak naprawdę z tym wszystkim
-                    chodzi 🤔</p>
-                <h3>Narzędzia Frontendowe <img src="/dist/img/icons/stack.svg" alt="ikona zasobów technologicznych">
-
-                </h3>
-                <ul class="stack-body-list">
-                    <li>
-                        <span>HTML</span> to fundament internetu, określający strukturę i zawartość strony. Można go
-                        porównać do
-                        planu
-                        domu, który definiuje układ i podstawę dla wszystkiego, co widzisz na stronie.
-                    </li>
-                    <li>
-                        <span>CSS</span> jest paletą artysty w świecie internetu, umożliwia programistom nadanie
-                        wizualnego stylu
-                        stronie. To jak wybieranie kolorów i aranżowanie mebli w pomieszczeniu. Obecnie programiści mają
-                        dostęp do wielu gotowych stylów za pomocą takich narzędzi, jak Tailwind CSS lub Bootstrap.
-                        Osobiście lubię tworzyć wszystko samemu od podstaw - niemniej nie zawsze warto wymyślać koło na
-                        nowo.
-                    </li>
-                    <li>
-                        <span>JavaScript</span> to magia dynamicznych i interaktywnych stron internetowych. Ożywia
-                        statyczne treści,
-                        sprawiając, że rzeczy się poruszają, reagują i dostosowują. Można to porównać do choreografa
-                        tańca, organizującego ruchy i interakcje w sieci.
-                    </li>
-                    <li>
-                        <span>React</span> to rodzaj planu architektonicznego do tworzenia skomplikowanych i
-                        interaktywnych
-                        interfejsów użytkownika. Formalnie jest to biblioteka JavaScriptu, choć jest też uznawana ze
-                        pełnoprawny Framework. Ułatwia budowanie komponentów interfejsu, umożliwiając zarządzanie nimi i
-                        aktualizowanie bez konieczności przeprojektowywania całej struktury.
-                    </li>
-                    <li>
-                        <span>WordPress</span> popularny i wszechstronny system zarządzania treścią (CMS), umożliwiający
-                        łatwe tworzenie i zarządzanie stronami internetowymi. Jest idealny zarówno dla początkujących,
-                        jak i doświadczonych użytkowników. Choć preferuję budowę stron samodzielnie, to praca z tym
-                        narzędziem jest całkiem przyjemna.
-                    </li>
-                </ul>
-
-                <div class="frontend">
-                    <img class="stack-body-icon" src="/dist/img/icons/html.png" title="HTML" alt="ikona html">
-                    <img class="stack-body-icon" src="/dist/img/icons/css.png" title="CSS" alt="ikona css">
-                    <img class="stack-body-icon" src="/dist/img/icons/sass.png" title="SASS" alt="ikona sass">
-                    <img class="stack-body-icon" src="/dist/img/icons/js.png" title="JavaScript" alt="ikona javascript">
-                    <img class="stack-body-icon" src="/dist/img/icons/react.png" title="React" alt="ikona react">
-                    <img class="stack-body-icon" src="/dist/img/icons/vite.png" title="Vite.js" alt="ikona vite.js">
-                    <img class="stack-body-icon" src="/dist/img/icons/next.png" title="Next.js" alt="ikona next.js">
-                    <img class="stack-body-icon" src="/dist/img/icons/tailwind.png" title="Tailwind CSS"
-                        alt="ikona tailwind css">
-                    <img class="stack-body-icon" src="/dist/img/icons/wordpress.png" title="WordPress"
-                        alt="ikona wordpress">
-                    <img class="stack-body-icon" src="/dist/img/icons/figma.png" title="Figma" alt="ikona figmy">
-                </div>
-                <h3>Narzędzia Backendowe <img src="/dist/img/icons/stack.svg" alt="ikona zasobów technologicznych"></h3>
-                <ul class="stack-body-list">
-                    <li><span>Python</span> to uniwersalny język programowania, idealny do budowy solidnych aplikacji.
-                        Jest jak
-                        wszechstronny narzędziowiec, który może być wykorzystywany do wielu celów, od prostych skryptów
-                        po zaawansowane projekty.</li>
-                    <li><span>Django</span> jest potężnym frameworkiem do tworzenia aplikacji internetowych w języku
-                        Python.
-                        To gotowy zestaw narzędzi dla programisty, który ułatwia szybkie projektowanie i rozwijanie
-                        stron
-                        internetowych. Z Django korzystają tacy giganci jak Spotify lub Instagram.</li>
-                    <li><span>SQL</span> to język do zarządzania bazami danych. Pozwala na składowanie, pobieranie i
-                        manipulowanie
-                        danymi w bazie. To jak komunikacja z archiwum, gdzie można przechowywać, odczytywać i
-                        aktualizować informacje.</li>
-                    <li><span>Node.js</span> czyli środowisko uruchomieniowe JavaScript po stronie serwera. Umożliwia
-                        programistom
-                        używanie JavaScriptu do tworzenia aplikacji backendowych. Jest dodatkowym zestawem narzędzi,
-                        który pozwala na używanie tych samych umiejętności do obsługi zarówno frontendu, jak i backendu.
-                    </li>
-                    <li><span>Amazon Web Services</span> to platforma chmurowa, oferująca różnorodne usługi do
-                        hostowania,
-                        przechowywania danych i zarządzania infrastrukturą online. Niczym wynajmowanie miejsca na
-                        przechowywanie i działanie aplikacji, bez konieczności posiadania własnych serwerów.</li>
-                </ul>
-                <div class="backend">
-                    <img class="stack-body-icon" src="/dist/img/icons/python.png" title="Python" alt="ikona python">
-                    <img class="stack-body-icon" src="/dist/img/icons/django.png" title="Django" alt="ikona django">
-                    <img class="stack-body-icon" src="/dist/img/icons/postgresql.png" title="PostgreSql"
-                        alt="ikona postgresql">
-                    <img class="stack-body-icon" src="/dist/img/icons/sql.png" title="SQL" alt="ikona sql">
-                    <img class="stack-body-icon" src="/dist/img/icons/node.png" title="Node.js" alt="ikona node.js">
-                    <img class="stack-body-icon" src="/dist/img/icons/aws.png" title="Amazon Web Services"
-                        alt="ikona amazon web services">
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-margin" id="info">
+        <section class="section section-margin" id="aboutme">
             <div class="info">
                 <div class="info__photo">
                     <div class="value-shadow">
@@ -257,7 +109,7 @@
                             <div class="info-box-one">
                                 <p class="inner-text inner-text-bold">
                                     Cechy profesjonalnej strony: </p>
-                                <ul class="inner-text inner-text-list">
+                                <ul class="inner-text inner-text-list" data-remove-orphans>
                                     <li><img src="/dist/img/icons/mobile.svg" alt="ikona smartphone"> Responsywna, czyli
                                         dostosowywująca się do różnych urządzeń bez względu na rodzaj
                                         ekranu
@@ -278,11 +130,11 @@
                                 <p class="inner-text inner-text-bold">
                                     Dlaczego wybór mnie to DOBRY wybór?
                                 </p>
-                                <ul class="inner-text inner-text-list">
+                                <ul class="inner-text inner-text-list" data-remove-orphans>
                                     <li><img src="/dist/img/icons/check.svg"
                                             alt="ikona potwierdzająca, że dana informacja jest potwierdzona"> Korzystam
-                                        z najnowszych narzędzi oraz tworzę strony z naciskiem na świeży i
-                                        innowacyjny design</li>
+                                        z najnowszych narzędzi oraz tworzę strony z naciskiem na świeży
+                                        i&nbsp;innowacyjny design</li>
                                     <li><img src="/dist/img/icons/check.svg" alt="ikona potwierdzenia umiejętności"> Nie
                                         odpuszczam dopóki projekt nie jest w pełni zadowalający. Każdy detal ma
                                         znaczenie
@@ -292,9 +144,9 @@
                                         zapewnić Ci
                                         spokój i pewność, że Twoja strona działa sprawnie</li>
                                     <li><img src="/dist/img/icons/check.svg" alt="ikona check/potwierdzenie"> Moje
-                                        podejście skupia się na osiąganiu celów biznesowych klienta - wspierają
+                                        podejście skupia się na osiąganiu celów biznesowych klienta - wspiera
                                         konwersję i
-                                        wzmacniają obecność online</li>
+                                        wzmacnia obecność online</li>
                                 </ul>
                             </div>
                         </div>
@@ -306,77 +158,75 @@
 
         <section class="wrapper section black-btn section-margin" id="projects">
             <h2 class="second-title second-title-margin">Projekty <img class="portfolio-icon"
-                    src="/dist/img/icons/portfolio.png" alt="ikona portfolio"></h2>
+                    src="/dist/img/icons/projects.png" alt="ikona portfolio"></h2>
             <div class="group-projects">
                 <div class="projects">
                     <div class="image-container">
-                        <div class="projects__img projects__img-one hidden"></div>
+                        <div class="projects__img projects__img-one hidden">
+                            <div class="projects__img-icon">
+                                <a href="https://wojciechstancel.github.io/FotoStory/" target="_blank"
+                                    rel="noopener"><img src="dist/img/icons/eye.svg"
+                                        alt="ikona do podglądu strony na żywo" class="projects__img-icon-eye">Przejdź do
+                                    strony </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="projects__body">
                         <h3>Fotograf</h3>
                         <p>Przykładowa strona stworzona dla osoby zajmującej się fotografią. Idealna do promowania
                             swojej pracy.</p>
-                        <p>Linki do podglądu live, jak i również do podglądu kodu znajdują się poniżej.</p>
                     </div>
-                    <div class="projects__footer">
-                        <a href="https://wojciechstancel.github.io/FotoStory/" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/github.png"
-                                    alt="ikona odsyłająca do github-live"></div>
-                        </a>
-                        <a href="https://github.com/WojciechStancel/FotoStory" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/github.png"
-                                    alt="ikona odsyłająca do strony kodu na github">
-                            </div>
-                        </a>
-                    </div>
+
                 </div>
                 <div class="projects black-btn">
                     <div class="image-container">
-                        <div class="projects__img projects__img-two hidden"></div>
+                        <div class="projects__img projects__img-two hidden">
+                            <div class="projects__img-icon">
+                                <a href="http://51.20.211.102/" target="_blank" rel="noopener"><img
+                                        src="dist/img/icons/eye.svg" alt="ikona do strony na hostingu amazon"
+                                        class="projects__img-icon-eye">Przejdź do
+                                    strony </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="projects__body">
                         <h3>Biuro nieruchomości</h3>
-                        <p>Projekt stworzony w Django, baza danych PostgreSql. Frontend w frameworku bootstrap.
-                            Projekt
-                            znajduje się na AWS, Wdrożony z wykorzystaniem m.in. Nginx, Gunicorn, Ubuntu. </p>
-                    </div>
-                    <div class="projects__footer">
-                        <a href="http://51.20.211.102/" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/brand-aws.png"
-                                    alt="ikona amazon web service"></div>
-                        </a>
+                        <p>Strona ta umożliwa przeglądanie nieruchomości, które są na sprzedaż. </p>
+                        <p>Jako użytkownik masz możliwość założyć konto, zalogować się, przeglądać oferty oraz poprosić
+                            o&nbsp;kontakt z pośrednikiem.</p>
 
-                        <a href="https://github.com/WojciechStancel/Real-Estate" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/github.png"
-                                    alt="ikona do strony github gdzie znajduje się kod źródłowy">
-                            </div>
-                        </a>
                     </div>
                 </div>
                 <div class="projects">
                     <div class="image-container">
-                        <div class="projects__img projects__img-three hidden"></div>
+                        <div class="projects__img projects__img-three hidden">
+                            <div class="projects__img-icon">
+                                <a href="https://wojciechstancel.github.io/FlowerShop/" target="_blank"
+                                    rel="noopener"><img src="dist/img/icons/eye.svg"
+                                        alt="odnośnik do podglądu wyglądu strony na żywo"
+                                        class="projects__img-icon-eye">Przejdź do
+                                    strony </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="projects__body">
                         <h3>Kwiaciarnia</h3>
                         <p>Prosta strona dla osoby prowadzącej własną kwiaciarnię.</p>
-                        <p>Link do strony live oraz link do kodu źródłowego znajdują się poniżej.</p>
-                    </div>
-                    <div class="projects__footer">
-                        <a href="https://wojciechstancel.github.io/FlowerShop/" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/github.png"
-                                    alt="ikona do podglądu strony na żywo"></div>
-                        </a>
-                        <a href="https://github.com/WojciechStancel/FlowerShop" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/github.png"
-                                    alt="ikona portalu github z kodem strony">
-                            </div>
-                        </a>
+                        <p>Znajdują się na niej wszelkie podstawowe informacje, dzięki którym potencjalni klienci bez
+                            wychodzenia z&nbsp;domu dowiedzą się o&nbsp;Twoim biznesie.</p>
+
                     </div>
                 </div>
                 <div class="projects">
                     <div class="image-container">
-                        <div class="projects__img projects__img-four hidden"></div>
+                        <div class="projects__img projects__img-four hidden">
+                            <div class="projects__img-icon">
+                                <a href="https://www.memorygame.site/" target="_blank" rel="noopener"><img
+                                        src="dist/img/icons/eye.svg" alt="ikona do strony z grą memory"
+                                        class="projects__img-icon-eye">Przejdź do
+                                    strony </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="projects__body">
                         <h3>Gra Memory</h3>
@@ -384,116 +234,115 @@
                         <p>Gra została stworzona przy użyciu Next.js. Projekt ten będzie rozwijany, więc zachęcam do
                             sprawdzania.</p>
                     </div>
-                    <div class="projects__footer">
-                        <a href="https://www.memorygame.site/" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/plane.svg" alt="ikona memorygame">
-                            </div>
-                        </a>
-                        <a href="https://github.com/WojciechStancel/Memo-Game" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/github.png"
-                                    alt="ikona do kodu źródłowego strony">
-                            </div>
-                        </a>
-                    </div>
                 </div>
                 <div class="projects">
                     <div class="image-container">
-                        <div class="projects__img projects__img-five hidden"></div>
+                        <div class="projects__img projects__img-five hidden">
+                            <div class="projects__img-icon">
+                                <a href="https://github.com/WojciechStancel/e-shop" target="_blank" rel="noopener"><img
+                                        src="dist/img/icons/eye.svg" alt="ikona do kodu na Github"
+                                        class="projects__img-icon-eye">Przejdź do
+                                    strony </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="projects__body">
                         <h3>Sklep odzieżowy</h3>
                         <p>Stworzony w frameworku React, aktualnie projekt ten jest w fazie rozwoju, więc jeszcze
                             nie
                             jest dostępny podgląd na żywo.</p>
-                        <p>Poniższy link pozwala sprawdzić kilka zdjęć oraz kod źródłowy.</p>
-                    </div>
-                    <div class="projects__footer">
+                        <p>Dopóki sklep nie będzie dostępny na żywo, jego zdjęciową wersję można obejrzeć na portalu
+                            Github.</p>
 
-                        <a href="https://github.com/WojciechStancel/e-shop" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/github.png" alt="ikona portalu github">
-                            </div>
-                        </a>
                     </div>
+
                 </div>
                 <div class="projects">
                     <div class="image-container">
-                        <div class="projects__img projects__img-six hidden"></div>
+                        <div class="projects__img projects__img-six hidden">
+                            <div class="projects__img-icon">
+                                <a href="https://your-notes-react-app.netlify.app/" target="_blank" rel="noopener"><img
+                                        src="dist/img/icons/eye.svg" alt="odnośnik do strony na żywo"
+                                        class="projects__img-icon-eye">Przejdź do
+                                    strony </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="projects__body">
                         <h3>Notatnik</h3>
                         <p>Aplikacja do dodawania, edycji oraz usuwania własnych notatek. Połączona z bazą danych
                             Firebase.</p>
-                        <p>Link do strony live oraz link do kodu źródłowego znajdują się poniżej.</p>
+                        <p>Jest to kolejna aplikacja, którą stworzyłem korzystając z potęgi React'a.</p>
+
                     </div>
-                    <div class="projects__footer">
-                        <a href="https://your-notes-react-app.netlify.app/" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/netlify.png" alt="ikona netlify">
-                            </div>
-                        </a>
-                        <a href="https://github.com/WojciechStancel/Notes-React-App" target="_blank" rel="noopener">
-                            <div class="footer-icon"><img src="dist/img/icons/github.png"
-                                    alt="ikona portalu na którym możesz znaleźć kod strony">
-                            </div>
-                        </a>
-                    </div>
+
                 </div>
             </div>
         </section>
 
         <div class="full-width-bg">
             <section class="wrapper section black-btn section-margin" id="prices">
-                <h2 class="second-title second-title-margin">Koszty <img class="money-icon"
+                <h2 class="second-title second-title-margin">Składowe ceny <img class="money-icon"
                         src="/dist/img/icons/money.svg" alt="ikona monety pod lupą"></h2>
                 <div class="accordion">
+                    <p class="accordion-description">Poniżej przedstawione zostały najważniejsze elemety, które składają
+                        się na cenę strony internetowej. W&nbsp;celu uzyskania dokładnej wyceny skontaktuj się ze mną poprzez
+                        <a href="#contact" aria-label="formularz kontaktowy">formularz kontaktowy.</a>
+                    </p>
                     <div class="accordion-box">
-                        <button class="accordion-btn" aria-label="rozwiń">
-                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon"
+                        <button class="accordion-btn accordion-btn-drop" aria-labelledby="Domena">
+                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
                                 alt="ikona rozwiń w dół">Domena
                         </button>
                         <div class="accordion-info">
                             <p class="accordion-info-text">
-                                Domena to taki internetowy adres albo nazwa Twojej strony. To co wpisujesz w
-                                przeglądarkę, żeby ją odnaleźć. Koszt domeny zależy od różnych rzeczy, takich jak
+                                Domena to taki internetowy adres albo nazwa Twojej strony. To co wpisujesz
+                                w&nbsp;przeglądarkę, żeby ją odnaleźć. Koszt domeny zależy od kilku rzeczy, takich jak
                                 popularność słów w nazwie, czyli co ludzie wpisują w Google, oraz od tego, czy ktoś już
-                                nie używa tej konkretnej nazwy. Domena jest jak unikalna wizytówka Twojej strony w
-                                internecie i to ile zapłacisz, zależy od tego, jakie słowo czy zestaw słów wybierzesz
+                                nie używa tej konkretnej nazwy. Domena jest jak unikalna wizytówka Twojej strony
+                                w&nbsp;internecie i to ile zapłacisz, zależy od tego, jakie słowo czy zestaw słów
+                                wybierzesz
                                 jako nazwę swojej strony.
                             </p>
                             <p class="accordion-info-text">
-                                Najbardziej ekonomiczną domenę można nabyć już za kilka - kilkanaście złotych, zazwyczaj
-                                w pierwszym roku korzystania z promocji. W kolejnych latach opłata wzrasta nieco,
-                                oscylując między kilkudziesięcioma a nieco ponad 100 złotymi. Warto jednak pamiętać, że
-                                koszty te mogą się różnić w zależności od wybranej nazwy domeny oraz od firmy dostawcy
-                                usług hostingowych.
+                                Najbardziej ekonomiczną domenę można nabyć już za kilka - kilkanaście złotych. Często
+                                domena kupowana po raz pierwszy ma cenę promocyjną. Zreguły domenę wykupuje się na rok.
+                                W kolejnych latach opłata nieco wzrasta,
+                                oscylując między kilkudziesięcioma a nieco ponad 100 zł. Warto jednak pamiętać, że
+                                koszty te mogą się różnić w&nbsp;zależności od wybranej nazwy domeny oraz od firmy
+                                dostawcy
+                                usług.
                             </p>
                         </div>
                     </div>
                     <div class="accordion-box">
-                        <button class="accordion-btn" aria-label="rozwiń">
-                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon" alt="rozwiń w dół"> Hosting
+                        <button class="accordion-btn accordion-btn-drop" aria-labelledby="Hosting">
+                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
+                                alt="rozwiń w dół">Hosting
                         </button>
                         <div class="accordion-info">
                             <p class="accordion-info-text">
                                 Hosting to miejsce, gdzie przechowujesz wszystkie pliki, treści i dane związane z Twoją
                                 stroną internetową. To swoiste wirtualne mieszkanie dla Twojej witryny w przestrzeni
-                                internetowej. Wybór odpowiedniego hostingu ma kluczowe znaczenie dla stabilności i
-                                dostępności Twojej strony online.
+                                internetowej. Wybór odpowiedniego hostingu ma kluczowe znaczenie dla stabilności
+                                i&nbsp;dostępności Twojej strony online.
                             </p>
                             <p class="accordion-info-text">
-                                Istnieje wiele rodzajów hostingu - Współdzielony (Shared Hosting), Prywatny (VPS),
-                                Dedykowany, Hosting w chmurze (Cloud Hosting), Hosting dla WordPress. Koszty dobrego
-                                hostingu zaczynają się średnio od 20 złotych miesięcznie w górę.
+                                Istnieje wiele rodzajów hostingu -&nbsp;Współdzielony (Shared Hosting), Prywatny (VPS),
+                                Dedykowany, Hosting w&nbsp;chmurze (Cloud Hosting), Hosting dla WordPress. Koszty dobrego
+                                hostingu zaczynają się średnio od 20 złotych miesięcznie w&nbsp;górę.
                             </p>
                             <p class="accordion-info-text">
                                 Hosting darmowy - dostępny dla początkujących, ale może być ograniczony pod względem
-                                funkcji i zasobów. To jak korzystanie z darmowego pokoju hotelowego - dostajesz
+                                funkcji i zasobów. To jak korzystanie z wersji demo produktu -&nbsp;dostajesz
                                 podstawowe, ale nie zawsze spełniające oczekiwania warunki.
                             </p>
                         </div>
                     </div>
                     <div class="accordion-box">
-                        <button class="accordion-btn" aria-label="rozwiń">
-                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon" alt="ikona zobacz więcej">
+                        <button class="accordion-btn accordion-btn-drop" aria-labelledby="Koszt wykonania">
+                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
+                                alt="ikona zobacz więcej">
                             Koszt
                             wykonania
                         </button>
@@ -504,21 +353,22 @@
                                 o prostym projekcie, to koszt do kilkuset złotych.
                             </p>
                             <p class="accordion-info-text">
-                                Inwestycja ta jednak przynosi korzyści w postaci profesjonalnej obecności w sieci,
-                                zwiększenia widoczności i potencjalnego zysku poprzez skuteczną interakcję z
-                                użytkownikami online.
+                                Inwestycja ta jednak przynosi korzyści w&nbsp;postaci profesjonalnej obecności w sieci,
+                                zwiększenia widoczności i&nbsp;potencjalnego zysku poprzez skuteczną interakcję
+                                z&nbsp;użytkownikami online.
                             </p>
                         </div>
                     </div>
                     <div class="accordion-box">
-                        <button class="accordion-btn" aria-label="rozwiń">
-                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon" alt="rozwiń"> Dodatkowe
+                        <button class="accordion-btn accordion-btn-drop" aria-labelledby="Dodatkowe koszty">
+                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
+                                alt="rozwiń"> Dodatkowe
                             koszty
                         </button>
                         <div class="accordion-info">
                             <p class="accordion-info-text">
                                 Ważne jest, aby uwzględnić dodatkowe koszty, takie jak utrzymanie strony, aktualizacje i
-                                ewentualne koszty związane z promocją online.
+                                ewentualne koszty związane z&nbsp;promocją online.
                             </p>
                             <p class="accordion-info-text">
                                 Bardzo często dodatkowym kosztem jest stworzenie samego projektu wizualnego strony. Web
@@ -528,8 +378,9 @@
                         </div>
                     </div>
                     <div class="accordion-box">
-                        <button class="accordion-btn" aria-label="rozwiń">
-                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon" alt="rozwiń"> Podsumowanie
+                        <button class="accordion-btn accordion-btn-drop" aria-labelledby="Podsumowanie">
+                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
+                                alt="rozwiń">Podsumowanie
                         </button>
                         <div class="accordion-info">
                             <p class="accordion-info-text">
@@ -537,8 +388,9 @@
                                 osobistym doświadczeniu, cena może się różnić w zależności od dostawcy).
                             </p>
                             <p class="accordion-info-text">
-                                Stworzenie strony to kwestia indywidualna - można znaleźć oferty za kilkaset złotych, a
-                                można również za kilka tysięcy. Wszystko jest uzależnione od skomplikowania witryny.
+                                Stworzenie strony to kwestia indywidualna -&nbsp;można znaleźć oferty za kilkaset
+                                złotych, a&nbsp;można również za kilka tysięcy. Wszystko jest uzależnione od
+                                skomplikowania witryny.
                                 Natomiast ja tworzę profesjonalne strony, za które na pewno nie przepłacisz 😉
                             </p>
                         </div>
@@ -568,15 +420,15 @@
                         <label for="msg">Napisz wiadomość:</label>
                         <textarea id="msg" class="textarea" name="msg" placeholder="Wpisz wiadomość"></textarea>
                         <p class="error-text message-error">Wiadomość nie może być pusta!</p>
-                        <button class="submit-btn" aria-label="Wyślij">Wyślij</button>
-                    </div>
-                    <div class="contact__form-protection contact-box">
-                        <p>Wypełnienie formularza oznacza, że podane w nim dane osobowe będą przetwarzane w celu
+
+                        <p class="contact__form-protection">Wypełnienie formularza oznacza, że podane w nim dane osobowe
+                            będą przetwarzane w celu
                             udzielenia odpowiedzi.</p>
-                        <label for="agreement">Akceptuję</label>
-                        <input type="checkbox" id="agreement" placeholder="Zaakceptuj warunki">
-                        <p class="error-text message-error">Musisz zaakceptować warunki</p>
+
+                        <button class="submit-btn" aria-label="Wyślij">Wyślij</button>
+
                     </div>
+
 
                     <div class="hidden-popup">
                         <div class="popup">
@@ -604,19 +456,21 @@
                 <div class="footer__box">
                     <h3>Portale społecznościowe</h3>
                     <div class="footer__box-socials">
-                        <a href="https://github.com/WojciechStancel" target="_blank" rel="noopener"><img
-                                src="dist/img/icons/github.png" alt="ikona portalu github"></a>
-                        <a href="https://www.linkedin.com/in/wojciech-stancel/" target="_blank" rel="noopener"><img
-                                src="dist/img/icons/linkedin.png" alt="ikona portalu github"></a>
+                        <a href="https://www.instagram.com/codecr8ive/" target="_blank" rel="noopener"><img
+                                src="dist/img/icons/instagram.png" alt="portal github"></a>
                         <a href="https://www.facebook.com/profile.php?id=61552481912036&mibextid=ZbWKwL" target="_blank"
                             rel="noopener"><img src="dist/img/icons/facebook.png" alt="ikona portalu facebook"></a>
+                        <a href="https://www.linkedin.com/in/wojciech-stancel/" target="_blank" rel="noopener"><img
+                                src="dist/img/icons/linkedin.png" alt="ikona portalu github"></a>
+                        <a href="https://github.com/WojciechStancel" target="_blank" rel="noopener"><img
+                                src="dist/img/icons/github.png" alt="ikona portalu github"></a>
                     </div>
                 </div>
                 <div class="footer__box">
-                    <h3>Inne dokumenty</h3>
+                    <h3>Sprawdź również</h3>
                     <ul class="footer__list">
+                        <li class="footer__list-item"><a href="/blog">Blog</a></li>
                         <li class="footer__list-item"><a href="/privacy_policy">Polityka prywatności</a></li>
-                        <li class="footer__list-item"><a href="/icons">Autorzy ikon</a></li>
                     </ul>
                 </div>
             </div>
@@ -625,11 +479,8 @@
         <p class="footer__bottom-text"> &copy; <span class="footer-year"></span> Code Cr8ive</p>
     </footer>
 
-    <script type="module" src="dist/js/script.min.js?ver=1.1"></script>
-    <script type="module" src="dist/js/cookies.min.js?ver=1.1"></script>
-    <script type="module" src="dist/js/email-validation.min.js?ver=1.1"></script>
-    <script type="module" src="dist/js/scrollSpy.min.js?ver=1.1"></script>
-    <script type="module" src="dist/js/footer-year.min.js?ver=1.1"></script>
+    <script type="module" src="dist/js/script.min.js?ver=1.6"></script>
+    <script type="module" src="dist/js/email-validation.min.js?ver=1.6"></script>
 </body>
 
 </html>
