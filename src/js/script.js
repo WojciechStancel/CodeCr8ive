@@ -13,22 +13,6 @@ const cookieBox = document.querySelector(".cookie-box");
 const cookieBtn = document.querySelector(".cookie-btn");
 const footerYear = document.querySelector(".footer-year");
 
-document.addEventListener("DOMContentLoaded", function () {
-	const currentUrl = window.location.href;
-
-	if (currentUrl.includes("#")) {
-		const fragment = currentUrl.split("#")[1];
-		const targetElement = document.getElementById(fragment);
-		console.log(targetElement);
-
-		if (targetElement) {
-			targetElement.scrollIntoView({ behavior: "smooth" });
-		}
-	}
-});
-
-window.addEventListener("scroll", sectionObserver);
-
 // ACTIVE MOBILE NAV
 
 mobileNavItems.forEach((item) =>
@@ -36,10 +20,6 @@ mobileNavItems.forEach((item) =>
 		mobileNav.classList.remove("mobile-nav-active")
 	)
 );
-
-burgerBtn.addEventListener("click", () => {
-	mobileNav.classList.toggle("mobile-nav-active");
-});
 
 // menuItems.forEach((link) => {
 // 	link.addEventListener("click", () => {
@@ -64,20 +44,6 @@ function sectionObserver() {
 		}
 	});
 }
-
-// ADD BACKGROUND TO NAV
-
-document.addEventListener("DOMContentLoaded", () => {
-	const addShadow = () => {
-		if (window.scrollY >= 400) {
-			nav.classList.add("add-background");
-		} else {
-			nav.classList.remove("add-background");
-		}
-	};
-
-	window.addEventListener("scroll", addShadow);
-});
 
 // ANIMATION OBSERVER
 
@@ -133,9 +99,6 @@ const closeAccordionAfterClickOutside = (e) => {
 	closeAccordion();
 };
 
-accordionBtns.forEach((btn) => btn.addEventListener("click", openAccordion));
-window.addEventListener("click", closeAccordionAfterClickOutside);
-
 // SCROLLSPY
 // const handleScrollSpy = () => {
 // 	if (document.body.classList.contains("main-page")) {
@@ -179,9 +142,6 @@ const showCookie = () => {
 	}
 };
 
-cookieBtn.addEventListener("click", cookiesAlert);
-showCookie();
-
 // FOOTER YEAR
 
 const currentYear = () => {
@@ -199,3 +159,43 @@ Array.prototype.forEach.call(
 		el.innerHTML = string.replace(/(\s)([\S]{1,2})[\s]+/g, "$1$2&nbsp;");
 	}
 );
+
+accordionBtns.forEach((btn) => btn.addEventListener("click", openAccordion));
+window.addEventListener("click", closeAccordionAfterClickOutside);
+
+window.addEventListener("scroll", sectionObserver);
+
+cookieBtn.addEventListener("click", cookiesAlert);
+showCookie();
+
+// ADD BACKGROUND TO NAV
+
+document.addEventListener("DOMContentLoaded", () => {
+	const addShadow = () => {
+		if (window.scrollY >= 400) {
+			nav.classList.add("add-background");
+		} else {
+			nav.classList.remove("add-background");
+		}
+	};
+
+	window.addEventListener("scroll", addShadow);
+});
+
+burgerBtn.addEventListener("click", () => {
+	mobileNav.classList.toggle("mobile-nav-active");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+	const currentUrl = window.location.href;
+
+	if (currentUrl.includes("#")) {
+		const fragment = currentUrl.split("#")[1];
+		const targetElement = document.getElementById(fragment);
+		console.log(targetElement);
+
+		if (targetElement) {
+			targetElement.scrollIntoView({ behavior: "smooth" });
+		}
+	}
+});
