@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	if (currentUrl.includes("#")) {
 		const fragment = currentUrl.split("#")[1];
 		const targetElement = document.getElementById(fragment);
+		console.log(targetElement);
 
 		if (targetElement) {
 			targetElement.scrollIntoView({ behavior: "smooth" });
@@ -136,33 +137,33 @@ accordionBtns.forEach((btn) => btn.addEventListener("click", openAccordion));
 window.addEventListener("click", closeAccordionAfterClickOutside);
 
 // SCROLLSPY
-const handleScrollSpy = () => {
-	if (document.body.classList.contains("main-page")) {
-		const sections = [];
+// const handleScrollSpy = () => {
+// 	if (document.body.classList.contains("main-page")) {
+// 		const sections = [];
 
-		allSections.forEach((section) => {
-			let top = window.scrollY;
-			let offset = section.offsetTop - 100;
-			let height = section.offsetHeight;
-			if (top >= offset && top < offset + height) {
-				sections.push(section);
-				const activeSection = document.querySelector(
-					`[href*="${sections[0].id}"]`
-				);
+// 		allSections.forEach((section) => {
+// 			let top = window.scrollY;
+// 			let offset = section.offsetTop - 100;
+// 			let height = section.offsetHeight;
+// 			if (top >= offset && top < offset + height) {
+// 				sections.push(section);
+// 				const activeSection = document.querySelector(
+// 					`[href*="${sections[0].id}"]`
+// 				);
 
-				if (activeSection) {
-					menuItems.forEach((item) => item.classList.remove("nav-active"));
-					activeSection.classList.add("nav-active");
-				} else {
-					menuItems.forEach((item) => item.classList.remove("nav-active"));
-					menuItems[0].classList.add("nav-active");
-				}
-			}
-		});
-	}
-};
+// 				if (activeSection) {
+// 					menuItems.forEach((item) => item.classList.remove("nav-active"));
+// 					activeSection.classList.add("nav-active");
+// 				} else {
+// 					menuItems.forEach((item) => item.classList.remove("nav-active"));
+// 					menuItems[0].classList.add("nav-active");
+// 				}
+// 			}
+// 		});
+// 	}
+// };
 
-window.addEventListener("scroll", handleScrollSpy);
+// window.addEventListener("scroll", handleScrollSpy);
 
 // COOKIES
 
