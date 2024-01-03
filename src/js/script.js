@@ -13,6 +13,19 @@ const cookieBox = document.querySelector(".cookie-box");
 const cookieBtn = document.querySelector(".cookie-btn");
 const footerYear = document.querySelector(".footer-year");
 
+document.addEventListener("DOMContentLoaded", function () {
+	const currentUrl = window.location.href;
+
+	if (currentUrl.includes("#")) {
+		const fragment = currentUrl.split("#")[1];
+		const targetElement = document.getElementById(fragment);
+
+		if (targetElement) {
+			targetElement.scrollIntoView({ behavior: "smooth" });
+		}
+	}
+});
+
 window.addEventListener("scroll", sectionObserver);
 
 // ACTIVE MOBILE NAV
@@ -27,12 +40,12 @@ burgerBtn.addEventListener("click", () => {
 	mobileNav.classList.toggle("mobile-nav-active");
 });
 
-menuItems.forEach((link) => {
-	link.addEventListener("click", () => {
-		document.querySelector(".nav-active").classList.remove("nav-active");
-		link.classList.add("nav-active");
-	});
-});
+// menuItems.forEach((link) => {
+// 	link.addEventListener("click", () => {
+// 		document.querySelector(".nav-active").classList.remove("nav-active");
+// 		link.classList.add("nav-active");
+// 	});
+// });
 
 function sectionObserver() {
 	const currentSection = window.scrollY;
@@ -129,9 +142,9 @@ const handleScrollSpy = () => {
 
 		allSections.forEach((section) => {
 			let top = window.scrollY;
-			let offset = section.offsetTop;
+			let offset = section.offsetTop - 100;
 			let height = section.offsetHeight;
-			if (top + 80 >= offset && top + 80 < offset + height) {
+			if (top >= offset && top < offset + height) {
 				sections.push(section);
 				const activeSection = document.querySelector(
 					`[href*="${sections[0].id}"]`
