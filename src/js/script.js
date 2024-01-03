@@ -153,20 +153,6 @@ Array.prototype.forEach.call(
 
 window.addEventListener("scroll", sectionObserver);
 
-document.addEventListener("DOMContentLoaded", function () {
-	const currentUrl = window.location.href;
-
-	if (currentUrl.includes("#")) {
-		const fragment = currentUrl.split("#")[1];
-		const targetElement = document.getElementById(fragment);
-
-
-		if (targetElement) {
-			targetElement.scrollIntoView({ behavior: "smooth" });
-		}
-	}
-});
-
 
 accordionBtns.forEach((btn) => btn.addEventListener("click", openAccordion));
 window.addEventListener("click", closeAccordionAfterClickOutside);
