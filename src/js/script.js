@@ -178,8 +178,6 @@ const handleScrollSpy = () => {
 };
 
 window.addEventListener("scroll", handleScrollSpy);
-
-
 window.addEventListener("scroll", sectionObserver);
 
 
