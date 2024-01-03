@@ -21,6 +21,10 @@ mobileNavItems.forEach((item) =>
 	)
 );
 
+burgerBtn.addEventListener("click", () => {
+	mobileNav.classList.toggle("mobile-nav-active");
+});
+
 // menuItems.forEach((link) => {
 // 	link.addEventListener("click", () => {
 // 		document.querySelector(".nav-active").classList.remove("nav-active");
@@ -44,6 +48,20 @@ function sectionObserver() {
 		}
 	});
 }
+
+// ADD BACKGROUND TO NAV
+
+document.addEventListener("DOMContentLoaded", () => {
+	const addShadow = () => {
+		if (window.scrollY >= 400) {
+			nav.classList.add("add-background");
+		} else {
+			nav.classList.remove("add-background");
+		}
+	};
+
+	window.addEventListener("scroll", addShadow);
+});
 
 // ANIMATION OBSERVER
 
@@ -99,34 +117,6 @@ const closeAccordionAfterClickOutside = (e) => {
 	closeAccordion();
 };
 
-// SCROLLSPY
-// const handleScrollSpy = () => {
-// 	if (document.body.classList.contains("main-page")) {
-// 		const sections = [];
-
-// 		allSections.forEach((section) => {
-// 			let top = window.scrollY;
-// 			let offset = section.offsetTop - 100;
-// 			let height = section.offsetHeight;
-// 			if (top >= offset && top < offset + height) {
-// 				sections.push(section);
-// 				const activeSection = document.querySelector(
-// 					`[href*="${sections[0].id}"]`
-// 				);
-
-// 				if (activeSection) {
-// 					menuItems.forEach((item) => item.classList.remove("nav-active"));
-// 					activeSection.classList.add("nav-active");
-// 				} else {
-// 					menuItems.forEach((item) => item.classList.remove("nav-active"));
-// 					menuItems[0].classList.add("nav-active");
-// 				}
-// 			}
-// 		});
-// 	}
-// };
-
-// window.addEventListener("scroll", handleScrollSpy);
 
 // COOKIES
 
@@ -160,31 +150,8 @@ Array.prototype.forEach.call(
 	}
 );
 
-accordionBtns.forEach((btn) => btn.addEventListener("click", openAccordion));
-window.addEventListener("click", closeAccordionAfterClickOutside);
 
 window.addEventListener("scroll", sectionObserver);
-
-cookieBtn.addEventListener("click", cookiesAlert);
-showCookie();
-
-// ADD BACKGROUND TO NAV
-
-document.addEventListener("DOMContentLoaded", () => {
-	const addShadow = () => {
-		if (window.scrollY >= 400) {
-			nav.classList.add("add-background");
-		} else {
-			nav.classList.remove("add-background");
-		}
-	};
-
-	window.addEventListener("scroll", addShadow);
-});
-
-burgerBtn.addEventListener("click", () => {
-	mobileNav.classList.toggle("mobile-nav-active");
-});
 
 document.addEventListener("DOMContentLoaded", function () {
 	const currentUrl = window.location.href;
@@ -192,10 +159,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	if (currentUrl.includes("#")) {
 		const fragment = currentUrl.split("#")[1];
 		const targetElement = document.getElementById(fragment);
-		console.log(targetElement);
+
 
 		if (targetElement) {
 			targetElement.scrollIntoView({ behavior: "smooth" });
 		}
 	}
 });
+
+
+accordionBtns.forEach((btn) => btn.addEventListener("click", openAccordion));
+window.addEventListener("click", closeAccordionAfterClickOutside);
+
+cookieBtn.addEventListener("click", cookiesAlert);
+showCookie();
