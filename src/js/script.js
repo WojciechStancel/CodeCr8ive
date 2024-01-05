@@ -53,7 +53,7 @@ function sectionObserver() {
 
 document.addEventListener("DOMContentLoaded", () => {
 	const addShadow = () => {
-		if (window.scrollY >= 400) {
+		if (window.scrollY >= 50) {
 			nav.classList.add("add-background");
 		} else {
 			nav.classList.remove("add-background");
