@@ -10,7 +10,6 @@
 
 html {
 	font-size: 62.5%;
-	// scroll-behavior: smooth;
 }
 
 @font-face {
@@ -681,11 +680,11 @@ body {
 		background-image: url("../img/flowershop-small.jpg");
 	}
 	&__img-four {
-		background-image: url("../img/memory.png");
+		background-image: url("../img/memory.webp");
 		background-size: cover;
 	}
 	&__img-five {
-		background-image: url("../img/e-shop.png");
+		background-image: url("../img/e-shop.webp");
 	}
 	&__img-six {
 		background-image: url("../img/notes_app.png");
@@ -714,36 +713,6 @@ body {
 			padding: 0.5em 0;
 		}
 	}
-
-	// &__footer {
-	// 	display: flex;
-	// 	justify-content: center;
-	// 	align-items: center;
-	// 	border-top: 1px solid black;
-	// 	background-color: $intensive-blue;
-	// 	height: 80px;
-
-	// 	a {
-	// 		text-decoration: none;
-	// 		padding: 0 20px;
-	// 		color: $pure-white;
-	// 		text-align: center;
-	// 		white-space: nowrap;
-	// 		font-size: 1.3rem;
-	// 		font-weight: bold;
-
-	// 		.footer-icon {
-	// 			transition: transform 0.4s;
-	// 			img {
-	// 				width: 40px;
-	// 			}
-
-	// 			&:hover {
-	// 				transform: scale(1.2);
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 
 // PRICES
