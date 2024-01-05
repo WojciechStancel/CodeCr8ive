@@ -8,7 +8,7 @@ const buttonBars = document.querySelector(".burger-btn__bars");
 const allSections = document.querySelectorAll(".section");
 const accordion = document.querySelector(".accordion");
 const accordionBtns = document.querySelectorAll(".accordion-btn");
-const socials = document.querySelector(".social-nav");
+// const socials = document.querySelector(".social-nav");
 const cookieBox = document.querySelector(".cookie-box");
 const cookieBtn = document.querySelector(".cookie-btn");
 const footerYear = document.querySelector(".footer-year");
@@ -117,7 +117,6 @@ const closeAccordionAfterClickOutside = (e) => {
 	closeAccordion();
 };
 
-
 // COOKIES
 
 const cookiesAlert = () => {
@@ -131,6 +130,7 @@ const showCookie = () => {
 		cookieBox.classList.add("cookies-sleep");
 	}
 };
+showCookie();
 
 // FOOTER YEAR
 
@@ -138,7 +138,6 @@ const currentYear = () => {
 	const year = new Date().getFullYear();
 	footerYear.innerText = year;
 };
-
 currentYear();
 
 // REMOVE ORPHANS
@@ -152,38 +151,34 @@ Array.prototype.forEach.call(
 
 // SCROLLSPY
 
-// const handleScrollSpy = () => {
-// 	if (document.body.classList.contains("main-page")) {
-// 		const sections = [];
+const handleScrollSpy = () => {
+	if (document.body.classList.contains("main-page")) {
+		const sections = [];
 
-// 		allSections.forEach((section) => {
-// 			let top = window.scrollY;
-// 			let offset = section.offsetTop - 100;
-// 			let height = section.offsetHeight;
-// 			if (top >= offset && top < offset + height) {
-// 				sections.push(section);
-// 				const activeSection = document.querySelector(
-// 					`[href*="${sections[0].id}"]`
-// 				);
+		allSections.forEach((section) => {
+			let top = window.scrollY;
+			let offset = section.offsetTop - 100;
+			let height = section.offsetHeight;
+			if (top >= offset && top < offset + height) {
+				sections.push(section);
+				const activeSection = document.querySelector(
+					`[href*="${sections[0].id}"]`
+				);
 
-// 				if (activeSection) {
-// 					menuItems.forEach((item) => item.classList.remove("nav-active"));
-// 					activeSection.classList.add("nav-active");
-// 				} else {
-// 					menuItems.forEach((item) => item.classList.remove("nav-active"));
-// 					menuItems[0].classList.add("nav-active");
-// 				}
-// 			}
-// 		});
-// 	}
-// };
+				if (activeSection) {
+					menuItems.forEach((item) => item.classList.remove("nav-active"));
+					activeSection.classList.add("nav-active");
+				} else {
+					menuItems.forEach((item) => item.classList.remove("nav-active"));
+					menuItems[0].classList.add("nav-active");
+				}
+			}
+		});
+	}
+};
 
-// window.addEventListener("scroll", handleScrollSpy);
+window.addEventListener("scroll", handleScrollSpy);
 window.addEventListener("scroll", sectionObserver);
-
-
-accordionBtns.forEach((btn) => btn.addEventListener("click", openAccordion));
 window.addEventListener("click", closeAccordionAfterClickOutside);
-
+accordionBtns.forEach((btn) => btn.addEventListener("click", openAccordion));
 cookieBtn.addEventListener("click", cookiesAlert);
-showCookie();

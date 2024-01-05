@@ -92,7 +92,7 @@ body {
 .header {
 	position: relative;
 	height: 100vh;
-	background-image: url("../img/milky-way-small.jpg");
+	background-image: url("../img/background-small.jpg");
 	background-size: cover;
 	background-position: center;
 
@@ -1214,7 +1214,6 @@ body {
 // MEDIA
 
 @media (max-width: 350px) {
-
 	.contact {
 		&__form-top,
 		&__form-middle,
@@ -1414,7 +1413,7 @@ body {
 	}
 
 	.header {
-		background-image: url("../img/milkyway_big.jpg");
+		background-image: url("../img/background-big.jpg");
 	}
 
 	.aboutme {
@@ -1620,7 +1619,6 @@ body {
 			&-socials {
 				img {
 					width: 45px;
-
 				}
 			}
 		}
