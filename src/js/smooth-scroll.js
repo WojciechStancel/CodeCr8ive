@@ -11,15 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
 				if (href.includes("#")) {
 					const targetId = href.split("#")[1];
 					const targetElement = document.getElementById(targetId);
-
 					if (targetElement) {
 						e.preventDefault();
 
-						// Ustawienie nowego hasha w adresie URL
 						history.pushState(null, null, `#${targetId}`);
-
+						const scrollMarginTop = targetId === "aboutme" ? 100 : 30;
 						window.scrollTo({
-							top: targetElement.offsetTop - 65,
+							top: targetElement.offsetTop - scrollMarginTop,
 							behavior: "smooth",
 						});
 					}
