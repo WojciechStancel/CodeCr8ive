@@ -8,7 +8,6 @@ const buttonBars = document.querySelector(".burger-btn__bars");
 const allSections = document.querySelectorAll(".section");
 const accordion = document.querySelector(".accordion");
 const accordionBtns = document.querySelectorAll(".accordion-btn");
-// const socials = document.querySelector(".social-nav");
 const cookieBox = document.querySelector(".cookie-box");
 const cookieBtn = document.querySelector(".cookie-btn");
 const footerYear = document.querySelector(".footer-year");
@@ -24,13 +23,6 @@ mobileNavItems.forEach((item) =>
 burgerBtn.addEventListener("click", () => {
 	mobileNav.classList.toggle("mobile-nav-active");
 });
-
-// menuItems.forEach((link) => {
-// 	link.addEventListener("click", () => {
-// 		document.querySelector(".nav-active").classList.remove("nav-active");
-// 		link.classList.add("nav-active");
-// 	});
-// });
 
 function sectionObserver() {
 	const currentSection = window.scrollY;
