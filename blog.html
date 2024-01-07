@@ -6,38 +6,44 @@
     <title>CodeCr8ive Profesjonalne strony internetowe</title>
     <meta name="description" content="Blog - objaśnienie trudnych kwestii frontendowych w najprostszy sposób">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://codecr8ive.pl/blog">
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://codecr8ive.pl/blog" />
-    <meta property="og:title" content="Blog - CodeCr8ive - w świecie kodu. Trudne rzeczy wyjaśnione w prosty sposób." />
-    <meta property="og:image" content="https://codecr8ive.pl/uploads/coding.jpg" />
-    <meta property="og:image:secure_url" content="https://codecr8ive.pl/uploads/coding.jpg" />
-    <meta property="og:image:width" content="600">
-    <meta property="og:image:height" content="420">
+
+    <meta property="og:url" content="https://codecr8ive.pl/blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="CodeCr8ive - gwarancja Twojego sukcesu w sieci.">
+    <meta property="og:description" content="Blog - trudne rzeczy wyjaśnione w prosty sposób">
+    <meta property="og:image" content="https://codecr8ive.pl/uploads/coding.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="codecr8ive.pl/blog">
+    <meta property="twitter:url" content="https://codecr8ive.pl/blog">
+    <meta name="twitter:title" content="CodeCr8ive - gwarancja Twojego sukcesu w sieci.">
+    <meta name="twitter:description" content="Blog - trudne rzeczy wyjaśnione w prosty sposób">
+    <meta name="twitter:image" content="https://codecr8ive.pl/uploads/coding.jpg">
+    <link rel="canonical" href="https://codecr8ive.pl/">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch.png" />
-    <link rel="stylesheet" href="dist/css/style.min.css?ver=1.8">
+    <link rel="stylesheet" href="dist/css/style.min.css?ver=1.10">
 
 </head>
 
-<body class="main-page">
+<body class="blog-page section">
     <nav>
-        <div class="nav" style="top: 0; background-color: #1b1a1a">
+        <div class="nav nav-bg">
             <div class="nav-logo">
-                <a class="nav__link-item nav-active" href="/">codeCR8IVE</a>
+                <a class="nav__link-item" href="/">codeCR8IVE</a>
             </div>
             <div class="nav__link">
                 <a class="nav__link-item" href="/#aboutme">O mnie</a>
                 <a class="nav__link-item" href="/#projects">Projekty</a>
                 <a class="nav__link-item" href="/#prices">Koszty</a>
                 <a class="nav__link-item" href="/#contact">Kontakt</a>
-                <a class="nav__link-item" href="/blog">Blog</a>
+                <a class="nav__link-item nav-active" href="#">Blog</a>
             </div>
         </div>
     </nav>
     <div class="mobile">
         <a href="/">CodeCr8ive</a>
-        <button class="burger-btn" aria-label="Przycisk rozwijania nawigacji" style="top: 1em; right: 0 ">
+        <button class="burger-btn" aria-label="Przycisk rozwijania nawigacji">
             <div class="burger-btn__box">
                 <div class="burger-btn__bars"></div>
             </div>
@@ -47,38 +53,75 @@
         <div class="mobile-nav">
             <div class="items">
                 <a href="/" class="item">CodeCr8ive</a>
-                <a href="index.html#aboutme" class="item">O mnie</a>
-                <a href="index.html#projects" class="item">Projekty</a>
-                <a href="index.html#prices" class="item">Koszty</a>
-                <a href="index.html#contact" class="item">Kontakt</a>
-                <a href="/blog" class="item">Blog</a>
+                <a href="/#aboutme" class="item">O mnie</a>
+                <a href="/#projects" class="item">Projekty</a>
+                <a href="/#prices" class="item">Koszty</a>
+                <a href="/#contact" class="item">Kontakt</a>
+                <a href="#blog" class="item">Blog</a>
             </div>
         </div>
     </nav>
-
-
-    <section class="wrapper section section-margin blog" id="blog">
-        <h1 class="second-title second-title-margin">Blog - w świecie kodu</h1>
-        <p class="blog-description">Na blogu pojawiać będą się wpisy, które mają na celu w prosty sposób wyjaśniać
-            programistyczne narzędzia. Gama technologii, z&nbsp;których można korzystać jest ogromna. Bardzo często
+    <header class="blog-header wrapper section black-btn">
+        <h1 class="second-title second-title-margin blog-header-title">Blog - w świecie kodu</h1>
+        <p class="blog-header-description">Na blogu pojawiać będą się wpisy, które mają na celu w prosty sposób
+            wyjaśniać
+            programistyczne narzędzia. Gama technologii, z&nbsp;których można korzystać jest ogromna. Bardzo
+            często
             pojawiają się
-            nowe aktualizacje. W&nbsp;poniższych wpisach postaram się wyjaśnić Ci jakich narzędzi używam na co dzień, do
+            nowe aktualizacje. W&nbsp;poniższych wpisach postaram się wyjaśnić Ci jakich narzędzi używam na
+            co
+            dzień, do
             czego one służą i jak powstają strony internetowe od podstaw. Zapraszam!
         </p>
-        <div class="group-projects blog-padding">
-            <div class="projects blog-width">
-                <div class="image-container">
-                    <div class="projects__img projects__img-blog-one"></div>
-                </div>
-                <div class="projects__body blog-body">
-                    <h3>Pod maską kodu</h3>
-                    <p>Część technologii, którymi posługuję się na co dzień tworząc aplikacje webowe. <a
-                            href="/blog-articles/moje-technologie">Czytaj więcej...</a></p>
+    </header>
+    <main class="blog-container">
+        <aside class="sidebar wrapper">
+            <h2 class="blog-title">Najnowszy wpis</h2>
+            <p>08.01.2024</p>
+            <div class="group-projects blog-padding">
+                <div class="projects blog-width">
+                    <div class="image-container">
+                        <div class="projects__img projects__img-blog-two"></div>
+                    </div>
+                    <div class="projects__body blog-body">
+                        <h3>Zawziętość i dokładność</h3>
+                        <p>Pisanie kodu w programowaniu to z reguły czysta przyjemność - budowanie od podstaw, rozwój.
+                            Natomiast, to nie ono jest głównym zadaniem programisty.
+                            Najgłówniejszym zadaniem jest... <a href="/blog-articles/programista-wojownik">Czytaj
+                                więcej...</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </aside>
+        <section class="wrapper section section-margin blog black-btn">
+            <h2 class="blog-title">Wszystkie wpisy</h2>
+            <div class="group-projects blog-padding">
+                <div class="projects blog-width">
+                    <div class="image-container">
+                        <div class="projects__img projects__img-blog-one"></div>
+                    </div>
+                    <div class="projects__body blog-body">
+                        <h3>Pod maską kodu</h3>
+                        <p>Część technologii, którymi posługuję się na co dzień tworząc aplikacje webowe. <a
+                                href="/blog-articles/moje-technologie">Czytaj więcej...</a></p>
+                    </div>
+                </div>
+                <div class="projects blog-width">
+                    <div class="image-container">
+                        <div class="projects__img projects__img-blog-two"></div>
+                    </div>
+                    <div class="projects__body blog-body">
+                        <h3>Zawziętość i dokładność</h3>
+                        <p>Pisanie kodu w programowaniu to z reguły czysta przyjemność - budowanie od podstaw, widok
+                            jak
+                            coś powstaje i się rozwija. Natomiast, to nie ono jest głównym zadaniem programisty.
+                            Najgłówniejszym zadaniem jest... <a href="/blog-articles/programista-wojownik">Czytaj
+                                więcej...</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <div class="cookie-box">
         <div class="cookie-box-items">
@@ -118,7 +161,7 @@
         <p class="footer__bottom-text"> &copy; <span class="footer-year"></span> Code Cr8ive</p>
     </footer>
 
-    <script type="module" src="dist/js/script.min.js?ver=1.8"></script>
+    <script type="module" src="dist/js/script.min.js?ver=1.10"></script>
 </body>
 
 </html>
