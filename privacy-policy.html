@@ -7,14 +7,23 @@
     <meta name="description" content="Zapoznaj się z polityką prywatności CodeCr8ive.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="dist/css/style.min.css?ver=1.10">
+    <link rel="stylesheet" href="dist/css/style.min.css?ver=1.12">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XND5KQ934"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6XND5KQ934');
+    </script>
 </head>
 
-<body class="special-body-color">
+<body>
 
     <nav class="nav nav-bg">
         <div class="nav-logo">
-            <a class="nav__link-item nav-active" href="/">codeCR8IVE</a>
+            <a class="nav__link-item" href="/">codeCR8IVE</a>
         </div>
         <div class="nav__link">
             <a class="nav__link-item" href="/#aboutme">O mnie</a>
@@ -24,7 +33,7 @@
             <a class="nav__link-item" href="blog">Blog</a>
         </div>
     </nav>
-    <div class="mobile">
+    <div class="mobile section">
         <a href="/">CodeCr8ive</a>
         <button class="burger-btn" aria-label="Przycisk rozwijania nawigacji">
             <div class="burger-btn__box">
@@ -44,10 +53,8 @@
     </nav>
 
 
-    <section class="privacy-policy-head wrapper">
+    <section class="privacy-policy-head wrapper section black-btn">
         <h1>Polityka Prywatności</h1>
-
-
         <div class="main-content wrapper">
             <div class="privacy-policy">
                 <h2>Cel zbierania danych osobowych</h2>
@@ -67,6 +74,18 @@
                 <p>Strona internetowa może korzystać z plików cookie w celu ułatwienia nawigacji i śledzenia ruchu na
                     stronie. Możesz wyłączyć pliki cookie w ustawieniach przeglądarki, ale może to wpłynąć na działanie
                     niektórych funkcji strony.</p>
+            </div>
+
+            <div class="privacy-policy">
+                <h2>Google Analytics</h2>
+                <p>
+                    Strona CodeCr8ive.pl korzysta z usługi Google Analytics dla zbierania i analizowania informacji o
+                    serwisie (ilość miesięcznych odwiedzin, skąd ruch trafia na stronę – z wyszukiwarek, z linków w
+                    social media itd.)
+                    W powyższym celu informacje o osobach korzystających z serwisu są przesyłane do Google. Google
+                    wyklucza przesyłanie informacji umożliwiających identyfikację danej osoby, jednakże adres IP nie
+                    jest traktowany jako taka informacja przez Google.
+                </p>
             </div>
 
             <div class="privacy-policy last-section">
@@ -95,10 +114,10 @@
                     <div class="footer__box-socials">
                         <a href="https://www.instagram.com/codecr8ive/" target="_blank" rel="noopener"><img
                                 src="dist/img/icons/instagram.png" alt="link do konta na instagramie"></a>
-                        <a href="https://www.facebook.com/profile.php?id=61552481912036&mibextid=ZbWKwL" target="_blank"
-                            rel="noopener"><img src="dist/img/icons/facebook.png" alt="ikona portalu facebook"></a>
+                        <a href="https://www.facebook.com/codecr8ivepl/" target="_blank" rel="noopener"><img
+                                src="dist/img/icons/facebook.png" alt="ikona portalu facebook"></a>
                         <a href="https://www.linkedin.com/in/wojciech-stancel/" target="_blank" rel="noopener"><img
-                                src="dist/img/icons/linkedin.png" alt="ikona portalu github"></a>
+                                src="dist/img/icons/linkedin.png" alt="ikona portalu linkedin"></a>
                         <a href="https://github.com/WojciechStancel" target="_blank" rel="noopener"><img
                                 src="dist/img/icons/github.png" alt="ikona portalu github"></a>
                     </div>
@@ -107,7 +126,7 @@
                     <h3>Sprawdź również</h3>
                     <ul class="footer__list">
                         <li class="footer__list-item"><a href="/blog">Blog</a></li>
-                        <li class="footer__list-item"><a href="/privacy_policy">Polityka prywatności</a></li>
+                        <li class="footer__list-item"><a href="/privacy-policy">Polityka prywatności</a></li>
                     </ul>
                 </div>
             </div>
@@ -115,7 +134,7 @@
 
         <p class="footer__bottom-text"> &copy; <span class="footer-year"></span> Code Cr8ive</p>
     </footer>
-    <script type="module" src="dist/js/script.min.js?ver=1.10">
+    <script type="module" src="dist/js/script.min.js?ver=1.12">
     </script>
 </body>
 
