@@ -13,7 +13,6 @@ const cookieBtn = document.querySelector(".cookie-btn");
 const footerYear = document.querySelector(".footer-year");
 
 // ACTIVE MOBILE NAV
-
 mobileNavItems.forEach((item) =>
 	item.addEventListener("click", () =>
 		mobileNav.classList.remove("mobile-nav-active")
@@ -42,7 +41,6 @@ function sectionObserver() {
 }
 
 // ADD BACKGROUND TO NAV
-
 document.addEventListener("DOMContentLoaded", () => {
 	const addShadow = () => {
 		if (window.scrollY >= 50) {
@@ -56,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ANIMATION OBSERVER
-
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
@@ -69,7 +66,6 @@ const observer = new IntersectionObserver((entries) => {
 hiddenElements.forEach((el) => observer.observe(el));
 
 // ACCORDION
-
 function openAccordion() {
 	const accordionInfo = this.nextElementSibling;
 
@@ -82,14 +78,12 @@ function openAccordion() {
 		rotateIcon(this, 180);
 	}
 }
-
 function rotateIcon(button, angle) {
 	const icon = button.querySelector(".accordion-btn-icon");
 	if (icon) {
 		icon.style.transform = `rotate(${angle}deg)`;
 	}
 }
-
 const closeAccordion = () => {
 	const allActiveItems = document.querySelectorAll(".accordion-info");
 	allActiveItems.forEach((item) => {
@@ -97,7 +91,6 @@ const closeAccordion = () => {
 		rotateIcon(item.previousElementSibling, 0);
 	});
 };
-
 const closeAccordionAfterClickOutside = (e) => {
 	if (
 		e.target.classList.contains("accordion-btn-drop") ||
@@ -110,12 +103,10 @@ const closeAccordionAfterClickOutside = (e) => {
 };
 
 // COOKIES
-
 const cookiesAlert = () => {
 	localStorage.setItem("cookie", "true");
 	cookieBox.classList.add("cookies-sleep");
 };
-
 const showCookie = () => {
 	const cookieExist = localStorage.getItem("cookie");
 	if (cookieExist) {
@@ -125,7 +116,6 @@ const showCookie = () => {
 showCookie();
 
 // FOOTER YEAR
-
 const currentYear = () => {
 	const year = new Date().getFullYear();
 	footerYear.innerText = year;
@@ -142,7 +132,6 @@ Array.prototype.forEach.call(
 );
 
 // SCROLLSPY
-
 const handleScrollSpy = () => {
 	if (document.body.classList.contains("main-page")) {
 		const sections = [];
@@ -168,6 +157,35 @@ const handleScrollSpy = () => {
 		});
 	}
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+	const isIndexPage = window.location.pathname === "/index.html" || "/";
+
+	if (isIndexPage) {
+		const links = document.querySelectorAll(".smooth-scroll a");
+
+		links.forEach((link) => {
+			link.addEventListener("click", function (e) {
+				const href = this.getAttribute("href");
+
+				if (href.includes("#")) {
+					const targetId = href.split("#")[1];
+					const targetElement = document.getElementById(targetId);
+					if (targetElement) {
+						e.preventDefault();
+
+						history.pushState(null, null, `#${targetId}`);
+						const scrollMarginTop = targetId === "aboutme" ? 100 : 30;
+						window.scrollTo({
+							top: targetElement.offsetTop - scrollMarginTop,
+							behavior: "smooth",
+						});
+					}
+				}
+			});
+		});
+	}
+});
 
 window.addEventListener("scroll", handleScrollSpy);
 window.addEventListener("scroll", sectionObserver);
