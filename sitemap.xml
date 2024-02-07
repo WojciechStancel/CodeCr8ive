@@ -9,27 +9,32 @@
 
 <url>
   <loc>https://codecr8ive.pl/</loc>
-  <lastmod>2024-01-08T00:03:44+00:00</lastmod>
+  <lastmod>2024-02-01T19:39:42+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://codecr8ive.pl/blog</loc>
-  <lastmod>2024-01-08T00:03:44+00:00</lastmod>
+  <lastmod>2024-02-01T19:39:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://codecr8ive.pl/privacy_policy</loc>
-  <lastmod>2024-01-08T00:03:44+00:00</lastmod>
+  <loc>https://codecr8ive.pl/privacy-policy</loc>
+  <lastmod>2024-02-01T19:39:42+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://codecr8ive.pl/blog-articles/programista-wojownik</loc>
-  <lastmod>2024-01-08T00:03:58+00:00</lastmod>
+  <loc>https://codecr8ive.pl/articles/optymalna-strona</loc>
+  <lastmod>2024-02-01T20:07:43+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://codecr8ive.pl/blog-articles/moje-technologie</loc>
-  <lastmod>2024-01-08T00:03:58+00:00</lastmod>
+  <loc>https://codecr8ive.pl/articles/moje-technologie</loc>
+  <lastmod>2024-02-01T19:39:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://codecr8ive.pl/articles/programista-wojownik</loc>
+  <lastmod>2024-02-01T19:39:55+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 

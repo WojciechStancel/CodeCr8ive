@@ -1,8 +1,9 @@
 node_modules
+uploads
 .env
 .vscode
 
-icons.html
-socials.html
 
 test.js
+mail.php
+.htaccess
