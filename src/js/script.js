@@ -8,9 +8,21 @@ const buttonBars = document.querySelector(".burger-btn__bars");
 const allSections = document.querySelectorAll(".section");
 const accordion = document.querySelector(".accordion");
 const accordionBtns = document.querySelectorAll(".accordion-btn");
-const cookieBox = document.querySelector(".cookie-box");
-const cookieBtn = document.querySelector(".cookie-btn");
 const footerYear = document.querySelector(".footer-year");
+const animation = document.querySelectorAll(".slideIn");
+const showAnimation = document.querySelectorAll(".showElement");
+const gallery = document.querySelectorAll(".image-container img");
+const galleryPopup = document.querySelector(".popup-image");
+const galleryPopupImg = document.querySelector(".popupPhoto");
+const closePopup = document.querySelector(".popupPhotoClose");
+const email = document.getElementById("email");
+const nameUser = document.getElementById("name");
+const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
+const msg = document.getElementById("message");
+const submitBtn = document.getElementById("submitBtn");
+const popup = document.querySelector(".form-popup");
+const popupBtn = document.querySelector(".popup-btn");
 
 // ACTIVE MOBILE NAV
 mobileNavItems.forEach((item) =>
@@ -53,18 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	window.addEventListener("scroll", addShadow);
 });
 
-// ANIMATION OBSERVER
-const observer = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			entry.target.classList.remove("hidden");
-			entry.target.classList.add("show");
-		}
-	});
-});
-
-hiddenElements.forEach((el) => observer.observe(el));
-
 // ACCORDION
 function openAccordion() {
 	const accordionInfo = this.nextElementSibling;
@@ -102,18 +102,96 @@ const closeAccordionAfterClickOutside = (e) => {
 	closeAccordion();
 };
 
-// COOKIES
-const cookiesAlert = () => {
-	localStorage.setItem("cookie", "true");
-	cookieBox.classList.add("cookies-sleep");
+// EMAIL VALIDATION
+if (submitBtn) {
+	submitBtn.addEventListener("click", (e) => {
+		e.preventDefault();
+		validateInputs();
+		countErrors();
+	});
+
+	popupBtn.addEventListener("click", () => {
+		popup.classList.remove("show-popup");
+	});
+}
+
+const setError = (element, message) => {
+	const inputControl = element.parentElement;
+	const errorDisplay = inputControl.querySelector(".error");
+
+	errorDisplay.innerText = message;
+	inputControl.classList.add("error");
+	inputControl.classList.remove("success");
 };
-const showCookie = () => {
-	const cookieExist = localStorage.getItem("cookie");
-	if (cookieExist) {
-		cookieBox.classList.add("cookies-sleep");
+
+const setSuccess = (element) => {
+	const inputControl = element.parentElement;
+	const errorDisplay = inputControl.querySelector(".error");
+
+	errorDisplay.innerText = "";
+	inputControl.classList.add("success");
+	inputControl.classList.remove("error");
+};
+
+const isValidEmail = (email) => {
+	const re =
+		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
+};
+
+const validateInputs = () => {
+	const userNameValue = nameUser.value.trim();
+	const emailValue = email.value.trim();
+	const phoneValue = phone.value.trim();
+	const msgValue = msg.value.trim();
+
+	if (userNameValue === "") {
+		setError(nameUser, "Podaj Imię!");
+	} else {
+		setSuccess(nameUser);
+	}
+
+	if (emailValue === "") {
+		setError(email, "Podaj Email!");
+	} else if (!isValidEmail(emailValue)) {
+		setError(email, "Email jest nieprawidłowy!");
+	} else {
+		setSuccess(email);
+	}
+
+	if (subject.value === "" || subject.value === "Wybierz temat:") {
+		setError(subject, "Wybierz temat wiadomości!");
+	} else {
+		setSuccess(subject);
+	}
+
+	if (msgValue === "") {
+		setError(msg, "Wpisz wiadomość!");
+	} else {
+		setSuccess(msg);
+	}
+
+	if (phoneValue === "") {
+		setSuccess(phone);
+	} else {
+		setSuccess(phone);
 	}
 };
-showCookie();
+
+const countErrors = () => {
+	const allErrors = document.querySelectorAll(".error");
+	let errorCount = 0;
+
+	allErrors.forEach((el) => {
+		if (el.innerText !== "") {
+			errorCount++;
+		}
+	});
+
+	if (errorCount === 0) {
+		popup.classList.add("show-popup");
+	}
+};
 
 // FOOTER YEAR
 const currentYear = () => {
@@ -151,12 +229,73 @@ const handleScrollSpy = () => {
 					activeSection.classList.add("nav-active");
 				} else {
 					menuItems.forEach((item) => item.classList.remove("nav-active"));
-					menuItems[0].classList.add("nav-active");
+					// menuItems[0].classList.add("nav-active");
 				}
 			}
 		});
 	}
 };
+
+// ANIMATION
+
+window.onscroll = () => {
+	animation.forEach((anim) => {
+		let top = window.scrollY;
+		let offset;
+
+		if (window.innerWidth < 1300) {
+			offset = anim.offsetTop - 500;
+		} else if (window.innerWidth >= 1300) {
+			offset = anim.offsetTop - 600;
+		}
+
+		let height = anim.offsetHeight;
+
+		if (top >= offset && top < offset + height) {
+			anim.classList.add("slide");
+		}
+	});
+
+	showAnimation.forEach((anim) => {
+		let top = window.scrollY;
+		let offset;
+
+		if (window.innerWidth < 1300) {
+			offset = anim.offsetTop - 500;
+		} else if (window.innerWidth >= 1300) {
+			offset = anim.offsetTop - 600;
+		}
+
+		let height = anim.offsetHeight;
+
+		if (top >= offset && top < offset + height) {
+			anim.classList.add("show");
+		}
+	});
+};
+
+// GALLERY
+
+const closeGalleryPopup = (e) => {
+	if (!e.target.classList.contains("show-popup-gallery")) {
+		return;
+	} else {
+		galleryPopup.classList.remove("show-popup-gallery");
+	}
+};
+
+gallery.forEach((image) => {
+	image.addEventListener("click", () => {
+		galleryPopup.classList.add("show-popup-gallery");
+		galleryPopupImg.src = image.getAttribute("src");
+	});
+});
+
+if (closePopup) {
+	closePopup.addEventListener("click", () => {
+		galleryPopup.classList.remove("show-popup-gallery");
+	});
+}
 
 document.addEventListener("DOMContentLoaded", function () {
 	const isIndexPage = window.location.pathname === "/index.html" || "/";
@@ -175,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
 						e.preventDefault();
 
 						history.pushState(null, null, `#${targetId}`);
-						const scrollMarginTop = targetId === "aboutme" ? 100 : 30;
+						const scrollMarginTop = targetId === "aboutme" ? 100 : 85;
 						window.scrollTo({
 							top: targetElement.offsetTop - scrollMarginTop,
 							behavior: "smooth",
@@ -187,8 +326,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 });
 
+window.addEventListener("click", closeGalleryPopup);
 window.addEventListener("scroll", handleScrollSpy);
 window.addEventListener("scroll", sectionObserver);
 window.addEventListener("click", closeAccordionAfterClickOutside);
 accordionBtns.forEach((btn) => btn.addEventListener("click", openAccordion));
-cookieBtn.addEventListener("click", cookiesAlert);
