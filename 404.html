@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -7,34 +7,31 @@
     <meta name="description" content="Podana strona nie istnieje.">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/css/style.min.css?ver=1.12">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XND5KQ934"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <link rel="canonical" href="https://codecr8ive.pl/404">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/dist/css/style.min.css?ver=1.14">
 
-        gtag('config', 'G-6XND5KQ934');
-    </script>
 </head>
 
 <body>
 
     <nav class="nav nav-bg">
         <div class="nav-logo">
-            <a class="nav__link-item" href="/">codeCR8IVE</a>
+            <a class="nav__link-item" href="/">code<span>CR8IVE</span></a>
         </div>
         <div class="nav__link">
             <a class="nav__link-item" href="/#aboutme">O mnie</a>
             <a class="nav__link-item" href="/#projects">Projekty</a>
             <a class="nav__link-item" href="/#prices">Koszty</a>
             <a class="nav__link-item" href="/#contact">Kontakt</a>
-            <a class="nav__link-item" href="blog">Blog</a>
+            <a class="nav__link-item" href="/blog">Blog</a>
         </div>
     </nav>
     <div class="mobile">
-        <a href="/">CodeCr8ive</a>
+        <a href="/">code<span>CR8IVE</span></a>
         <button class="burger-btn" aria-label="Przycisk rozwijania nawigacji">
             <div class="burger-btn__box">
                 <div class="burger-btn__bars"></div>
@@ -43,7 +40,7 @@
     </div>
     <nav class="mobile-nav">
         <div class="items">
-            <a href="/" class="item">CodeCr8ive</a>
+            <a href="/" class="item item-logo">code<span>CR8IVE</span></a>
             <a href="/#aboutme" class="item">O mnie</a>
             <a href="/#projects" class="item">Projekty</a>
             <a href="/#prices" class="item">Koszty</a>
@@ -51,38 +48,28 @@
             <a href="/blog" class="item">Blog</a>
         </div>
     </nav>
-    <div class="not-found">
-        <img src="/dist/img/404-big.jpg" alt="zdjęcie informujące, że dana strona jeszcze nie istnieje">
-        <div class="not-found-box">
-            <p>Upss.. Ta strona nie istnieje 🤔</p>
+    <header class="header-websites">
+        <div class="blog-header blog-header-four section">
+            <div class="header__shadow"></div>
+            <h1 class="blog-header-title blog-header-title-404">Upss.. Ta strona nie istnieje 🤔</h1>
         </div>
-    </div>
-    <div class="button-box">
-        <a href="/" class="not-found-btn">Wróć do głownej</a>
-    </div>
+    </header>
 
-    <div class="cookie-box">
-        <div class="cookie-box-items">
-            <p>Ta strona korzysta z ciasteczek!</p>
-            <button class="cookie-btn" aria-label="Rozumiem">Rozumiem</button>
-        </div>
 
-    </div>
     <footer>
         <div class="wrapper">
-            <p class="second-title"></p>
             <div class="footer">
                 <div class="footer__box">
                     <h3>Portale społecznościowe</h3>
                     <div class="footer__box-socials">
                         <a href="https://www.instagram.com/codecr8ive/" target="_blank" rel="noopener"><img
-                                src="/dist/img/icons/instagram.png" alt="link do konta na instagramie"></a>
-                        <a href="https://www.facebook.com/codecr8ivepl/" target="_blank"
-                            rel="noopener"><img src="/dist/img/icons/facebook.png" alt="ikona portalu facebook"></a>
+                                src="/dist/img/icons/instagram.png" alt="portal instagram"></a>
+                        <a href="https://www.facebook.com/codecr8ivepl/" target="_blank" rel="noopener"><img
+                                src="/dist/img/icons/facebook.png" alt="ikona portalu facebook"></a>
                         <a href="https://www.linkedin.com/in/wojciech-stancel/" target="_blank" rel="noopener"><img
                                 src="/dist/img/icons/linkedin.png" alt="ikona portalu linkedin"></a>
                         <a href="https://github.com/WojciechStancel" target="_blank" rel="noopener"><img
-                                src="/dist/img/icons/github.png" alt="ikona portalu github"></a>
+                                src="/dist/img/icons/github.svg" alt="ikona portalu github"></a>
                     </div>
                 </div>
                 <div class="footer__box">
@@ -94,10 +81,11 @@
                 </div>
             </div>
         </div>
-        <p class="footer__bottom-text"> &copy;<span class="footer-year"></span> Code Cr8ive</p>
+        <p class="footer__bottom-text"> &copy; <span class="footer-year"></span> code<span
+                class="footer-logo">CR8IVE</span></p>
     </footer>
 
-    <script type="module" src="/dist/js/script.min.js?ver=1.12">
+    <script type="module" src="/dist/js/script.min.js?ver=1.14">
     </script>
 
 </body>

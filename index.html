@@ -23,26 +23,34 @@
         content="W CodeCr8ive tworzę profesjonalne strony internetowe dostosowane do Twoich potrzeb.">
     <meta name="twitter:image" content="https://codecr8ive.pl/uploads/coding.jpg">
     <link rel="canonical" href="https://codecr8ive.pl/">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch.png" />
-    <link rel="stylesheet" href="dist/css/style.min.css?ver=1.12">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XND5KQ934"></script>
-    <script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="dist/css/style.min.css?ver=1.14">
+    <script type="text/javascript" src="//www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js"
+        charset="UTF-8"></script>
+    <script type="text/javascript" charset="UTF-8">
+        document.addEventListener('DOMContentLoaded', function () {
+            cookieconsent.run({ "notice_banner_type": "simple", "consent_type": "express", "palette": "dark", "language": "pl", "page_load_consent_levels": ["strictly-necessary"], "notice_banner_reject_button_hide": false, "preferences_center_close_button_hide": false, "page_refresh_confirmation_buttons": false, "website_name": "CodeCr8ive", "website_privacy_policy_url": "https://codecr8ive.pl/privacy-policy" });
+        });
+    </script>
+    <script type="text/plain" data-cookie-consent="tracking" async
+        src="https://www.googletagmanager.com/gtag/js?id=G-6XND5KQ934"></script>
+    <script type="text/plain" data-cookie-consent="tracking">
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-6XND5KQ934');
     </script>
-
 </head>
 
 <body class="main-page">
     <nav>
         <div class="nav smooth-scroll">
             <div class="nav-logo">
-                <a class="nav__link-item nav-active" href="#">codeCR8IVE</a>
+                <a class="nav__link-item" href="#">code<span>CR8IVE</span></a>
             </div>
             <div class="nav__link">
                 <a class="nav__link-item" href="#aboutme">O mnie</a>
@@ -61,7 +69,7 @@
     <nav>
         <div class="mobile-nav smooth-scroll">
             <div class="items">
-                <a href="#" class="item">CodeCr8ive</a>
+                <a href="#" class="item item-logo">code<span>CR8IVE</span></a>
                 <a href="#aboutme" class="item">O mnie</a>
                 <a href="#projects" class="item">Projekty</a>
                 <a href="#prices" class="item">Koszty</a>
@@ -73,12 +81,11 @@
 
     <header>
         <div class="header section section-margin">
-
             <div class="header__shadow"></div>
             <div class="header__text smooth-scroll">
                 <p>code<span>cr8ive</span></p>
-                <h1>Strona to coś więcej niż kod <img src="dist/img/icons/coding-color.png"
-                        alt="Web development icons created by surang - Flaticon"></h1>
+                <h1>Strona to coś więcej niż kod <img src="dist/img/icons/customer-2.png"
+                        alt="Ikona symbolizująca człowieka"></h1>
 
                 <a href="#aboutme" aria-label="Przycisk nawigacji w dół do sekcji o mnie">
                     <div class="arrow-icon">
@@ -92,25 +99,25 @@
 
     <main>
         <section class="aboutme wrapper section black-btn " id="aboutme">
-
             <div class="aboutme__main">
-                <div class="aboutme-image">
+                <div class="aboutme-image slideIn">
                     <img src="dist/img/IMG_20230122_125325_2.webp"
                         alt="Zdjęcie przedstawiające mężczyznę - założyciela strony." class="aboutme__img">
                 </div>
-                <div class="aboutme__text">
+                <div class="aboutme__text slideIn">
                     <p class="hello">Cześć!</p>
                     <p class="hello-content">Z tej strony Wojtek, tworzę profesjonalne strony internetowe, które są
                         w
                         pełni dostosowane do
-                        aktualnych standardów oraz potrzeb użytkowników. </p>
+                        aktualnych standardów oraz potrzeb&nbsp;użytkowników. </p>
                     <p class="hello-content" data-remove-orphans>Tworzenie strony internetowej, to coś więcej niż kod.
                         To przede
                         wszystkim odpowiedni
                         plan,
                         zorientowanie na potrzeby i pełne zaangażowanie, by opracowany projekt wpłynął
-                        korzystnie na Twoją działalność.</p>
-                    <p class="hello-content smooth-scroll">Zapraszam Cię do zapoznania się z pozostałą częścią strony - tam
+                        korzystnie na Twoją&nbsp;działalność.</p>
+                    <p class="hello-content smooth-scroll">Zapraszam Cię do zapoznania się z pozostałą częścią strony -
+                        tam
                         znajdziesz
                         informacje na temat
                         m.in. technologii w jakich działam oraz czynników które wpływają na cenę strony.
@@ -180,12 +187,28 @@
         </section>
 
         <section class="wrapper section black-btn section-margin" id="projects">
-            <h2 class="second-title second-title-margin">Projekty <img class="portfolio-icon"
-                    src="/dist/img/icons/projects.png" alt="ikona portfolio"></h2>
+            <h2 class="second-title second-title-margin">Projekty</h2>
             <div class="group-projects">
-                <div class="projects">
+                <div class="projects showElement">
                     <div class="image-container">
-                        <div class="projects__img projects__img-one hidden">
+                        <div class="projects__img projects__img-zero">
+                            <div class="projects__img-icon">
+                                <a href="https://azclean.com.pl/" target="_blank" rel="noopener"><img
+                                        src="dist/img/icons/eye.svg" alt="ikona do podglądu strony na żywo"
+                                        class="projects__img-icon-eye">Przejdź do
+                                    strony </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects__body">
+                        <h3>AZ Clean</h3>
+                        <p>Strona Internetowa firmy sprzątającej działającej w Warszawie i okolicach. Profesjonalny i
+                            nowoczesny design. Bardzo wysokie wyniki strony zarówno w SEO, jak i wydajnościowo.</p>
+                    </div>
+                </div>
+                <div class="projects showElement">
+                    <div class="image-container">
+                        <div class="projects__img projects__img-one">
                             <div class="projects__img-icon">
                                 <a href="https://wojciechstancel.github.io/FotoStory/" target="_blank"
                                     rel="noopener"><img src="dist/img/icons/eye.svg"
@@ -199,11 +222,10 @@
                         <p>Przykładowa strona stworzona dla osoby zajmującej się fotografią. Idealna do promowania
                             swojej pracy.</p>
                     </div>
-
                 </div>
-                <div class="projects black-btn">
+                <div class="projects black-btn showElement">
                     <div class="image-container">
-                        <div class="projects__img projects__img-two hidden">
+                        <div class="projects__img projects__img-two">
                             <div class="projects__img-icon">
                                 <a href="http://51.20.211.102/" target="_blank" rel="noopener"><img
                                         src="dist/img/icons/eye.svg" alt="ikona do strony na hostingu amazon"
@@ -220,29 +242,10 @@
 
                     </div>
                 </div>
-                <div class="projects">
-                    <div class="image-container">
-                        <div class="projects__img projects__img-three hidden">
-                            <div class="projects__img-icon">
-                                <a href="https://wojciechstancel.github.io/FlowerShop/" target="_blank"
-                                    rel="noopener"><img src="dist/img/icons/eye.svg"
-                                        alt="odnośnik do podglądu wyglądu strony na żywo"
-                                        class="projects__img-icon-eye">Przejdź do
-                                    strony </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="projects__body">
-                        <h3>Kwiaciarnia</h3>
-                        <p>Prosta strona dla osoby prowadzącej własną kwiaciarnię.</p>
-                        <p>Znajdują się na niej wszelkie podstawowe informacje, dzięki którym potencjalni klienci bez
-                            wychodzenia z&nbsp;domu dowiedzą się o&nbsp;Twoim biznesie.</p>
 
-                    </div>
-                </div>
-                <div class="projects">
+                <div class="projects showElement">
                     <div class="image-container">
-                        <div class="projects__img projects__img-four hidden">
+                        <div class="projects__img projects__img-four">
                             <div class="projects__img-icon">
                                 <a href="https://www.memorygame.site/" target="_blank" rel="noopener"><img
                                         src="dist/img/icons/eye.svg" alt="ikona do strony z grą memory"
@@ -258,9 +261,9 @@
                             sprawdzania.</p>
                     </div>
                 </div>
-                <div class="projects">
+                <div class="projects showElement">
                     <div class="image-container">
-                        <div class="projects__img projects__img-five hidden">
+                        <div class="projects__img projects__img-five">
                             <div class="projects__img-icon">
                                 <a href="https://github.com/WojciechStancel/e-shop" target="_blank" rel="noopener"><img
                                         src="dist/img/icons/eye.svg" alt="ikona do kodu na Github"
@@ -276,67 +279,47 @@
                             jest dostępny podgląd na żywo.</p>
                         <p>Dopóki sklep nie będzie dostępny na żywo, jego zdjęciową wersję można obejrzeć na portalu
                             Github.</p>
-
                     </div>
-
-                </div>
-                <div class="projects">
-                    <div class="image-container">
-                        <div class="projects__img projects__img-six hidden">
-                            <div class="projects__img-icon">
-                                <a href="https://your-notes-react-app.netlify.app/" target="_blank" rel="noopener"><img
-                                        src="dist/img/icons/eye.svg" alt="odnośnik do strony na żywo"
-                                        class="projects__img-icon-eye">Przejdź do
-                                    strony </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="projects__body">
-                        <h3>Notatnik</h3>
-                        <p>Aplikacja do dodawania, edycji oraz usuwania własnych notatek. Połączona z bazą danych
-                            Firebase.</p>
-                        <p>Jest to kolejna aplikacja, którą stworzyłem korzystając z potęgi React'a.</p>
-
-                    </div>
-
                 </div>
             </div>
         </section>
 
         <div class="full-width-bg">
             <section class="wrapper section black-btn section-margin" id="prices">
-                <h2 class="second-title second-title-margin">Składowe ceny <img class="money-icon"
-                        src="/dist/img/icons/money.svg" alt="ikona monety pod lupą"></h2>
+                <h2 class="second-title second-title-margin">Składowe ceny</h2>
                 <div class="accordion">
-                    <p class="accordion-description smooth-scroll">Poniżej przedstawione zostały najważniejsze elemety, które składają
+                    <p class="accordion-description smooth-scroll">Poniżej przedstawione zostały najważniejsze elemety,
+                        które składają
                         się na cenę strony internetowej. W&nbsp;celu uzyskania dokładnej wyceny skontaktuj się ze mną
                         poprzez
                         <a href="#contact" aria-label="formularz kontaktowy">formularz kontaktowy.</a>
                     </p>
                     <div class="accordion-box">
                         <button class="accordion-btn accordion-btn-drop" aria-labelledby="Domena">
-                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
+                            <img src="dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
                                 alt="ikona rozwiń w dół">Domena
                         </button>
-                        <div class="accordion-info">
-                            <p class="accordion-info-text">
+                        <div class="accordion-info long-info">
+                            <p class="accordion-info-text" data-remove-orphans>
                                 Domena to taki internetowy adres albo nazwa Twojej strony. To co wpisujesz
-                                w&nbsp;przeglądarkę, żeby ją odnaleźć. Koszt domeny zależy od kilku rzeczy, takich jak
+                                w przeglądarkę, żeby ją odnaleźć🌐 Koszt domeny zależy od kilku rzeczy, takich jak
                                 popularność słów w nazwie, czyli co ludzie wpisują w Google, oraz od tego, czy ktoś już
-                                nie używa tej konkretnej nazwy. Domena jest jak unikalna wizytówka Twojej strony
-                                w&nbsp;internecie i to ile zapłacisz, zależy od tego, jakie słowo czy zestaw słów
+                                nie używa tej konkretnej nazwy✅
+                            </p>
+                            <p class="accordion-info-text" data-remove-orphans>
+                                Domena jest jak unikalna wizytówka Twojej strony
+                                w internecie i to ile zapłacisz, zależy od tego, jakie słowo czy zestaw słów
                                 wybierzesz
-                                jako nazwę swojej strony.
-                            </p>
-                            <p class="accordion-info-text">
-                                Najbardziej ekonomiczną domenę można nabyć już za kilka - kilkanaście złotych. Często
-                                domena kupowana po raz pierwszy ma cenę promocyjną. Zreguły domenę wykupuje się na rok.
+                                jako nazwę swojej strony. Z reguły domenę wykupuje się na rok.
                                 W kolejnych latach opłata nieco wzrasta,
-                                oscylując między kilkudziesięcioma a nieco ponad 100 zł. Warto jednak pamiętać, że
-                                koszty te mogą się różnić w&nbsp;zależności od wybranej nazwy domeny oraz od firmy
-                                dostawcy
-                                usług.
+                                oscylując między kilkudziesięcioma a nieco ponad 100 zł💰
                             </p>
+                            <p class="accordion-info-text" data-remove-orphans>
+                                Najbardziej ekonomiczną domenę można nabyć już za kilka - kilkanaście złotych. Często
+                                domena kupowana po raz pierwszy ma cenę promocyjną 📢 Warto jednak pamiętać, że
+                                koszty te mogą się różnić w zależności od wybranej nazwy domeny oraz od firmy
+                                dostawcy
+                                usług.</p>
                         </div>
                     </div>
                     <div class="accordion-box">
@@ -344,59 +327,73 @@
                             <img src="/dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
                                 alt="rozwiń w dół">Hosting
                         </button>
-                        <div class="accordion-info">
-                            <p class="accordion-info-text">
+                        <div class="accordion-info long-info">
+                            <p class="accordion-info-text" data-remove-orphans>
                                 Hosting to miejsce, gdzie przechowujesz wszystkie pliki, treści i dane związane z Twoją
-                                stroną internetową. To swoiste wirtualne mieszkanie dla Twojej witryny w przestrzeni
-                                internetowej. Wybór odpowiedniego hostingu ma kluczowe znaczenie dla stabilności
-                                i&nbsp;dostępności Twojej strony online.
+                                stroną internetową💻 To swoiste wirtualne mieszkanie dla Twojej witryny w przestrzeni
+                                internetowej. Wybór&nbsp;odpowiedniego hostingu ma kluczowe znaczenie dla stabilności
+                                i dostępności Twojej strony online✅
                             </p>
-                            <p class="accordion-info-text">
-                                Istnieje wiele rodzajów hostingu -&nbsp;Współdzielony (Shared Hosting), Prywatny (VPS),
-                                Dedykowany, Hosting w&nbsp;chmurze (Cloud Hosting), Hosting dla WordPress. Koszty
+                            <p class="accordion-info-text" data-remove-orphans>
+                                Istnieje wiele rodzajów hostingu -Współdzielony (Shared Hosting), Prywatny (VPS),
+                                Dedykowany, Hosting w chmurze (Cloud Hosting), Hosting dla WordPress. Koszty
                                 dobrego
-                                hostingu zaczynają się średnio od 20 złotych miesięcznie w&nbsp;górę.
+                                hostingu zaczynają się średnio od 20 złotych miesięcznie w górę⬆️
                             </p>
-                            <p class="accordion-info-text">
+                            <p class="accordion-info-text" data-remove-orphans>
                                 Hosting darmowy - dostępny dla początkujących, ale może być ograniczony pod względem
-                                funkcji i zasobów. To jak korzystanie z wersji demo produktu -&nbsp;dostajesz
-                                podstawowe, ale nie zawsze spełniające oczekiwania warunki.
+                                funkcji i zasobów. To jak korzystanie z wersji demo produktu - dostajesz
+                                podstawowe, ale nie zawsze spełniające oczekiwania warunki⚠️
                             </p>
                         </div>
                     </div>
                     <div class="accordion-box">
                         <button class="accordion-btn accordion-btn-drop" aria-labelledby="Koszt wykonania">
-                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
+                            <img src="dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
                                 alt="ikona zobacz więcej">
                             Koszt
                             wykonania
                         </button>
-                        <div class="accordion-info">
-                            <p class="accordion-info-text">
+                        <div class="accordion-info long-info">
+                            <p class="accordion-info-text" data-remove-orphans>
                                 Koszt wykonania strony internetowej zależy od wielu czynników, takich jak skomplikowanie
                                 projektu, funkcjonalności, designu i wymagań specyficznych dla branży. Stworzenie strony
-                                o prostym projekcie, to koszt do kilkuset złotych.
+                                to nie tylko kod👨‍💻
+                            <ul data-remove-orphans>
+                                <li>✅ to zapoznanie się z branżą dla której strona ma powstać,</li>
+                                <li>✅ design - projekt i rozplanowanie wszelkich części strony,</li>
+                                <li>✅ to optymalizacja wszystkich elementów, by strona była szybka i przyjazna dla
+                                    użytkowników,</li>
+                                <li>✅ zadbanie o pozycjonowanie pod względem SEO - im lepsze SEO tym strona ma szansę
+                                    być wysoko pozycjonowana przez wyszukiwarki,</li>
+                                <li>✅ przygotowanie niezbędnych elementów po stronie serwera</li>
+                                <li>✅ to po prostu wiele godzin poza samym kodowaniem - by strona internetowa była
+                                    najlepszej jakości.</li>
+                            </ul>
                             </p>
-                            <p class="accordion-info-text">
-                                Inwestycja ta jednak przynosi korzyści w&nbsp;postaci profesjonalnej obecności w sieci,
-                                zwiększenia widoczności i&nbsp;potencjalnego zysku poprzez skuteczną interakcję
-                                z&nbsp;użytkownikami online.
+                            <p class="accordion-info-text" data-remove-orphans>
+                                Inwestycja ta jednak przynosi korzyści w postaci profesjonalnej obecności w sieci,
+                                zwiększenia widoczności i potencjalnego zysku poprzez skuteczną interakcję
+                                z użytkownikami online 🤝
                             </p>
                         </div>
                     </div>
                     <div class="accordion-box">
                         <button class="accordion-btn accordion-btn-drop" aria-labelledby="Dodatkowe koszty">
-                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
+                            <img src="dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
                                 alt="rozwiń"> Dodatkowe
                             koszty
                         </button>
                         <div class="accordion-info">
-                            <p class="accordion-info-text">
-                                Ważne jest, aby uwzględnić dodatkowe koszty, takie jak utrzymanie strony, aktualizacje i
-                                ewentualne koszty związane z&nbsp;promocją online. Jak widzisz strona to coś więcej niż
+                            <p class="accordion-info-text" data-remove-orphans>
+                                Ważne jest, aby uwzględnić dodatkowe koszty, takie jak utrzymanie strony, aktualizacje,
+                                dodatkowe serwisy i
+                                ewentualne koszty związane z promocją online. Poza tym do powstania strony potrzebne są
+                                zdjecia, ikony, czasami dokumenty np. regulaminy itd. Jak widzisz strona to coś więcej
+                                niż
                                 stworzenie kodu, ale nie martw się - we wszystkim Ci pomogę👍
                             </p>
-                            <p class="accordion-info-text">
+                            <p class="accordion-info-text" data-remove-orphans>
                                 Bardzo często dodatkowym kosztem jest stworzenie samego projektu wizualnego strony. Web
                                 designer, to oddzielny zawód. <b>Projekt strony masz ode mnie w gratisie!</b> Taką
                                 oszczędność możesz przeznaczyć na pokrycie kosztów np. hostingu 🤗
@@ -405,17 +402,17 @@
                     </div>
                     <div class="accordion-box">
                         <button class="accordion-btn accordion-btn-drop" aria-labelledby="Podsumowanie">
-                            <img src="/dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
+                            <img src="dist/img/icons/down.svg" class="accordion-btn-icon accordion-btn-drop"
                                 alt="rozwiń">Podsumowanie
                         </button>
                         <div class="accordion-info">
-                            <p class="accordion-info-text">
+                            <p class="accordion-info-text" data-remove-orphans>
                                 Domena + dobry Hosting to koszt 20-30 złotych miesięcznie (dane te opieram na swoim
                                 osobistym doświadczeniu, cena może się różnić w zależności od dostawcy).
                             </p>
-                            <p class="accordion-info-text">
-                                Stworzenie strony to kwestia indywidualna -&nbsp;można znaleźć oferty za kilkaset
-                                złotych, a&nbsp;można również za kilka tysięcy. Wszystko jest uzależnione od
+                            <p class="accordion-info-text" data-remove-orphans>
+                                Stworzenie strony to kwestia indywidualna - można znaleźć oferty za kilkaset
+                                złotych, a można również za kilka tysięcy. Wszystko jest uzależnione od
                                 skomplikowania witryny.
                                 Natomiast ja tworzę profesjonalne strony, za które na pewno nie przepłacisz 😉
                             </p>
@@ -425,71 +422,101 @@
             </section>
         </div>
 
-        <section class="section black-btn " id="contact">
-            <div class="contact wrapper">
-                <h2 class="second-title contact-title second-title-margin">Formularz kontaktowy <img
-                        src="dist/img/icons/email.png" alt="ikona koperty pocztowej" class="email-icon"> </h2>
+        <section class="section black-btn contact-section wrapper" id="contact">
+            <h2 class="second-title contact-title second-title-margin">Kontakt</h2>
+            <div class="contact">
+                <div class="contact-left">
+                    <h3>Napisz wiadomość</h3>
+                    <form action="mail.php" method="post">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="name">Imię*</label>
+                                <input type="text" name="name" id="name" placeholder="Twoje imię">
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email*</label>
+                                <input type="email" name="email" id="email" placeholder="Twój adres email">
+                                <div class="error"></div>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="phone">Numer tel.</label>
+                                <input type="phone" name="phone" id="phone" placeholder="Nr. tel. (opcjonalnie)">
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-group">
+                                <label for="subject">Temat*</label>
+                                <select name="subject" id="subject">
+                                    <option disabled selected hidden>Wybierz temat:</option>
+                                    <option value="Strona wizytówkowa / informacyjna">Strona wizytówkowa / informacyjna
+                                    </option>
+                                    <option value="Strona z formularzem kontaktowym">Strona z formularzem kontaktowym
+                                    </option>
+                                    <option value="Sklep Internetowy">Sklep Internetowy</option>
+                                    <option value="Blog">Blog</option>
+                                    <option value="Inne">Inne</option>
+                                </select>
+                                <div class="error"></div>
+                            </div>
+                        </div>
 
-                <form action="mail.php" method="post" class="contact__form">
-                    <div class="contact__form-top contact-box">
-                        <label for="name" class="contact__label">Podaj Imię</label>
-                        <input type="text" id="name" class="contact__input" name="name" placeholder="Podaj swoje imię">
-                        <p class="error-text"></p>
-                    </div>
-                    <div class="contact__form-middle contact-box">
-                        <label for="email" class="contact__label">Adres e-mail:</label>
-                        <input type="email" id="email" class="contact__input" name="email"
-                            placeholder="Wprowadź swój adres e-mail">
-                        <p class="error-text"></p>
-                    </div>
-                    <div class="contact__form-end contact-box">
-                        <label for="msg">Napisz wiadomość:</label>
-                        <textarea id="msg" class="textarea" name="msg" placeholder="Wpisz wiadomość"></textarea>
-                        <p class="error-text message-error">Wiadomość nie może być pusta!</p>
-
-                        <p class="contact__form-protection">Wypełnienie formularza oznacza, że podane w nim dane osobowe
-                            będą przetwarzane w celu
-                            udzielenia odpowiedzi.</p>
-
-                        <button class="submit-btn" aria-label="Wyślij">Wyślij</button>
-
-                    </div>
-
-
-                    <div class="hidden-popup">
-                        <div class="popup">
-                            <p>Wiadomość została wysłana!</p>
-                            <button class="close" aria-label="Zamknij">Zamknij</button>
+                        <div class="input-group last-input-group">
+                            <label for="message">Wiadomość&ast;</label>
+                            <textarea name="message" id="message" rows="8" placeholder="Twoja wiadomość"></textarea>
+                            <div class="error"></div>
+                        </div>
+                        <button type="submit" id="submitBtn">Wyślij</button>
+                        <div class="form-popup">
+                            <img src="dist/img/icons/email.png" alt="zdjęcie koperty symbolizującej wysłany email">
+                            <h4>Dziękuję za wiadomość!</h4>
+                            <p>Twoja wiadomość została wysłana. Wkrótce się z Tobą skontaktuję!</p>
+                            <button type="submit" class="popup-btn" aria-label="Ok">Ok</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-right">
+                    <div class="contact-right-shadow"></div>
+                    <h3>Skontaktuj się ze mną!</h3>
+                    <p>Masz pytania dotyczące moich usług lub projektów? Chętnie odpowiem na wszystkie Twoje zapytania.
+                    </p>
+                    <p>Jeśli masz własne koncepcje lub inspiracje dotyczące projektu? Podziel się nimi,
+                        a&nbsp;z&nbsp;przyjemnością wspólnie je omówimy.</p>
+                    <p>Skorzystaj z poniższych opcji lub formularza kontaktowego.</p>
+                    <div class="contact-data">
+                        <p class="contact-box"><img src="dist/img/icons/mail.png"
+                                alt="ikona symbolu przedstawiającego wysyłanie wiadomości email">Email:
+                            kontakt@codecr8ive.pl
+                        </p>
+                        <div class="contact-box">
+                            <a href="https://www.facebook.com/codecr8ivepl/" target="_blank" rel="noopener"><img
+                                    src="dist/img/icons/facebook-icon.png" alt="portal facebook"
+                                    class="socials-icon"></a>
+                            <a href="https://www.instagram.com/codecr8ive/" target="_blank" rel="noopener"><img
+                                    src="dist/img/icons/instagram-icon.png" alt="portal instagram"
+                                    class="socials-icon"></a>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <div class="cookie-box">
-        <div class="cookie-box-items">
-            <p>Ta strona korzysta z ciasteczek!</p>
-            <button class="cookie-btn" aria-label="Rozumiem">Rozumiem</button>
-        </div>
-
-    </div>
-
     <footer>
         <div class="wrapper">
-            <p class="second-title"></p>
             <div class="footer">
                 <div class="footer__box">
                     <h3>Portale społecznościowe</h3>
                     <div class="footer__box-socials">
                         <a href="https://www.instagram.com/codecr8ive/" target="_blank" rel="noopener"><img
-                                src="dist/img/icons/instagram.png" alt="portal github"></a>
-                        <a href="https://www.facebook.com/codecr8ivepl/" target="_blank"
-                            rel="noopener"><img src="dist/img/icons/facebook.png" alt="ikona portalu facebook"></a>
+                                src="dist/img/icons/instagram.png" alt="portal instagram"></a>
+                        <a href="https://www.facebook.com/codecr8ivepl/" target="_blank" rel="noopener"><img
+                                src="dist/img/icons/facebook.png" alt="ikona portalu facebook"></a>
                         <a href="https://www.linkedin.com/in/wojciech-stancel/" target="_blank" rel="noopener"><img
                                 src="dist/img/icons/linkedin.png" alt="ikona portalu linkedin"></a>
                         <a href="https://github.com/WojciechStancel" target="_blank" rel="noopener"><img
-                                src="dist/img/icons/github.png" alt="ikona portalu github"></a>
+                                src="dist/img/icons/github.svg" alt="ikona portalu github"></a>
                     </div>
                 </div>
                 <div class="footer__box">
@@ -497,16 +524,16 @@
                     <ul class="footer__list">
                         <li class="footer__list-item"><a href="/blog">Blog</a></li>
                         <li class="footer__list-item"><a href="/privacy-policy">Polityka prywatności</a></li>
+                        <li class="footer__list-item"><a href="#" id="open_preferences_center">Zmień ustawienia
+                                ciasteczek</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-
-        <p class="footer__bottom-text"> &copy; <span class="footer-year"></span> Code Cr8ive</p>
+        <p class="footer__bottom-text"> &copy; <span class="footer-year"></span> code<span
+                class="footer-logo">CR8IVE</span></p>
     </footer>
-
-    <script type="module" src="dist/js/script.min.js?ver=1.12"></script>
-    <script type="module" src="dist/js/email-validation.min.js?ver=1.12"></script>
+    <script type="module" src="dist/js/script.min.js?ver=1.14"></script>
 </body>
 
 </html>
