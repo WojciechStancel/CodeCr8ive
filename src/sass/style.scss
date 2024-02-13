@@ -602,6 +602,12 @@ input {
 	.blog-header-four {
 		background-image: url("../../dist/img/404-big.jpg");
 	}
+	.blog-header-five {
+		background-image: url("../../dist/img/money.jpg");
+		height: 70vh;
+		background-position: 40% 30%;
+		background-attachment: fixed;
+	}
 
 	.blog-header-title {
 		z-index: 1;
@@ -626,6 +632,7 @@ input {
 	p {
 		padding: 1em 2em;
 		font-weight: 300;
+		// line-height: 1;
 
 		span {
 			font-weight: bold;
@@ -635,11 +642,32 @@ input {
 		display: flex;
 		flex-direction: column;
 
+		&-text-width-small {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
 		&-text {
 			display: flex;
 			flex-direction: column;
 			gap: 1.5em;
 			font-size: 1px 4rem;
+
+			.divider-img {
+				padding: 0 2em;
+				margin: 0 auto;
+				margin-bottom: 2em;
+
+				img {
+					box-shadow: 0 10px 20px rgba(0, 0, 0, 0.242);
+					width: 200px;
+				}
+
+				.dev-process {
+					box-shadow: none;
+					width: 300px;
+				}
+			}
 
 			.third-article {
 				display: flex;
@@ -680,6 +708,10 @@ input {
 							li {
 								margin-bottom: 0.3em;
 							}
+						}
+
+						.proffesional-value {
+							padding: 0 2em;
 						}
 					}
 				}
@@ -898,6 +930,91 @@ input {
 	}
 }
 
+// OFFER
+
+.offer {
+	width: 100%;
+	display: grid;
+	place-items: center;
+	margin-bottom: 3rem;
+
+	&-row {
+		display: flex;
+		flex-wrap: wrap;
+
+		.offer-column {
+			width: 100%;
+			padding: 0 1em 1em 1em;
+			text-align: center;
+		}
+
+		.card {
+			border: 1px solid black;
+			width: 100%;
+			height: 100%;
+			padding: 2em 1.5em;
+			background: linear-gradient(#fff 50%, #1478cf 50%);
+			background-size: 100% 200%;
+			background-position: 0 2.5%;
+			border-radius: 2px;
+			box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+			transition: 0.5s;
+
+			&:hover {
+				background-position: 0 100%;
+			}
+
+			&:hover .icon-wrapper {
+				background-color: white;
+			}
+
+			&:hover .icon-wrapper img {
+				filter: invert(20%) sepia(31%) saturate(2878%) hue-rotate(200deg)
+					brightness(104%) contrast(67%);
+			}
+
+			&:hover h3 {
+				color: white;
+			}
+			&:hover p {
+				color: #f0f0f0;
+			}
+
+			h3 {
+				font-size: 2rem;
+				font-weight: 700;
+				color: #1f195c;
+				margin: 1em 0;
+			}
+
+			p {
+				color: #212338;
+				line-height: 1.6;
+				font-size: 1.8rem;
+				letter-spacing: 0.03em;
+				margin-bottom: 1.6em;
+			}
+
+			.icon-wrapper {
+				background-color: #1478cf;
+				position: relative;
+				margin: auto;
+				font-size: 3rem;
+				height: 2.5em;
+				width: 2.5em;
+				border-radius: 50%;
+				display: grid;
+				place-items: center;
+				transition: 0.5s;
+
+				img {
+					filter: invert(1);
+				}
+			}
+		}
+	}
+}
+
 // PROJECTS
 
 .image-container {
@@ -974,8 +1091,25 @@ input {
 		background-image: url("../img/AZ-Clean.png");
 		background-position: center;
 	}
+	&__img-zero_half {
+		background-image: url("../img/wojciechs.png");
+		background-position: -50px;
+	}
 	&__img-one {
 		background-image: url("../img/photographs-small.jpg");
+	}
+	&__img-one_half {
+		background-image: url("../img/kadrart.png");
+		background-position: 50% 0;
+	}
+	&__img-one-landing {
+		background-image: url("../img/landing-hotel.png");
+		background-position: 50% 0;
+	}
+	&__img-two-landing {
+		background-image: url("../img/landing-beauty.png");
+		background-position: 50% 0;
+		background-size: cover;
 	}
 	&__img-two {
 		background-image: url("../img/house-1477041_1280.jpg");
@@ -999,6 +1133,10 @@ input {
 		background-image: url("../img/seo.png");
 		background-position: center;
 	}
+	&__img-blog-four {
+		background-image: url("../img/money.jpg");
+		background-position: center;
+	}
 
 	&__body {
 		text-align: center;
@@ -1017,6 +1155,7 @@ input {
 		p {
 			padding: 0.5em 0;
 			font-weight: 300;
+			line-height: 1.5;
 		}
 	}
 }
@@ -1145,6 +1284,10 @@ input {
 			border: none;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 			padding-bottom: 0.5em;
+		}
+
+		select {
+			background: transparent;
 		}
 
 		textarea {
@@ -1448,9 +1591,21 @@ footer {
 	transition-delay: 1s;
 }
 .showElement:nth-child(4) {
-	transition-delay: 0.5s;
+	transition-delay: 0.1s;
 }
 .showElement:nth-child(5) {
+	transition-delay: 0.5s;
+}
+.showElement:nth-child(6) {
+	transition-delay: 1s;
+}
+.showElement:nth-child(7) {
+	transition-delay: 0.1s;
+}
+.showElement:nth-child(8) {
+	transition-delay: 0.5s;
+}
+.showElement:nth-child(9) {
 	transition-delay: 1s;
 }
 
@@ -1621,6 +1776,17 @@ footer {
 		}
 	}
 
+	.offer {
+		padding: 0 2em;
+
+		&-row {
+			.offer-column {
+				flex: 0 50%;
+				max-width: 50%;
+			}
+		}
+	}
+
 	.group-projects {
 		display: flex;
 		justify-content: center;
@@ -1696,6 +1862,7 @@ footer {
 			padding: 0;
 			line-height: 27px;
 		}
+
 		&-body {
 			flex-direction: row;
 			align-items: flex-start;
@@ -1715,6 +1882,14 @@ footer {
 				.third-article {
 					img {
 						width: 500px;
+					}
+				}
+
+				.divider-img {
+					img,
+					.dev-process {
+						width: 500px;
+						height: 300px;
 					}
 				}
 			}
@@ -1803,6 +1978,29 @@ footer {
 		}
 	}
 
+	.offer {
+		padding: 1em 3em;
+
+		&-row {
+			.offer-column {
+				flex: 0 0 33.33%;
+				max-width: 33.33%;
+			}
+
+			.card {
+				h3 {
+					font-size: 2.2rem;
+				}
+
+				.icon-wrapper {
+					img {
+						width: 30px;
+					}
+				}
+			}
+		}
+	}
+
 	.contact {
 		max-width: 990px;
 		font-size: 2rem;
@@ -1887,9 +2085,11 @@ footer {
 		}
 	}
 
-	.group-projects {
-		padding: 0 4em;
+	.offer {
+		margin-bottom: 10rem;
+	}
 
+	.group-projects {
 		.projects {
 			&__img-one {
 				background-image: url("../img/photographs-big.jpg");
@@ -1968,6 +2168,12 @@ footer {
 	}
 
 	.article {
+		.summary-article {
+			padding-top: 0;
+		}
+		.smaller-pb {
+			padding-bottom: 0;
+		}
 		&-body {
 			&-text {
 				.third-article {
@@ -1991,6 +2197,7 @@ footer {
 					&-text {
 						p {
 							line-height: 1.6;
+							font-size: 2.2rem;
 						}
 
 						&-right {
@@ -1999,7 +2206,7 @@ footer {
 							}
 
 							ul {
-								font-size: 2rem;
+								font-size: 2.2rem;
 								font-weight: 300;
 
 								li {
@@ -2012,6 +2219,14 @@ footer {
 
 					&-bottom {
 						margin-top: 3em;
+					}
+				}
+				.divider-img {
+					margin-bottom: 4em;
+					img,
+					.dev-process {
+						width: 700px;
+						height: 400px;
 					}
 				}
 			}
@@ -2143,6 +2358,12 @@ footer {
 
 		p {
 			font-size: 2.5rem;
+		}
+	}
+
+	.article-body {
+		&-text-width-small {
+			max-width: 1000px;
 		}
 	}
 }
